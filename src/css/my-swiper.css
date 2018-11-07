@@ -1,0 +1,13 @@
+.swiper-container-vertical > .swiper-pagination-bullets {
+  right: 2vw;
+}
+.swiper-pagination-bullet {
+  height: 2vh;
+  width: 2vh;
+  background: none;
+  border: 0.5vh solid white;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: white;
+}
