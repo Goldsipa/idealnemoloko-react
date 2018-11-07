@@ -40,15 +40,15 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/leaves.6741755c.png"
   },
   {
-    "revision": "410504d49238e955ba7dc23a7f963021",
-    "url": "/idealnemoloko-react/static/media/Proxima-Nova-Regular.410504d4.otf"
-  },
-  {
     "revision": "8a1b91a8e5ef27b6c7ac813ef2235dd8",
     "url": "/idealnemoloko-react/static/media/LEngineer-Regular.8a1b91a8.otf"
   },
   {
-    "revision": "e02146fbd9db6f16789b37a840a78cd9",
+    "revision": "410504d49238e955ba7dc23a7f963021",
+    "url": "/idealnemoloko-react/static/media/Proxima-Nova-Regular.410504d4.otf"
+  },
+  {
+    "revision": "8f7ebfd5f25c1626d56351d9ceae3dd8",
     "url": "/idealnemoloko-react/index.html"
   }
 ];
