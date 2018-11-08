@@ -34,24 +34,17 @@ body {
 }
 
 .splash-left {
-  position: absolute;
+  position: fixed;
   right: 81vw;
   bottom: -10%;
   height: 85%;
   z-index: 1;
 }
 .splash-right {
-  position: absolute;
+  position: fixed;
   right: 45vw;
   top: -38%;
   height: 80%;
-  z-index: 1;
-}
-.leaves {
-  position: absolute;
-  right: 57vw;
-  bottom: 6vh;
-  height: 18vh;
   z-index: 1;
 }
 
@@ -62,24 +55,24 @@ body {
   z-index: 2;
 
   font-family: Proxima-Nova-Semibold;
-  font-size: 1.9vh;
-  text-shadow: 0px 0px 4px #555555cc;
+  font-size: 1.7vh;
 }
 .left-bar > span {
   margin-right: 2vw;
 }
 .left-bar a {
   text-decoration: none;
-  color: #ffe6ab;
+  color: #ffffff;
 }
 .left-bar a:hover {
   color: #ffffff;
+  /* text-shadow: 0px 0px 4px #555555cc; */
 }
 
 .social {
   position: absolute;
   top: 4.4vh;
-  right: 2vw;
+  right: 1.5vw;
   z-index: 2;
 }
 .social a {

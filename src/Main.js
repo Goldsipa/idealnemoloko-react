@@ -27,7 +27,7 @@ class Main extends React.Component {
     return (
       <div className="main">
         <div className="main-header">
-          ПЕРШЕ УКРАЇНСЬКЕ НЕМОЛОКО
+          <h3>ПЕРШЕ УКРАЇНСЬКЕ «ІДЕАЛЬ НЕМОЛОКО»</h3>
         </div>
         <MainBody />
       </div>

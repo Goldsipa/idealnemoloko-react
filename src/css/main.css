@@ -1,15 +1,24 @@
 .main {
   position: absolute;
-  top: 0;
+  top: 24vh;
   left: 11vw;
   width: 35%;
-  height: 100%;
+  height: 76%;
   z-index: 2;
-}
-.main-header {
-  margin-top: 24vh;
-  height: 6vh;
 
+  opacity: 1;
+  transition: opacity 1s ease;
+  transition-delay: 1s;
+}
+.main-hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.main-header {
+  height: 6vh;
+}
+.main-header > * {
   font-family: LEngineer-Regular;
   font-size: 3.5vh;
   -webkit-font-smoothing: antialiased;

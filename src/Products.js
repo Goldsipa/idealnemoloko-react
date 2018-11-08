@@ -1,14 +1,15 @@
 import React from 'react';
-import Swiper from 'swiper';
 import './css/products.css';
 import './css/my-swiper.css';
 import vivsyane from './img/vivsyane.png';
 import grechane from './img/grechane.png';
 
+import products from './products.json';
+
 const SwiperSlideRight = (props) => {
   return (
-    <div className={"swiper-slide-right " + props.classN} >
-      <div className="swiper-slide-right-title">{props.text}</div>
+    <div className="swiper-slide-right">
+      <div className="swiper-slide-right-title">- {props.product.title} -</div>
       <div className="swiper-slide-right-img">
         <img src={props.src}  alt={props.text}/>
       </div>
@@ -18,32 +19,19 @@ const SwiperSlideRight = (props) => {
 
 const SwiperSlide = (props) => {
   return (
-    <div className="swiper-slide">
-      <SwiperSlideRight text={props.text} src={props.src} classN={props.classN} />
+    <div className={"swiper-slide " + props.classN} >
+      <SwiperSlideRight text={props.text} src={props.src} product={props.product} />
     </div>
   );
 }
 
 class Products extends React.Component {
-  componentDidMount() {
-    var mySwiper = new Swiper('.swiper-container', {
-      direction: 'vertical',
-      loop: true,
-      slidesPerView: 1,
-      mousewheel: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-  }
-
   render() {
     return (
       <div className="swiper-container">
         <div className="swiper-wrapper">
-          <SwiperSlide text="– УЛЮБЛЕНА ВІВСЯНКА –" src={vivsyane} classN='slide-vivsyane' />
-          <SwiperSlide text="– УЛЮБЛЕНА ГРЕЧКА –" src={grechane} classN='slide-grechane' />
+          <SwiperSlide src={vivsyane} classN='slide-vivsyane' product={products[0]} />
+          <SwiperSlide src={grechane} classN='slide-grechane' product={products[1]} />
         </div>
         <div className="swiper-pagination"></div>
       </div>
