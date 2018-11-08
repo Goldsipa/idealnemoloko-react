@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "15954e12289d695ce4c6d299af65da15",
-    "url": "/idealnemoloko-react/static/media/logo.15954e12.png"
+    "revision": "6741755c6f18c5159d3dd79d60ba6959",
+    "url": "/idealnemoloko-react/static/media/leaves.6741755c.png"
   },
   {
-    "revision": "6272b54393e50485579f",
-    "url": "/idealnemoloko-react/static/css/main.de97186c.chunk.css"
+    "revision": "e5683cc233699d2748af",
+    "url": "/idealnemoloko-react/static/css/main.9f03b663.chunk.css"
   },
   {
-    "revision": "6515d2c6d2be45e686a5",
-    "url": "/idealnemoloko-react/static/js/1.6515d2c6.chunk.js"
+    "revision": "bdafd3c106acd8e9dcad",
+    "url": "/idealnemoloko-react/static/js/1.bdafd3c1.chunk.js"
   },
   {
     "revision": "b86a6ed1e15bb0a44792",
@@ -24,8 +24,12 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/grechane.57b8b438.png"
   },
   {
-    "revision": "6272b54393e50485579f",
-    "url": "/idealnemoloko-react/static/js/main.6272b543.chunk.js"
+    "revision": "e5683cc233699d2748af",
+    "url": "/idealnemoloko-react/static/js/main.e5683cc2.chunk.js"
+  },
+  {
+    "revision": "15954e12289d695ce4c6d299af65da15",
+    "url": "/idealnemoloko-react/static/media/logo.15954e12.png"
   },
   {
     "revision": "d25055ebca7b6b4e88d9ececfd4da46b",
@@ -36,19 +40,15 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/splash-right.d15eddc3.png"
   },
   {
-    "revision": "6741755c6f18c5159d3dd79d60ba6959",
-    "url": "/idealnemoloko-react/static/media/leaves.6741755c.png"
+    "revision": "410504d49238e955ba7dc23a7f963021",
+    "url": "/idealnemoloko-react/static/media/Proxima-Nova-Regular.410504d4.otf"
   },
   {
     "revision": "8a1b91a8e5ef27b6c7ac813ef2235dd8",
     "url": "/idealnemoloko-react/static/media/LEngineer-Regular.8a1b91a8.otf"
   },
   {
-    "revision": "410504d49238e955ba7dc23a7f963021",
-    "url": "/idealnemoloko-react/static/media/Proxima-Nova-Regular.410504d4.otf"
-  },
-  {
-    "revision": "8f7ebfd5f25c1626d56351d9ceae3dd8",
+    "revision": "780cf870caf31d548e5d265bd62443dc",
     "url": "/idealnemoloko-react/index.html"
   }
 ];
