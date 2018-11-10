@@ -1,6 +1,6 @@
 .swiper-container, .swiper-wrapper, .swiper-slide {
   height: 100%;
-  z-index: unset;
+  z-index: 0;
 }
 
 .swiper-slide-right {
@@ -21,11 +21,19 @@
   font-size: 3.5vh;
   -webkit-font-smoothing: antialiased;
   color: #7d4526;
+  cursor: pointer;
+}
+.swiper-slide-right-title-hidden {
+  cursor: unset;
 }
 
 .swiper-slide-right-img {
   height: 70%;
   text-align: center;
+  cursor: pointer;
+}
+.swiper-slide-right-img-hidden {
+  cursor: unset;
 }
 .swiper-slide-right-img img {
   position: absolute;

@@ -38,4 +38,5 @@
   bottom: 6vh;
   height: 18vh;
   z-index: 1;
+  transform: skewX(10deg);
 }

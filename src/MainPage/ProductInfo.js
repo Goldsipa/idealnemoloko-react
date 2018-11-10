@@ -1,8 +1,8 @@
 import React from 'react';
-import './css/product-info.css';
+import '../css/product-info.css';
 
 const ProcuctInfo = (props) =>(
-  <div className='info'>
+  <div className={props.isOpen ? 'info info-hidden' : 'info'}>
     <div className='info-header'>
       <h3>{props.product.name}</h3>
     </div>

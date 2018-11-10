@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/main.css';
+import '../css/main.css';
 
 const MainBody = (props) => {
   return (
@@ -25,7 +25,7 @@ const MainBody = (props) => {
 class Main extends React.Component {
   render() {
     return (
-      <div className="main">
+      <div className={this.props.isOpen ? 'main main-hidden' : 'main'}>
         <div className="main-header">
           <h3>ПЕРШЕ УКРАЇНСЬКЕ «ІДЕАЛЬ НЕМОЛОКО»</h3>
         </div>
