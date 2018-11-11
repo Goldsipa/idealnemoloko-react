@@ -16,8 +16,6 @@ class MainPage extends React.Component{
 
     this.state = {
       index: 0,
-      swiper: null,
-
       isOpen: false
     }
 
@@ -26,37 +24,52 @@ class MainPage extends React.Component{
   }
 
   productClick() {
-    console.log('prod');
-    this.state.swiper.pagination.clickable = false;
-    this.state.swiper.mousewheel.disable();
-    this.state.swiper.detachEvents();
+    this.swiper.pagination.clickable = false;
+    console.log(this.swiper.pagination.update);
+    this.swiper.mousewheel.disable();
+    this.swiper.autoplay.stop();
+    this.swiper.detachEvents();
     this.setState({
-      index: this.state.swiper.realIndex,
+      index: this.swiper.realIndex,
       isOpen: true
     });
   }
 
   logoClick() {
-    console.log('logo');
-    this.state.swiper.pagination.clickable = true;
-    this.state.swiper.mousewheel.enable();
-    this.state.swiper.attachEvents();
+    this.swiper.pagination.clickable = true;
+    console.log(this.swiper.pagination);
+    this.swiper.mousewheel.enable();
+    this.swiper.autoplay.start();
+    this.swiper.attachEvents();
     this.setState({
-      index: this.state.swiper.realIndex,
+      index: this.swiper.realIndex,
       isOpen: false
     });
   }
 
   componentDidMount() {
-    this.state.swiper = new Swiper('.swiper-container', {
+    this.swiper = new Swiper('.swiper-container', {
       direction: 'vertical',
+      speed: 640,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       slidesPerView: 1,
+      initialSlide: this.state.index,
       mousewheel: true,
       pagination: {
         el: '.swiper-pagination',
-        clickable: true,
+        type: 'bullets',
+        clickable: true
       },
     });
+    if(this.state.isOpen){
+      this.swiper.pagination.clickable = false;
+      console.log(this.swiper.pagination);
+      this.swiper.mousewheel.disable();
+      this.swiper.detachEvents();
+    }
   }
 
   render() {
@@ -71,7 +84,7 @@ class MainPage extends React.Component{
         <Curtain isOpen={this.state.isOpen} />
         <Main isOpen={this.state.isOpen} />
         <ProductInfo 
-          product={this.state.swiper ? products[this.state.index] : products[0]}
+          product={this.state.index ? products[this.state.index] : products[0]}
           isOpen={this.state.isOpen}
         />
       </div>

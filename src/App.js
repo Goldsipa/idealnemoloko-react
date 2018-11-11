@@ -14,10 +14,10 @@ import yt_logo from './img/yt-logo.png';
 
 const Social = (props) => {
   return (
-      <div className="social" href='#'>
-        <Link to='/'><img src={fb_logo} alt='fb logo' /></Link>
-        <Link to='/'><img src={ig_logo} alt='fb logo' /></Link>
-        <Link to='/'><img src={yt_logo} alt='fb logo' /></Link>
+      <div className="social">
+        <Link to='/idealnemoloko-react/'><img src={fb_logo} alt='fb logo' /></Link>
+        <Link to='/idealnemoloko-react/'><img src={ig_logo} alt='fb logo' /></Link>
+        <Link to='/idealnemoloko-react/'><img src={yt_logo} alt='fb logo' /></Link>
       </div>
   );
 }
@@ -25,8 +25,8 @@ const Social = (props) => {
 const LeftBar = (props) => {
   return (
     <div className='left-bar'>
-      <span><Link to='/production'>ПРОДУКЦІЯ</Link></span>
-      <span><Link to='/why'>ЧОМУ ІДЕАЛЬ НЕМОЛОКО</Link></span>
+      <span><Link to='/idealnemoloko-react/production'>ПРОДУКЦІЯ</Link></span>
+      <span><Link to='/idealnemoloko-react/why'>ЧОМУ ІДЕАЛЬ НЕМОЛОКО</Link></span>
     </div>
   );
 };
@@ -53,9 +53,9 @@ class App extends Component {
       <div>
         <Header />
         <Switch>
-          <Route exact path='/' component={MainPage}/>
-          <Route exact path='/why' component={WhyPage}/>
-          <Route exact path='/production' component={ProductsPage}/>
+          <Route exact path='/idealnemoloko-react/' component={MainPage}/>
+          <Route exact path='/idealnemoloko-react/why' component={WhyPage}/>
+          <Route exact path='/idealnemoloko-react/production' component={ProductsPage}/>
           <Route component={NotFound} />
         </Switch>
       </div>

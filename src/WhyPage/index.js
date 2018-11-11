@@ -51,7 +51,7 @@ class WhyPage extends React.Component {
   render() {
     return (
       <div className="why-page">
-        <Link to='/'><img className="logo" src={logoSrc} alt='idealnemoloko logo' /></Link>
+        <Link to='/idealnemoloko-react/'><img className="logo" src={logoSrc} alt='idealnemoloko logo' /></Link>
         <WhySwiper />
       </div>
     );

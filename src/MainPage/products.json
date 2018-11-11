@@ -18,7 +18,9 @@
     "cal": "52,5 ккал",
     "protein": "1,0г",
     "carbs": "6,5г",
-    "cholest": "0"
+    "cholest": "0",
+    "bg_inner": "#ffe5ab",
+    "bg_outer": "#ffd889"
   },
   {
     "classN": "slide-grechane",
@@ -40,6 +42,8 @@
     "cal": "52,5 ккал",
     "protein": "1,0г",
     "carbs": "6,5г",
-    "cholest": "0"
+    "cholest": "0",
+    "bg_inner": "#eaccb8",
+    "bg_outer": "#deb297"
   }
 ]

@@ -30,7 +30,7 @@ class ProductsPage extends React.Component {
   render() {
     return (
       <div style={{height: '100%'}}>
-        <Link to='/'><img className="logo" src={logoSrc} alt='idealnemoloko logo' /></Link>
+        <Link to='/idealnemoloko-react/'><img className="logo" src={logoSrc} alt='idealnemoloko logo' /></Link>
         <div style={stubDivStyle}>
           <h3 style={messageStyle}>Сторінка у розробці</h3>
         </div>

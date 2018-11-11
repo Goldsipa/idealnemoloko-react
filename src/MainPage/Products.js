@@ -4,8 +4,12 @@ import '../css/my-swiper.css';
 import vivsyane from '../img/vivsyane.png';
 import grechane from '../img/grechane.png';
 
+import oves from '../img/oves.png';
+import grechka from '../img/grechka.png';
+
 import products from './products.json';
 const images = [vivsyane, grechane];
+const imagesDesc = [oves, grechka];
 
 const SwiperSlideRight = (props) => {
   return (
@@ -20,18 +24,22 @@ const SwiperSlideRight = (props) => {
         className={ "swiper-slide-right-img" + (props.isOpen ? " swiper-slide-right-img-hidden" : "")}
         onClick={props.isOpen ? undefined : props.click}
       >
-        <img src={props.src}  alt={props.text}/>
+        <img src={images[props.index]}  alt={props.text}/>
       </div>
     </div>
   );
 }
 
 const SwiperSlide = (props) => {
+  let bgImg = {backgroundImage: "radial-gradient(circle, " + props.product.bg_inner + ", " + props.product.bg_inner + ", " + props.product.bg_outer + ", " + props.product.bg_outer + ")"}
   return (
-    <div className={"swiper-slide " + props.product.classN} >
+    <div className={"swiper-slide"} style={{backgroundColor: props.product.bg_outer}}>
+      <div className="swiper-slide-left" style={bgImg}>
+        <img src={imagesDesc[props.index]} alt={'small_' + props.index} />
+      </div>
       <SwiperSlideRight 
         text={props.text}
-        src={props.src}
+        index={props.index}
         product={props.product}
         click={props.click}
         isOpen={props.isOpen}
@@ -49,7 +57,7 @@ class Products extends React.Component {
             (product,index) => (
               <SwiperSlide
                 key={ 'product' + index }
-                src={images[index]}
+                index={index}
                 product={product} 
                 click={this.props.click}
                 isOpen={this.props.isOpen}
@@ -58,7 +66,7 @@ class Products extends React.Component {
           )}
         </div>
         <div 
-          className={ this.props.isOpen ? 'swiper-pagination swiper-pagination-clickable swiper-pagination-bullets bullets-hidden' : 'swiper-pagination swiper-pagination-clickable swiper-pagination-bullets' }>
+          className={ this.props.isOpen ? 'swiper-pagination swiper-pagination-bullets bullets-hidden' : 'swiper-pagination swiper-pagination-clickable swiper-pagination-bullets' }>
         </div>
         
       </div>

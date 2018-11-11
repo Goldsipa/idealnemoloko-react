@@ -3,6 +3,24 @@
   z-index: 0;
 }
 
+.swiper-slide-left {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.swiper-slide-left > img {
+  position: absolute;
+  bottom: 5vh;
+  right: 55vw;
+  height: 25vh;
+  width: 25vh;
+  z-index: 1;
+}
+
 .swiper-slide-right {
   position: absolute;
   right: 0;
@@ -43,10 +61,12 @@
   transform: translateX(50%);
 }
 
-.slide-vivsyane {
+/* .slide-vivsyane {
   background-color: #ffd889;
+  background-color: #ffe5ab;
 }
 
 .slide-grechane {
   background-color: #deb297;
-}
+  background-color: #eaccb8;
+} */
