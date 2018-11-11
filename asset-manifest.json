@@ -1,12 +1,12 @@
 {
-  "main.css": "/idealnemoloko-react/static/css/main.aa2a9f2f.chunk.css",
-  "main.js": "/idealnemoloko-react/static/js/main.6274eaf1.chunk.js",
-  "main.js.map": "/idealnemoloko-react/static/js/main.6274eaf1.chunk.js.map",
+  "main.css": "/idealnemoloko-react/static/css/main.4430579f.chunk.css",
+  "main.js": "/idealnemoloko-react/static/js/main.df6b87b7.chunk.js",
+  "main.js.map": "/idealnemoloko-react/static/js/main.df6b87b7.chunk.js.map",
   "static/js/1.23df92a7.chunk.js": "/idealnemoloko-react/static/js/1.23df92a7.chunk.js",
   "static/js/1.23df92a7.chunk.js.map": "/idealnemoloko-react/static/js/1.23df92a7.chunk.js.map",
   "runtime~main.js": "/idealnemoloko-react/static/js/runtime~main.b86a6ed1.js",
   "runtime~main.js.map": "/idealnemoloko-react/static/js/runtime~main.b86a6ed1.js.map",
-  "static/media/index.css": "/idealnemoloko-react/static/media/Proxima-Nova-Regular.410504d4.otf",
+  "static/media/index.css": "/idealnemoloko-react/static/media/Proxima-Nova-Bold.62d4d7d3.otf",
   "static/media/logo.png": "/idealnemoloko-react/static/media/logo.15954e12.png",
   "static/media/grechane.png": "/idealnemoloko-react/static/media/grechane.57b8b438.png",
   "static/media/oves.png": "/idealnemoloko-react/static/media/oves.4d8a32a0.png",
@@ -20,8 +20,8 @@
   "static/media/splash-left.png": "/idealnemoloko-react/static/media/splash-left.d25055eb.png",
   "static/media/splash-right.png": "/idealnemoloko-react/static/media/splash-right.d15eddc3.png",
   "static/media/vivsyane.png": "/idealnemoloko-react/static/media/vivsyane.3f58d971.png",
-  "static/css/main.aa2a9f2f.chunk.css.map": "/idealnemoloko-react/static/css/main.aa2a9f2f.chunk.css.map",
+  "static/css/main.4430579f.chunk.css.map": "/idealnemoloko-react/static/css/main.4430579f.chunk.css.map",
   "index.html": "/idealnemoloko-react/index.html",
-  "precache-manifest.d093b31563565ed693a5f99afb9cb7c6.js": "/idealnemoloko-react/precache-manifest.d093b31563565ed693a5f99afb9cb7c6.js",
+  "precache-manifest.4dc72adad4c3dce563cdf546b8c020a3.js": "/idealnemoloko-react/precache-manifest.4dc72adad4c3dce563cdf546b8c020a3.js",
   "service-worker.js": "/idealnemoloko-react/service-worker.js"
 }
