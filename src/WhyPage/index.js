@@ -13,10 +13,10 @@ import logoSrc from '../img/logo.png';
 const WhySwiper = (props) => (
   <div className="why-swiper-container">
     <div className="swiper-wrapper">
-      <WhySlide />
-      <WhySlide1 />
-      <WhySlide2 />
-      <WhySlide3 />
+      <WhySlide index={props.index} />
+      <WhySlide1 index={props.index} />
+      <WhySlide2 index={props.index} />
+      <WhySlide3 index={props.index} />
     </div>
     <div className='swiper-pagination'>
     </div>
@@ -28,33 +28,39 @@ class WhyPage extends React.Component {
     super(props);
 
     this.state = {
-      swiper: null,
+      index: undefined
     }
+    this.kek = this.kek.bind(this);
+  }
+
+  kek() {
+    this.setState({index: this.swiper.realIndex});
   }
 
   componentDidMount() {
-    this.setState(
-      {
-        swiper: new Swiper('.why-swiper-container', {
-          direction: 'vertical',
-          slidesPerView: 1,
-          mousewheel: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        })
+    this.swiper = new Swiper('.why-swiper-container', {
+      direction: 'vertical',
+      speed: 1000,
+      slidesPerView: 1,
+      mousewheel: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      on: {
+        transitionEnd: this.kek
       }
-    );
+    });
+    setTimeout(this.kek, 100);
   }
 
   render() {
     return (
       <div className="why-page">
-        <Link to='/idealnemoloko-react/'><img className="logo" src={logoSrc} alt='idealnemoloko logo' /></Link>
-        <WhySwiper />
+        <Link to='/idealnemoloko-react/'><img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' /></Link>
+        <WhySwiper index={this.state.index} />
       </div>
-    );
+    ); 
   }
 }
 

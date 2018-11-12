@@ -10,22 +10,32 @@ import logoSrc from '../img/logo.png';
 
 import products from './products.json';
 
+const Loader = (props) => (
+  <div className={ props.isLoading ? "loader" : "loader loader-hidden" }></div>
+);
+
+const LoaderImg = (props) => (
+  <img src={logoSrc} className={ props.isLoading ? "loader-img" : "loader-img loader-img-hidden" } alt='logo'></img>
+);
+
 class MainPage extends React.Component{
   constructor(props) {
     super(props);
 
     this.state = {
       index: 0,
-      isOpen: false
+      isOpen: false,
+      isLoading: true
     }
 
     this.productClick = this.productClick.bind(this);
-    this.logoClick = this.logoClick.bind(this);
+    this.backClick = this.backClick.bind(this);
+    this.hasLoaded = this.hasLoaded.bind(this);
+    this.swiperStart = this.swiperStart.bind(this);
   }
 
   productClick() {
     this.swiper.pagination.clickable = false;
-    console.log(this.swiper.pagination.update);
     this.swiper.mousewheel.disable();
     this.swiper.autoplay.stop();
     this.swiper.detachEvents();
@@ -35,9 +45,8 @@ class MainPage extends React.Component{
     });
   }
 
-  logoClick() {
+  backClick() {
     this.swiper.pagination.clickable = true;
-    console.log(this.swiper.pagination);
     this.swiper.mousewheel.enable();
     this.swiper.autoplay.start();
     this.swiper.attachEvents();
@@ -47,12 +56,21 @@ class MainPage extends React.Component{
     });
   }
 
+  hasLoaded() {
+    this.setState({isLoading: false})
+  }
+
+  swiperStart() {
+    this.swiper.autoplay.start();
+  }
+
   componentDidMount() {
     this.swiper = new Swiper('.swiper-container', {
       direction: 'vertical',
-      speed: 640,
+      preventInteractionOnTransition: true,
+      speed: 1000,
       autoplay: {
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false,
       },
       slidesPerView: 1,
@@ -66,18 +84,23 @@ class MainPage extends React.Component{
     });
     if(this.state.isOpen){
       this.swiper.pagination.clickable = false;
-      console.log(this.swiper.pagination);
       this.swiper.mousewheel.disable();
       this.swiper.detachEvents();
     }
+    this.swiper.autoplay.stop();
+    setTimeout(this.hasLoaded, 1500);
+    setTimeout(this.swiperStart, 3000);
   }
 
   render() {
     return (
       <div className='main-page'>
+        <Loader isLoading={this.state.isLoading} />
+        <LoaderImg isLoading={this.state.isLoading} />
+
         <img 
-          className={this.state.isOpen ? 'logo logo-hidden' : 'logo'} 
-          onClick={this.state.isOpen ? this.logoClick : undefined}
+          className={this.state.isLoading ? 'logo' : 'logo logo-hidden'} 
+          // onClick={this.state.isOpen ? this.logoClick : undefined}
           src={logoSrc} alt='idealnemoloko logo' 
         />
         <Products isOpen={this.state.isOpen} click={this.productClick}/>
@@ -86,6 +109,7 @@ class MainPage extends React.Component{
         <ProductInfo 
           product={this.state.index ? products[this.state.index] : products[0]}
           isOpen={this.state.isOpen}
+          backClick={this.backClick}
         />
       </div>
     );

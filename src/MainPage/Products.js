@@ -31,9 +31,9 @@ const SwiperSlideRight = (props) => {
 }
 
 const SwiperSlide = (props) => {
-  let bgImg = {backgroundImage: "radial-gradient(circle, " + props.product.bg_inner + ", " + props.product.bg_inner + ", " + props.product.bg_outer + ", " + props.product.bg_outer + ")"}
+  let bgImg = {backgroundImage: "radial-gradient(circle, " + props.product.inner_gradient_color + ", " + props.product.inner_gradient_color + ", " + props.product.outer_gradient_color + ", " + props.product.outer_gradient_color + ")"}
   return (
-    <div className={"swiper-slide"} style={{backgroundColor: props.product.bg_outer}}>
+    <div className={"swiper-slide"} style={{backgroundColor: props.product.outer_gradient_color}}>
       <div className="swiper-slide-left" style={bgImg}>
         <img src={imagesDesc[props.index]} alt={'small_' + props.index} />
       </div>

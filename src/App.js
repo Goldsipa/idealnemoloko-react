@@ -37,6 +37,9 @@ const Header = (props) => (
     <img className='splash-right' src={splashRight} alt='milk splash'/>
     <LeftBar />
     <Social />
+    <span className="lang" onClick={props.lang === 'ua' ? props.setLangRu : props.setLangUa}>
+      {props.lang === 'ua' ? 'RU' : 'UA'}
+    </span>
   </div>
 );
 
@@ -47,11 +50,29 @@ const NotFound = (props) => (
 ); 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      lang: 'ru'
+    }
+
+    this.setLangRu = this.setLangRu.bind(this);
+    this.setLangUa = this.setLangUa.bind(this);
+  }
+
+  setLangRu() {
+    this.setState({lang: 'ru'});
+  }
+
+  setLangUa() {
+    this.setState({lang: 'ua'});
+  }
 
   render() {
     return (
       <div>
-        <Header />
+        <Header lang={this.state.lang} setLangRu={this.setLangRu} setLangUa={this.setLangUa}/>
         <Switch>
           <Route exact path='/idealnemoloko-react/' component={MainPage}/>
           <Route exact path='/idealnemoloko-react/why' component={WhyPage}/>

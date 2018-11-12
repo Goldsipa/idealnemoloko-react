@@ -15,6 +15,19 @@
   transition-delay: 1s;
 }
 
+.info-back {
+  position: absolute;
+  height: 100vh;
+  width: 10vw;
+  margin-left: -11vw;
+  margin-top: -24vh;
+  background-image: linear-gradient(to right, #00000033, #3b3b3b33, #ffffff00);
+  opacity: 0.5;
+}
+.info-back:hover {
+  opacity: 0.75;
+}
+
 .info-header > * {
   margin: 0;
 
@@ -44,6 +57,7 @@
   margin-bottom: 0;
   font-size: 1.4vh;
   line-height: 2.3vh;
+  color: #00632f;
 }
 .info-body-list-title {
   margin: 0;

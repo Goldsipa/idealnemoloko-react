@@ -3,22 +3,23 @@ import '../css/product-info.css';
 
 const ProcuctInfo = (props) =>(
   <div className={props.isOpen ? 'info info-hidden' : 'info'}>
+    <div className="info-back" onClick={ props.isOpen ? props.backClick : undefined }></div>
     <div className='info-header'>
-      <h3>{props.product.name}</h3>
+      <h3>ІДЕАЛЬ НЕМОЛОКО</h3>
     </div>
     <div className='info-body'>
-      <h4 className='info-body-title'>{props.product.title}</h4>
-      <h5 className='info-body-subtitle'>{props.product.subtitle}</h5>
+      <h4 className='info-body-title' style={{color: props.product.title_subtitle_color}}>{props.product.title}</h4>
+      <h5 className='info-body-subtitle' style={{color: props.product.title_subtitle_color}}>{props.product.subtitle}</h5>
       <p className='info-body-description'>
-        {props.product.description}
+        {props.product.content}
       </p>
-      <h6 className='info-body-list-title'>{props.product.list_title}</h6>
+      <h6 className='info-body-list-title'>{props.product.list_heading}</h6>
       <ul className='info-body-list'>
-        {props.product.list.map(
+        {props.product.about_list.map(
           (li, index) => <li key={ props.product.title + index }><span>{li}</span></li>
         )}
       </ul>
-      <p className='info-body-finally'>{props.product.finally}</p>
+      <p className='info-body-finally'>{props.product.silly_comment}</p>
     </div>
     <div className="info-footer">
       <h4 className='info-footer-table-title'>Поживна цінність продукту</h4>
@@ -38,10 +39,10 @@ const ProcuctInfo = (props) =>(
           <div>Холестерин</div>
         </div>
         <div className='info-footer-table-col'>
-          <div>{props.product.cal}</div>
-          <div>{props.product.protein}</div>
-          <div>{props.product.carbs}</div>
-          <div>{props.product.cholest}</div>
+          <div>{props.product.calories}</div>
+          <div>{props.product.proteins}</div>
+          <div>{props.product.carbohydrates}</div>
+          <div>{props.product.cholesterol}</div>
         </div>
       </div>
     </div>

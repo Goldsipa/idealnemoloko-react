@@ -6,7 +6,7 @@
 .swiper-container-vertical > .bullets-hidden {
   right: -6vw;
   transition: right 1s ease;
-  transition-delay: 0.5s;
+  /* transition-delay: 0.5s; */
 }
 .swiper-pagination-bullet {
   height: 2vh;
