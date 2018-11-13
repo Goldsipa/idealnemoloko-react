@@ -13,10 +13,10 @@ import logoSrc from '../img/logo.png';
 const WhySwiper = (props) => (
   <div className="why-swiper-container">
     <div className="swiper-wrapper">
-      <WhySlide index={props.index} />
-      <WhySlide1 index={props.index} />
-      <WhySlide2 index={props.index} />
-      <WhySlide3 index={props.index} />
+      <WhySlide index={props.index} lang={props.lang} />
+      <WhySlide1 index={props.index} lang={props.lang} />
+      <WhySlide2 index={props.index} lang={props.lang} />
+      <WhySlide3 index={props.index} lang={props.lang} />
     </div>
     <div className='swiper-pagination'>
     </div>
@@ -57,8 +57,10 @@ class WhyPage extends React.Component {
   render() {
     return (
       <div className="why-page">
-        <Link to='/idealnemoloko-react/'><img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' /></Link>
-        <WhySwiper index={this.state.index} />
+        <Link to='/idealnemoloko-react/'>
+          <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
+        </Link>
+        <WhySwiper index={this.state.index} lang={this.props.lang} />
       </div>
     ); 
   }

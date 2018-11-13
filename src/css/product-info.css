@@ -41,6 +41,7 @@
 .info-body {
   margin-top: 4vh;
   font-family: Proxima-Nova-Semibold;
+  color: #00632f;
 }
 .info-body-title{
   margin: 0;
@@ -57,7 +58,6 @@
   margin-bottom: 0;
   font-size: 1.4vh;
   line-height: 2.3vh;
-  color: #00632f;
 }
 .info-body-list-title {
   margin: 0;
@@ -85,6 +85,7 @@
 
 .info-footer {
   margin-top: 2vh;
+  color: #75321f;
 }
 .info-footer-table-title {
   margin-top: 0;
@@ -97,13 +98,13 @@
 }
 
 .info-footer-table-head {
-  width: 30vh;
+  width: 32vh;
   margin-bottom: 0.5vh;
   font-family: Proxima-Nova-Semibold;
   background: #ffffff77;
 }
 .info-footer-table-body {
-  width: 30vh;
+  width: 32vh;
   font-family: Proxima-Nova-Semibold;
   background: #ffffff77;
 }

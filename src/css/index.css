@@ -46,11 +46,12 @@ body {
 .left-bar {
   position: absolute;
   top: 5vh;
-  right: 13vw;
+  right: 9.75vw;
+  /* was 13vw */
   z-index: 2;
 
-  font-family: Proxima-Nova-Semibold;
-  font-size: 1.7vh;
+  font-family: Proxima-Nova-Bold;
+  font-size: 1.8vh;
 }
 .left-bar > span {
   margin-right: 1.5vw;
@@ -86,8 +87,8 @@ body {
   right: 2vw;
   z-index: 2;
 
-  font-family: Proxima-Nova-Semibold;
-  font-size: 1.7vh;
+  font-family: Proxima-Nova-Bold;
+  font-size: 1.8vh;
   color: #ffffff;
   cursor: pointer;
 }
@@ -124,7 +125,7 @@ body {
   position: fixed;
   height: 100%;
   width: 100%;
-  background: rgb(255, 216, 137);
+  background: #bcffd0;
   opacity: 1;
   z-index: 17;
 }
@@ -165,4 +166,8 @@ body {
   0%   {top: 50%; left: 50%; margin-left: 0; height: 28vh;transform: translate(-50%, -50%);}
   99.9%   {top: 5vh; left: 11vw; margin-left: -3vh; height: 14vh;transform: none;}
   100%   {top: 5vh; left: 11vw; margin-left: -3vh; height: 0;transform: none;}
+}
+
+.on-images-loaded, .on-images-loaded > div, .on-images-loaded > div > div {
+  height: 100%;
 }

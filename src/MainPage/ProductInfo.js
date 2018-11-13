@@ -4,12 +4,18 @@ import '../css/product-info.css';
 const ProcuctInfo = (props) =>(
   <div className={props.isOpen ? 'info info-hidden' : 'info'}>
     <div className="info-back" onClick={ props.isOpen ? props.backClick : undefined }></div>
+
     <div className='info-header'>
       <h3>ІДЕАЛЬ НЕМОЛОКО</h3>
     </div>
+
     <div className='info-body'>
-      <h4 className='info-body-title' style={{color: props.product.title_subtitle_color}}>{props.product.title}</h4>
-      <h5 className='info-body-subtitle' style={{color: props.product.title_subtitle_color}}>{props.product.subtitle}</h5>
+      <h4 className='info-body-title' style={{color: props.product.title_subtitle_color}}>
+        {props.product.title}
+      </h4>
+      <h5 className='info-body-subtitle' style={{color: props.product.title_subtitle_color}}>
+        {props.product.subtitle}
+      </h5>
       <p className='info-body-description'>
         {props.product.content}
       </p>
@@ -21,11 +27,16 @@ const ProcuctInfo = (props) =>(
       </ul>
       <p className='info-body-finally'>{props.product.silly_comment}</p>
     </div>
+
     <div className="info-footer">
-      <h4 className='info-footer-table-title'>Поживна цінність продукту</h4>
+      <h4 className='info-footer-table-title'>
+        { props.lang === 'ua' ? 'Поживна цінність продукту' : 'Питательная ценность продукта'}
+      </h4>
       <div className='info-footer-table-head'>
         <div className='info-footer-table-col'>
-          <h6>Показник на 100г</h6>
+          <h6>
+            { props.lang === 'ua' ? 'Показник на 100г' : 'Показатель на 100г'}
+          </h6>
         </div>
         <div className='info-footer-table-col'>
           <h6>Ідеаль Немолоко 2,5%</h6>
@@ -33,9 +44,9 @@ const ProcuctInfo = (props) =>(
       </div>
       <div className='info-footer-table-body'>
         <div className='info-footer-table-col'>
-          <div>Калорійність</div>
-          <div>Білок</div>
-          <div>Вуглеводи</div>
+          <div>{ props.lang === 'ua' ? 'Калорійність' : 'Калорийность'}</div>
+          <div>{ props.lang === 'ua' ? 'Білок' : 'Белки'}</div>
+          <div>{ props.lang === 'ua' ? 'Вуглеводи' : 'Углеводы'}</div>
           <div>Холестерин</div>
         </div>
         <div className='info-footer-table-col'>
@@ -46,6 +57,7 @@ const ProcuctInfo = (props) =>(
         </div>
       </div>
     </div>
+    
   </div>
 );
 

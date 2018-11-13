@@ -10,6 +10,8 @@ import logoSrc from '../img/logo.png';
 
 import products from './products.json';
 
+const API = 'http://104.248.138.81:8000/api/';
+
 const Loader = (props) => (
   <div className={ props.isLoading ? "loader" : "loader loader-hidden" }></div>
 );
@@ -25,7 +27,8 @@ class MainPage extends React.Component{
     this.state = {
       index: 0,
       isOpen: false,
-      isLoading: true
+      isLoading: true,
+      products: undefined
     }
 
     this.productClick = this.productClick.bind(this);
@@ -58,6 +61,7 @@ class MainPage extends React.Component{
 
   hasLoaded() {
     this.setState({isLoading: false})
+    setTimeout(this.swiperStart, 1500);
   }
 
   swiperStart() {
@@ -65,6 +69,10 @@ class MainPage extends React.Component{
   }
 
   componentDidMount() {
+    fetch(API)
+      .then( response => response.json() )
+      .then( data => this.setState({products: data}));
+
     this.swiper = new Swiper('.swiper-container', {
       direction: 'vertical',
       preventInteractionOnTransition: true,
@@ -88,13 +96,11 @@ class MainPage extends React.Component{
       this.swiper.detachEvents();
     }
     this.swiper.autoplay.stop();
-    setTimeout(this.hasLoaded, 1500);
-    setTimeout(this.swiperStart, 3000);
   }
 
   render() {
     return (
-      <div className='main-page'>
+      <div id="main-page" className='main-page'>
         <Loader isLoading={this.state.isLoading} />
         <LoaderImg isLoading={this.state.isLoading} />
 
@@ -103,13 +109,19 @@ class MainPage extends React.Component{
           // onClick={this.state.isOpen ? this.logoClick : undefined}
           src={logoSrc} alt='idealnemoloko logo' 
         />
-        <Products isOpen={this.state.isOpen} click={this.productClick}/>
+        <Products
+          isOpen={this.state.isOpen}
+          click={this.productClick}
+          products={ this.state.products ? this.props.lang === 'ua' ? this.state.products.ua : this.state.products.ru : products }
+          hasLoaded={this.hasLoaded}
+        />
         <Curtain isOpen={this.state.isOpen} />
-        <Main isOpen={this.state.isOpen} />
+        <Main isOpen={this.state.isOpen} lang={this.props.lang} />
         <ProductInfo 
-          product={this.state.index ? products[this.state.index] : products[0]}
+          product={this.state.products ? this.props.lang === 'ua' ? this.state.products.ua[this.state.index] : this.state.products.ru[this.state.index] : products[0] }
           isOpen={this.state.isOpen}
           backClick={this.backClick}
+          lang={this.props.lang}
         />
       </div>
     );

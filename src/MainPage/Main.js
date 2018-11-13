@@ -1,35 +1,13 @@
 import React from 'react';
 import '../css/main.css';
-
-const MainBody = (props) => {
-  return (
-    <div className="main-body">
-      Рослини не тільки лікують, а й добре смакують. За ними <br/>
-      майбутнє! Недарма ж увесь світ наслідує принципи здорового<br/>
-      харчування, щоб бути у гармонії із собою та планетою.<br/>
-      Але ми пропонуємо не ще один салат, свіжі овочі або фруктові<br/>
-      соки. В «Ідеаль молоко» є те, що змінить твоє уявлення про<br/>
-      молоко. Бо це НЕмолоко.
-      <br/><br/>
-      Компанія Люстдорф першою підхопила світову тенденцію і<br/>
-      створила давно очікуваний 100% український, натуральний<br/>
-      рослинний напій.<br/>
-      Це смачно, доступно і з турботою про здоров'я країни.<br/>
-      Немолоко змінить твоє уявлення про здорове харчування,<br/>
-      бо захочеться ще і ще!<br/>
-      Насолоджуйся!
-    </div>
-  );
-}
+import { MainBodyUA, MainHeaderUA, MainBodyRU, MainHeaderRU } from '../Locales';
 
 class Main extends React.Component {
   render() {
     return (
       <div className={this.props.isOpen ? 'main main-hidden' : 'main'}>
-        <div className="main-header">
-          <h3>ПЕРШЕ УКРАЇНСЬКЕ «ІДЕАЛЬ НЕМОЛОКО»</h3>
-        </div>
-        <MainBody />
+        {this.props.lang === 'ua' ? <MainHeaderUA /> : <MainHeaderRU />}
+        {this.props.lang === 'ua' ? <MainBodyUA /> : <MainBodyRU />}
       </div>
     );
   }

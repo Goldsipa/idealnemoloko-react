@@ -1,15 +1,8 @@
 import React from 'react';
 import '../css/products.css';
 import '../css/my-swiper.css';
-import vivsyane from '../img/vivsyane.png';
-import grechane from '../img/grechane.png';
 
-import oves from '../img/oves.png';
-import grechka from '../img/grechka.png';
-
-import products from './products.json';
-const images = [vivsyane, grechane];
-const imagesDesc = [oves, grechka];
+const IMG_URL = 'https://res.cloudinary.com/syplemstudio/';
 
 const SwiperSlideRight = (props) => {
   return (
@@ -24,10 +17,47 @@ const SwiperSlideRight = (props) => {
         className={ "swiper-slide-right-img" + (props.isOpen ? " swiper-slide-right-img-hidden" : "")}
         onClick={props.isOpen ? undefined : props.click}
       >
-        <img src={images[props.index]}  alt={props.text}/>
+        <HandleImg
+          src={ IMG_URL + props.product.image }
+          alt={'small_' + props.index}
+          hasLoaded={props.hasLoaded}
+        />
       </div>
     </div>
   );
+}
+
+class HandleImg extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.handleImageChange = this.handleImageChange.bind(this);
+  }
+
+  handleImageChange(e) {
+    const parentNode = document.getElementById('products');
+    const imgElements = parentNode.querySelectorAll("img");
+
+    function isComplete(nList) {
+      for (let i = 0; i < nList.length; i++) {
+        if(!nList[i].complete) return false;
+      }
+      return true;
+    }
+
+    const verdict = isComplete(imgElements);
+    if(verdict) this.props.hasLoaded();
+  }
+
+  render() {
+    return (
+      <img
+        src={ this.props.src }
+        alt={ this.props.alt }
+        onLoad={this.handleImageChange}
+      />
+    );
+  }
 }
 
 const SwiperSlide = (props) => {
@@ -35,14 +65,18 @@ const SwiperSlide = (props) => {
   return (
     <div className={"swiper-slide"} style={{backgroundColor: props.product.outer_gradient_color}}>
       <div className="swiper-slide-left" style={bgImg}>
-        <img src={imagesDesc[props.index]} alt={'small_' + props.index} />
+        <HandleImg
+          src={ IMG_URL + props.product.cereal_image }
+          alt={'small_' + props.index}
+          hasLoaded={props.hasLoaded}
+        />
       </div>
       <SwiperSlideRight 
-        text={props.text}
         index={props.index}
         product={props.product}
         click={props.click}
         isOpen={props.isOpen}
+        hasLoaded={props.hasLoaded}
       />
     </div>
   );
@@ -51,9 +85,9 @@ const SwiperSlide = (props) => {
 class Products extends React.Component {
   render() {
     return (
-      <div className="swiper-container">
+      <div id='products' className="swiper-container">
         <div className="swiper-wrapper">
-          {products.map(
+          {this.props.products.map(
             (product,index) => (
               <SwiperSlide
                 key={ 'product' + index }
@@ -61,6 +95,7 @@ class Products extends React.Component {
                 product={product} 
                 click={this.props.click}
                 isOpen={this.props.isOpen}
+                hasLoaded={this.props.hasLoaded}
               />
             )
           )}
