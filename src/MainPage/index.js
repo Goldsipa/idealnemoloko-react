@@ -9,6 +9,7 @@ import Main from './Main';
 import logoSrc from '../img/logo.png';
 
 import products from './products.json';
+import productsBackup from './products-backup.json';
 
 const API = 'http://104.248.138.81:8000/api/';
 
@@ -60,8 +61,11 @@ class MainPage extends React.Component{
   }
 
   hasLoaded() {
-    this.setState({isLoading: false})
-    setTimeout(this.swiperStart, 1500);
+    if(this.state.isLoading === true) {
+      this.setState({isLoading: false})
+      setTimeout(this.swiperStart, 1500);
+      console.log('lalka');
+    }
   }
 
   swiperStart() {
@@ -71,7 +75,11 @@ class MainPage extends React.Component{
   componentDidMount() {
     fetch(API)
       .then( response => response.json() )
-      .then( data => this.setState({products: data}));
+      .then( data => this.setState({products: data}))
+      .catch((err) => {  
+        console.log('Fetch Error :-S', err);  
+        this.setState({products: productsBackup});
+      });
 
     this.swiper = new Swiper('.swiper-container', {
       direction: 'vertical',
@@ -90,11 +98,12 @@ class MainPage extends React.Component{
         clickable: true
       },
     });
-    if(this.state.isOpen){
-      this.swiper.pagination.clickable = false;
-      this.swiper.mousewheel.disable();
-      this.swiper.detachEvents();
-    }
+    console.log('kek');
+    // if(this.state.isOpen){
+    //   this.swiper.pagination.clickable = false;
+    //   this.swiper.mousewheel.disable();
+    //   this.swiper.detachEvents();
+    // }
     this.swiper.autoplay.stop();
   }
 
@@ -112,6 +121,7 @@ class MainPage extends React.Component{
         <Products
           isOpen={this.state.isOpen}
           click={this.productClick}
+          backClick={this.backClick}
           products={ this.state.products ? this.props.lang === 'ua' ? this.state.products.ua : this.state.products.ru : products }
           hasLoaded={this.hasLoaded}
         />
