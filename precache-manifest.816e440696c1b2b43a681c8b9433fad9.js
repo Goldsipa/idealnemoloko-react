@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/leaves.7a1dfe52.png"
   },
   {
-    "revision": "ffad89f295dac2bf96cd",
-    "url": "/idealnemoloko-react/static/css/main.b55649c3.chunk.css"
+    "revision": "32ee16d92f605216f98c",
+    "url": "/idealnemoloko-react/static/css/main.e3728d0f.chunk.css"
   },
   {
-    "revision": "7b3b0112988aea0de1df",
-    "url": "/idealnemoloko-react/static/js/1.7b3b0112.chunk.js"
+    "revision": "af2874df3a797e7b8d71",
+    "url": "/idealnemoloko-react/static/js/1.af2874df.chunk.js"
   },
   {
     "revision": "b86a6ed1e15bb0a44792",
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/splash-right.d15eddc3.png"
   },
   {
-    "revision": "ffad89f295dac2bf96cd",
-    "url": "/idealnemoloko-react/static/js/main.ffad89f2.chunk.js"
+    "revision": "32ee16d92f605216f98c",
+    "url": "/idealnemoloko-react/static/js/main.32ee16d9.chunk.js"
   },
   {
     "revision": "4dbe32558ee6a570c45dd1eceed3910f",
@@ -56,15 +56,15 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/Proxima-Nova-Regular.410504d4.otf"
   },
   {
-    "revision": "8a1b91a8e5ef27b6c7ac813ef2235dd8",
-    "url": "/idealnemoloko-react/static/media/LEngineer-Regular.8a1b91a8.otf"
-  },
-  {
     "revision": "62d4d7d369292a9bf23762465ec6d704",
     "url": "/idealnemoloko-react/static/media/Proxima-Nova-Bold.62d4d7d3.otf"
   },
   {
-    "revision": "b75add4880df461a7b8bcb5b50486a09",
+    "revision": "8a1b91a8e5ef27b6c7ac813ef2235dd8",
+    "url": "/idealnemoloko-react/static/media/LEngineer-Regular.8a1b91a8.otf"
+  },
+  {
+    "revision": "1b7564ffca0a650efbb8243684bdcb86",
     "url": "/idealnemoloko-react/index.html"
   }
 ];
