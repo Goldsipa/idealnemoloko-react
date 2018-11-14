@@ -64,16 +64,16 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/im-bg.7b8b83f2.png"
   },
   {
-    "revision": "62d4d7d369292a9bf23762465ec6d704",
-    "url": "/idealnemoloko-react/static/media/Proxima-Nova-Bold.62d4d7d3.otf"
-  },
-  {
     "revision": "410504d49238e955ba7dc23a7f963021",
     "url": "/idealnemoloko-react/static/media/Proxima-Nova-Regular.410504d4.otf"
   },
   {
     "revision": "8a1b91a8e5ef27b6c7ac813ef2235dd8",
     "url": "/idealnemoloko-react/static/media/LEngineer-Regular.8a1b91a8.otf"
+  },
+  {
+    "revision": "62d4d7d369292a9bf23762465ec6d704",
+    "url": "/idealnemoloko-react/static/media/Proxima-Nova-Bold.62d4d7d3.otf"
   },
   {
     "revision": "31bc46e7c14ea7dcd701eaf1ff4a9a67",

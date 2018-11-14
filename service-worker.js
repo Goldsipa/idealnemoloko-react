@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/idealnemoloko-react/precache-manifest.98d9a13b0bf2240d89c4229cc477bd7b.js"
+  "/idealnemoloko-react/precache-manifest.42a8f41769494e6264c1da2f362e3ad2.js"
 );
 
 workbox.clientsClaim();
