@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/k-2.min.f8ae4ef6.png"
   },
   {
-    "revision": "8c78e75187b487028a50",
-    "url": "/idealnemoloko-react/static/css/main.473b6e9a.chunk.css"
+    "revision": "1bec1ba523023d6aecbf",
+    "url": "/idealnemoloko-react/static/css/main.5d31fcb8.chunk.css"
   },
   {
-    "revision": "31ae0870c8809d76f3bb",
-    "url": "/idealnemoloko-react/static/js/1.31ae0870.chunk.js"
+    "revision": "1aaac8844673d69a743f",
+    "url": "/idealnemoloko-react/static/js/1.1aaac884.chunk.js"
   },
   {
     "revision": "b86a6ed1e15bb0a44792",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/k-1.min.9c1273cd.png"
   },
   {
-    "revision": "8c78e75187b487028a50",
-    "url": "/idealnemoloko-react/static/js/main.8c78e751.chunk.js"
+    "revision": "1bec1ba523023d6aecbf",
+    "url": "/idealnemoloko-react/static/js/main.1bec1ba5.chunk.js"
   },
   {
     "revision": "e7fee7396d9e30498dc547338f8962e4",
@@ -64,19 +64,19 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/im-bg.7b8b83f2.png"
   },
   {
-    "revision": "410504d49238e955ba7dc23a7f963021",
-    "url": "/idealnemoloko-react/static/media/Proxima-Nova-Regular.410504d4.otf"
-  },
-  {
     "revision": "62d4d7d369292a9bf23762465ec6d704",
     "url": "/idealnemoloko-react/static/media/Proxima-Nova-Bold.62d4d7d3.otf"
+  },
+  {
+    "revision": "410504d49238e955ba7dc23a7f963021",
+    "url": "/idealnemoloko-react/static/media/Proxima-Nova-Regular.410504d4.otf"
   },
   {
     "revision": "8a1b91a8e5ef27b6c7ac813ef2235dd8",
     "url": "/idealnemoloko-react/static/media/LEngineer-Regular.8a1b91a8.otf"
   },
   {
-    "revision": "927f0936b43a8a7f58587dde0993cd3b",
+    "revision": "31bc46e7c14ea7dcd701eaf1ff4a9a67",
     "url": "/idealnemoloko-react/index.html"
   }
 ];
