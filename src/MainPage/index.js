@@ -5,13 +5,11 @@ import Products from './Products';
 import Curtain from './Curtain';
 import ProductInfo from './ProductInfo';
 import Main from './Main';
+import { Splashes } from '../Header';
 
 import logoSrc from '../img/logo.png';
 
 import products from './products.json';
-import productsBackup from './products-backup.json';
-
-const API = 'http://104.248.138.81:8000/api/';
 
 const Loader = (props) => (
   <div className={ props.isLoading ? "loader" : "loader loader-hidden" }></div>
@@ -64,7 +62,24 @@ class MainPage extends React.Component{
     if(this.state.isLoading === true) {
       this.setState({isLoading: false})
       setTimeout(this.swiperStart, 1500);
-      console.log('lalka');
+
+      this.swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        preventInteractionOnTransition: true,
+        speed: 1000,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        initialSlide: this.state.index,
+        mousewheel: true,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        },
+      });
     }
   }
 
@@ -72,39 +87,16 @@ class MainPage extends React.Component{
     this.swiper.autoplay.start();
   }
 
-  componentDidMount() {
-    fetch(API)
-      .then( response => response.json() )
-      .then( data => this.setState({products: data}))
-      .catch((err) => {  
-        console.log('Fetch Error :-S', err);  
-        this.setState({products: productsBackup});
-      });
+  kek() {
+    console.log('keeek');
+  }
 
-    this.swiper = new Swiper('.swiper-container', {
-      direction: 'vertical',
-      preventInteractionOnTransition: true,
-      speed: 1000,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      slidesPerView: 1,
-      initialSlide: this.state.index,
-      mousewheel: true,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-      },
-    });
-    console.log('kek');
+  componentDidMount() {
     // if(this.state.isOpen){
     //   this.swiper.pagination.clickable = false;
     //   this.swiper.mousewheel.disable();
     //   this.swiper.detachEvents();
     // }
-    this.swiper.autoplay.stop();
   }
 
   render() {
@@ -112,7 +104,8 @@ class MainPage extends React.Component{
       <div id="main-page" className='main-page'>
         <Loader isLoading={this.state.isLoading} />
         <LoaderImg isLoading={this.state.isLoading} />
-
+        <Splashes />
+        
         <img 
           className={this.state.isLoading ? 'logo' : 'logo logo-hidden'} 
           // onClick={this.state.isOpen ? this.logoClick : undefined}
@@ -122,13 +115,13 @@ class MainPage extends React.Component{
           isOpen={this.state.isOpen}
           click={this.productClick}
           backClick={this.backClick}
-          products={ this.state.products ? this.props.lang === 'ua' ? this.state.products.ua : this.state.products.ru : products }
+          products={ this.props.products ? this.props.products : products }
           hasLoaded={this.hasLoaded}
         />
         <Curtain isOpen={this.state.isOpen} />
         <Main isOpen={this.state.isOpen} lang={this.props.lang} />
         <ProductInfo 
-          product={this.state.products ? this.props.lang === 'ua' ? this.state.products.ua[this.state.index] : this.state.products.ru[this.state.index] : products[0] }
+          product={this.props.products ? this.props.products[this.state.index] : products[0] }
           isOpen={this.state.isOpen}
           backClick={this.backClick}
           lang={this.props.lang}

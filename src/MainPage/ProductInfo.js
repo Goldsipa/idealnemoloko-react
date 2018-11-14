@@ -11,21 +11,25 @@ const ProcuctInfo = (props) =>(
 
     <div className='info-body'>
       <h4 className='info-body-title' style={{color: props.product.title_subtitle_color}}>
-        {props.product.title}
+        { props.lang === 'ua' ? props.product.title : props.product.title_rus }
       </h4>
       <h5 className='info-body-subtitle' style={{color: props.product.title_subtitle_color}}>
-        {props.product.subtitle}
+        { props.lang === 'ua' ? props.product.subtitle : props.product.subtitle_rus }
       </h5>
       <p className='info-body-description'>
-        {props.product.content}
+        { props.lang === 'ua' ? props.product.content : props.product.content_rus }
       </p>
-      <h6 className='info-body-list-title'>{props.product.list_heading}</h6>
+      <h6 className='info-body-list-title'>
+        { props.lang === 'ua' ? props.product.list_heading : props.product.list_heading_rus }
+      </h6>
       <ul className='info-body-list'>
-        {props.product.about_list.map(
+        { props.lang === 'ua' ? props.product.about_list.map(
+          (li, index) => <li key={ props.product.title + index }><span>{li}</span></li>
+        ) : props.product.about_list_rus.map(
           (li, index) => <li key={ props.product.title + index }><span>{li}</span></li>
         )}
       </ul>
-      <p className='info-body-finally'>{props.product.silly_comment}</p>
+      <p className='info-body-finally'>{ props.lang === 'ua' ? props.product.silly_comment : props.product.silly_comment_rus}</p>
     </div>
 
     <div className="info-footer">

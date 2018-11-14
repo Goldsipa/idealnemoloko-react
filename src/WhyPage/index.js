@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Swiper from 'swiper';
+
+import { Splashes } from '../Header';
 import WhySlide from './WhySlide';
 import WhySlide1 from './WhySlide1';
 import WhySlide2 from './WhySlide2';
 import WhySlide3 from './WhySlide3';
 
 import '../css/why.css';
+import '../css/my-swiper.css'
 
 import logoSrc from '../img/logo.png';
 
@@ -18,7 +21,7 @@ const WhySwiper = (props) => (
       <WhySlide2 index={props.index} lang={props.lang} />
       <WhySlide3 index={props.index} lang={props.lang} />
     </div>
-    <div className='swiper-pagination'>
+    <div className='why-swiper-pagination swiper-pagination'>
     </div>
   </div>
 );
@@ -44,7 +47,7 @@ class WhyPage extends React.Component {
       slidesPerView: 1,
       mousewheel: true,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.why-swiper-pagination',
         clickable: true,
       },
       on: {
@@ -60,6 +63,7 @@ class WhyPage extends React.Component {
         <Link to='/idealnemoloko-react/'>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
         </Link>
+        <Splashes />
         <WhySwiper index={this.state.index} lang={this.props.lang} />
       </div>
     ); 

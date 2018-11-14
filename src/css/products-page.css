@@ -1,0 +1,77 @@
+.products-page {
+  height: 100%;
+  background-color: #e2e5e4;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.prod-splash {
+  position: absolute;
+  top: 10vh;
+  height: 80vh;
+  z-index: 0;
+}
+
+.contacts {
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+  width: 100%;
+  padding-left: 16vw;
+  background-color: rgb(51, 177, 0, 29%);
+}
+
+.contacts-img {
+  height: 100%;
+  width: 11vh;
+  float: left;
+  margin-right: 3vw;
+}
+.contacts-img > img {
+  position: absolute;
+  top: 50%;
+  
+  height: 8vh;
+  transform: translateY(-50%);
+}
+
+.contacts-text {
+  height: 100%;
+  float: left;
+}
+.contacts-text > p {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  font-family: Proxima-Nova-Bold;
+  font-size: 1.7vh;
+  color: #006d24;
+  transform: translateY(-50%);
+}
+
+.products-container {
+  position: relative;
+  width: 50%;
+  padding-left: 25%;
+  padding-top: 25vh;
+  padding-bottom: 15vh;
+}
+.products-node {
+  display: inline-block;
+  width: 50%;
+  height: 45vh;
+  margin-bottom: 10vh;
+  text-align: center;
+}
+.products-node > img {
+  height: 70%;
+  margin-bottom: 5%;
+}
+.products-node-heading, .products-node-title, .products-node-subtitle {
+  margin: 0.5vh auto;
+  font-family: Proxima-Nova-Bold;
+  font-size: 1.6vh;
+  color: #7c4331;
+}
+.products-node-subtitle {
+  max-width: 30vh;
+}

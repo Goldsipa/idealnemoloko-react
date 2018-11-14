@@ -7,12 +7,16 @@ import WhyPage from './WhyPage';
 import ProductsPage from './ProductsPage';
 import NotFound from './NotFound';
 
+import productsBackup from './products-backup.json';
+const API = 'http://idealnemoloko.digioceideal.pp.ua:8000/api/';
+
 class App extends Component {
   constructor(props) {
     super(props);
     
     this.state = {
-      lang: 'ua'
+      lang: 'ua',
+      products: undefined
     }
 
     this.setLangRu = this.setLangRu.bind(this);
@@ -27,18 +31,30 @@ class App extends Component {
     this.setState({lang: 'ua'});
   }
 
+  componentDidMount() {
+    fetch(API)
+      .then( response => response.json() )
+      .then( data => this.setState({products: data}))
+      .catch((err) => {  
+        console.log('Fetch Error :-S', err);  
+        // this.setState({products: productsBackup});
+      });
+  }
+
   render() {
     return (
       <div>
-        <Header lang={this.state.lang} setLangRu={this.setLangRu} setLangUa={this.setLangUa}/>
+        <Header lang={this.state.lang} setLangRu={this.setLangRu} setLangUa={this.setLangUa} />
         <Switch>
           <Route exact path='/idealnemoloko-react/'
-            render={(props) => <MainPage lang={this.state.lang} />}
+            render={(props) => <MainPage lang={this.state.lang} products={this.state.products} />}
           />
           <Route exact path='/idealnemoloko-react/why'
             render={(props) => <WhyPage lang={this.state.lang} />}
           />
-          <Route exact path='/idealnemoloko-react/production' component={ProductsPage}/>
+          <Route exact path='/idealnemoloko-react/production'
+            render={(props) => <ProductsPage lang={this.state.lang} products={this.state.products} />}
+          />
           <Route 
             render={(props) => <NotFound lang={this.state.lang} />}
           />

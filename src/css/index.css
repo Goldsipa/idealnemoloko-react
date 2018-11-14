@@ -113,7 +113,7 @@ body {
 .logo-hidden {
   opacity: 1;
   animation-name: logo;
-  animation-duration: 2s;
+  animation-duration: 2.5s;
 }
 @keyframes logo {
   0%   {opacity: 0;}
@@ -134,10 +134,11 @@ body {
   height: 0;
   opacity: 0;
   animation-name: loader;
-  animation-duration: 2s;
+  animation-duration: 2.5s;
 }
 @keyframes loader {
   0%   {opacity: 1; height: 100%; width: 100%}
+  20%   {opacity: 1; height: 100%; width: 100%}
   99.9%   {opacity: 0; height: 100%; width: 100%}
   100%   {opacity: 0; height: 0; width: 0}
 }
@@ -160,10 +161,11 @@ body {
   transform: none;
 
   animation-name: loader-img;
-  animation-duration: 2s;
+  animation-duration: 2.5s;
 }
 @keyframes loader-img {
   0%   {top: 50%; left: 50%; margin-left: 0; height: 28vh;transform: translate(-50%, -50%);}
+  20%   {top: 50%; left: 50%; margin-left: 0; height: 28vh;transform: translate(-50%, -50%);}
   99.9%   {top: 5vh; left: 11vw; margin-left: -3vh; height: 14vh;transform: none;}
   100%   {top: 5vh; left: 11vw; margin-left: -3vh; height: 0;transform: none;}
 }
