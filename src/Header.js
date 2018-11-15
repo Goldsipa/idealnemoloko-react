@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { MyDelayLink } from './DelayLink';
 
 import splashLeft from './img/splash-left.png';
 import splashRight from './img/splash-right.png';
@@ -34,12 +34,12 @@ const Social = (props) => {
 const LeftBar = (props) => {
   return (
     <div className='left-bar'>
-      <span><Link to='/idealnemoloko-react/production'>
+      <span><MyDelayLink to='/idealnemoloko-react/production'>
         { props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
-      </Link></span>
-      <span><Link to='/idealnemoloko-react/why'>
+      </MyDelayLink></span>
+      <span><MyDelayLink to='/idealnemoloko-react/why'>
         { props.lang === 'ua' ? 'ЧОМУ ІДЕАЛЬ НЕМОЛОКО' : 'ПОЧЕМУ ІДЕАЛЬ НЕМОЛОКО'}
-      </Link></span>
+      </MyDelayLink></span>
     </div>
   );
 };

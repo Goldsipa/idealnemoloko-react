@@ -3,8 +3,6 @@ import '../css/product-info.css';
 
 const ProcuctInfo = (props) =>(
   <div className={props.isOpen ? 'info info-hidden' : 'info'}>
-    <div className="info-back" onClick={ props.isOpen ? props.backClick : undefined }></div>
-
     <div className='info-header'>
       <h3>ІДЕАЛЬ НЕМОЛОКО</h3>
     </div>

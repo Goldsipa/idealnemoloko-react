@@ -50,21 +50,24 @@
 
 .products-container {
   position: relative;
-  width: 50%;
-  padding-left: 25%;
+  width: 75vw;
+  padding-left: 20%;
   padding-top: 25vh;
   padding-bottom: 15vh;
 }
 .products-node {
   display: inline-block;
-  width: 50%;
+  width: 25vw;
   height: 45vh;
   margin-bottom: 10vh;
   text-align: center;
 }
-.products-node > img {
+.products-node > a > img {
   height: 70%;
   margin-bottom: 5%;
+}
+.products-node > a {
+  text-decoration: none;
 }
 .products-node-heading, .products-node-title, .products-node-subtitle {
   margin: 0.5vh auto;

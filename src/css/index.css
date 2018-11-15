@@ -173,3 +173,28 @@ body {
 .on-images-loaded, .on-images-loaded > div, .on-images-loaded > div > div {
   height: 100%;
 }
+
+.trans-curtain {
+  position: absolute;
+  left: -25%;
+  top: 0;
+  height: 100%;
+  width: 150%;
+  z-index: 3;
+  background-color: #bcffd0;
+  transform: skewX(-10deg);
+  transition: left 1s ease;
+}
+.trans-curtain-hidden {
+  left: -175%;
+}
+.trans-curtain > img {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  margin-left: 0;
+  height: 28vh;
+  transform: translate(-50%, -50%) skewX(10deg);
+  z-index: 4;
+}

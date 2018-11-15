@@ -1,12 +1,15 @@
 .swiper-container-vertical > .swiper-pagination-bullets {
-  right: 2vw;
+  right: 3.5vh;
   transition: right 0.5s ease;
   transition-delay: 0.5s;
 }
+.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 2vh 0;
+}
 .swiper-container-vertical > .bullets-hidden {
-  right: -6vw;
+  /* right: -6vh;
   transition: right 1s ease;
-  /* transition-delay: 0.5s; */
+  transition-delay: 0.5s; */
 }
 .swiper-pagination-bullet {
   height: 2vh;

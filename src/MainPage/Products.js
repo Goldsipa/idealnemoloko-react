@@ -103,7 +103,10 @@ class Products extends React.Component {
         <div 
           className={ this.props.isOpen ? 'swiper-pagination swiper-pagination-bullets bullets-hidden' : 'swiper-pagination swiper-pagination-clickable swiper-pagination-bullets' }>
         </div>
-        
+        <div id='info-back'
+          className={ this.props.isOpen ? "info-back info-back-hidden" : "info-back" }
+          onClick={ this.props.isOpen ? this.props.backClick : undefined }
+        ></div>
       </div>
     );
   }

@@ -16,11 +16,14 @@ class App extends Component {
     
     this.state = {
       lang: 'ua',
-      products: undefined
+      products: undefined,
+      index: 0,
+      isOpen: false
     }
 
     this.setLangRu = this.setLangRu.bind(this);
     this.setLangUa = this.setLangUa.bind(this);
+    this.setIndexOpen = this.setIndexOpen.bind(this);
   }
 
   setLangRu() {
@@ -31,13 +34,20 @@ class App extends Component {
     this.setState({lang: 'ua'});
   }
 
+  setIndexOpen(i, isOpen) {
+    this.setState({
+      index: i,
+      isOpen: isOpen
+    });
+  }
+
   componentDidMount() {
     fetch(API)
       .then( response => response.json() )
       .then( data => this.setState({products: data}))
       .catch((err) => {  
         console.log('Fetch Error :-S', err);  
-        // this.setState({products: productsBackup});
+        this.setState({products: productsBackup});
       });
   }
 
@@ -47,13 +57,27 @@ class App extends Component {
         <Header lang={this.state.lang} setLangRu={this.setLangRu} setLangUa={this.setLangUa} />
         <Switch>
           <Route exact path='/idealnemoloko-react/'
-            render={(props) => <MainPage lang={this.state.lang} products={this.state.products} />}
+            render={(props) => (
+              <MainPage
+                lang={this.state.lang}
+                products={this.state.products}
+                setIndexOpen={this.setIndexOpen}
+                index={this.state.index}
+                isOpen={this.state.isOpen}
+              />
+            )}
           />
           <Route exact path='/idealnemoloko-react/why'
             render={(props) => <WhyPage lang={this.state.lang} />}
           />
           <Route exact path='/idealnemoloko-react/production'
-            render={(props) => <ProductsPage lang={this.state.lang} products={this.state.products} />}
+            render={(props) => (
+              <ProductsPage
+                lang={this.state.lang}
+                products={this.state.products}
+                setIndexOpen={this.setIndexOpen}
+              />
+            )}
           />
           <Route 
             render={(props) => <NotFound lang={this.state.lang} />}

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MyDelayLink } from '../DelayLink';
 
-import products from '../MainPage/products.json';
 import '../css/products-page.css';
 import prodSplash from '../img/production-splash.png';
 import lustodorf from '../img/lustodorf.png';
 import logoSrc from '../img/logo.png';
-import grechaneProd from '../img/grechane-prod.png';
+
+const IMG_URL = 'https://res.cloudinary.com/syplemstudio/';
 
 const Contacts = (props) => (
   <div className='contacts'>
@@ -23,23 +24,50 @@ const Contacts = (props) => (
   </div>
 );
 
-const ProductNode = (props) => (
-  <div className='products-node'>
-    <img src={grechaneProd} alt='grechaneProd' />
-    <h4 className='products-node-heading'>ІДЕАЛЬ НЕМОЛОКО</h4>
-    <h5 className='products-node-title'>
-      { props.lang === 'ua' ? props.product.title : props.product.title_rus }
-    </h5>
-    <p className='products-node-subtitle'>
-      { props.lang === 'ua' ? props.product.subtitle : props.product.subtitle_rus }
-    </p>
-  </div>
-);
+class ProductNode extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.kek = this.kek.bind(this);
+  }
+
+  kek(){
+    this.props.setIndexOpen(this.props.index, true);
+    console.log('kek');
+  }
+
+  render() {
+    return (
+      <div className='products-node'>
+        <MyDelayLink onClick={this.kek} to='/idealnemoloko-react/'>
+          { this.props.product && <img src={ IMG_URL + this.props.product.image_for_product_page } alt='grechaneProd' /> }
+        </MyDelayLink>
+        <Link onClick={this.kek} to='/idealnemoloko-react/'>
+          <h4 className='products-node-heading'>ІДЕАЛЬ НЕМОЛОКО</h4>
+          <h5 className='products-node-title'>
+            { this.props.lang === 'ua' ? this.props.product.title : this.props.product.title_rus }
+          </h5>
+          <p className='products-node-subtitle'>
+            { this.props.lang === 'ua' ? this.props.product.subtitle : this.props.product.subtitle_rus }
+          </p>
+        </Link>
+      </div>
+    )
+  }
+}
 
 const ProductsContainer = (props) => (
   <div className='products-container'>
     {props.products.map(
-      (product, index) => <ProductNode key={ product.title + index } product={product} lang={props.lang}/>
+      (product, index) => (
+        <ProductNode
+          key={ product.title + index }
+          product={product}
+          lang={props.lang}
+          index={index}
+          setIndexOpen={props.setIndexOpen}
+        />
+      )
     )}
   </div>
 );
@@ -48,14 +76,22 @@ class ProductsPage extends React.Component {
   render() {
     return (
       <div className='products-page'>
-        <Link to='/idealnemoloko-react/'>
+        <MyDelayLink to='/idealnemoloko-react/'>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
-        </Link>
+        </MyDelayLink>
         <img className='prod-splash' src={prodSplash} alt='milk-splash' />
-
-        { this.props.products && <ProductsContainer products={ this.props.products } lang={this.props.lang}/>}
+        { this.props.products && 
+          <ProductsContainer
+            products={ this.props.products } 
+            lang={this.props.lang}
+            setIndexOpen={this.props.setIndexOpen}
+          />}
 
         <Contacts />
+
+        <div className='trans-curtain trans-curtain-hidden'>
+          <img src={logoSrc} alt='logo'/>
+        </div>
       </div>
     );
   }

@@ -9,8 +9,6 @@ import { Splashes } from '../Header';
 
 import logoSrc from '../img/logo.png';
 
-import products from './products.json';
-
 const Loader = (props) => (
   <div className={ props.isLoading ? "loader" : "loader loader-hidden" }></div>
 );
@@ -24,8 +22,6 @@ class MainPage extends React.Component{
     super(props);
 
     this.state = {
-      index: 0,
-      isOpen: false,
       isLoading: true,
       products: undefined
     }
@@ -41,10 +37,7 @@ class MainPage extends React.Component{
     this.swiper.mousewheel.disable();
     this.swiper.autoplay.stop();
     this.swiper.detachEvents();
-    this.setState({
-      index: this.swiper.realIndex,
-      isOpen: true
-    });
+    this.props.setIndexOpen(this.swiper.realIndex, true);
   }
 
   backClick() {
@@ -52,16 +45,16 @@ class MainPage extends React.Component{
     this.swiper.mousewheel.enable();
     this.swiper.autoplay.start();
     this.swiper.attachEvents();
-    this.setState({
-      index: this.swiper.realIndex,
-      isOpen: false
-    });
+    // this.setState({
+    //   index: this.swiper.realIndex,
+    //   isOpen: false
+    // });
+    this.props.setIndexOpen(this.swiper.realIndex, false);
   }
 
   hasLoaded() {
     if(this.state.isLoading === true) {
       this.setState({isLoading: false})
-      setTimeout(this.swiperStart, 1500);
 
       this.swiper = new Swiper('.swiper-container', {
         direction: 'vertical',
@@ -72,7 +65,7 @@ class MainPage extends React.Component{
           disableOnInteraction: false,
         },
         slidesPerView: 1,
-        initialSlide: this.state.index,
+        initialSlide: this.props.index,
         mousewheel: true,
         pagination: {
           el: '.swiper-pagination',
@@ -80,6 +73,12 @@ class MainPage extends React.Component{
           clickable: true
         },
       });
+
+      this.swiper.autoplay.stop();
+      if(!this.props.isOpen)setTimeout(this.swiperStart, 1500);
+
+      var pag = document.getElementsByClassName('swiper-pagination')[0].clientHeight;
+      document.getElementById('info-back').style.top = 'calc(50% - ' + pag/window.innerHeight*100/2 + 'vh)';
     }
   }
 
@@ -108,24 +107,24 @@ class MainPage extends React.Component{
         
         <img 
           className={this.state.isLoading ? 'logo' : 'logo logo-hidden'} 
-          // onClick={this.state.isOpen ? this.logoClick : undefined}
+          // onClick={this.props.isOpen ? this.logoClick : undefined}
           src={logoSrc} alt='idealnemoloko logo' 
         />
-        <Products
-          isOpen={this.state.isOpen}
+        { this.props.products && <Products
+          isOpen={this.props.isOpen}
           click={this.productClick}
           backClick={this.backClick}
-          products={ this.props.products ? this.props.products : products }
+          products={ this.props.products }
           hasLoaded={this.hasLoaded}
-        />
-        <Curtain isOpen={this.state.isOpen} />
-        <Main isOpen={this.state.isOpen} lang={this.props.lang} />
-        <ProductInfo 
-          product={this.props.products ? this.props.products[this.state.index] : products[0] }
-          isOpen={this.state.isOpen}
+        /> }
+        <Curtain isOpen={this.props.isOpen} />
+        <Main isOpen={this.props.isOpen} lang={this.props.lang} />
+        { this.props.products && <ProductInfo 
+          product={this.props.products[this.props.index]}
+          isOpen={this.props.isOpen}
           backClick={this.backClick}
           lang={this.props.lang}
-        />
+        />}
       </div>
     );
   }

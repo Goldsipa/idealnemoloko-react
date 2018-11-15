@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Swiper from 'swiper';
+import { MyDelayLink } from '../DelayLink';
 
 import { Splashes } from '../Header';
 import WhySlide from './WhySlide';
@@ -60,11 +60,15 @@ class WhyPage extends React.Component {
   render() {
     return (
       <div className="why-page">
-        <Link to='/idealnemoloko-react/'>
+        <MyDelayLink to='/idealnemoloko-react/'>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
-        </Link>
+        </MyDelayLink>
         <Splashes />
         <WhySwiper index={this.state.index} lang={this.props.lang} />
+
+        <div className='trans-curtain trans-curtain-hidden'>
+          <img src={logoSrc} alt='logo'/>
+        </div>
       </div>
     ); 
   }
