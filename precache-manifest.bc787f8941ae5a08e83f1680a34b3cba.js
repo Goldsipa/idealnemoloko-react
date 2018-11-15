@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/k-1.min.9c1273cd.png"
   },
   {
-    "revision": "adffe82697d019b83df5",
+    "revision": "62ea5518e0e6aa42e695",
     "url": "/idealnemoloko-react/static/css/main.e78c72c6.chunk.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/k-0.min.4dbe3255.png"
   },
   {
-    "revision": "adffe82697d019b83df5",
-    "url": "/idealnemoloko-react/static/js/main.adffe826.chunk.js"
+    "revision": "62ea5518e0e6aa42e695",
+    "url": "/idealnemoloko-react/static/js/main.62ea5518.chunk.js"
   },
   {
     "revision": "f8ae4ef612ad39f3be66a0a136e18083",
@@ -64,15 +64,15 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/Proxima-Nova-Regular.410504d4.otf"
   },
   {
-    "revision": "8a1b91a8e5ef27b6c7ac813ef2235dd8",
-    "url": "/idealnemoloko-react/static/media/LEngineer-Regular.8a1b91a8.otf"
-  },
-  {
     "revision": "62d4d7d369292a9bf23762465ec6d704",
     "url": "/idealnemoloko-react/static/media/Proxima-Nova-Bold.62d4d7d3.otf"
   },
   {
-    "revision": "a864fc02045307e56948ff4bb368335a",
+    "revision": "8a1b91a8e5ef27b6c7ac813ef2235dd8",
+    "url": "/idealnemoloko-react/static/media/LEngineer-Regular.8a1b91a8.otf"
+  },
+  {
+    "revision": "afea4820fce22bf01072587e323c6da7",
     "url": "/idealnemoloko-react/index.html"
   }
 ];
