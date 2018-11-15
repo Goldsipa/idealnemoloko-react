@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "f8ae4ef612ad39f3be66a0a136e18083",
-    "url": "/idealnemoloko-react/static/media/k-2.min.f8ae4ef6.png"
+    "revision": "9c1273cdbb69e740d8ce97855853ac05",
+    "url": "/idealnemoloko-react/static/media/k-1.min.9c1273cd.png"
   },
   {
-    "revision": "1bec1ba523023d6aecbf",
-    "url": "/idealnemoloko-react/static/css/main.5d31fcb8.chunk.css"
+    "revision": "909c00c8503895096f73",
+    "url": "/idealnemoloko-react/static/css/main.f0a00499.chunk.css"
   },
   {
-    "revision": "1aaac8844673d69a743f",
-    "url": "/idealnemoloko-react/static/js/1.1aaac884.chunk.js"
+    "revision": "413d0fe57d4fe02d4321",
+    "url": "/idealnemoloko-react/static/js/1.413d0fe5.chunk.js"
   },
   {
     "revision": "b86a6ed1e15bb0a44792",
@@ -36,12 +36,12 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/k-0.min.4dbe3255.png"
   },
   {
-    "revision": "9c1273cdbb69e740d8ce97855853ac05",
-    "url": "/idealnemoloko-react/static/media/k-1.min.9c1273cd.png"
+    "revision": "909c00c8503895096f73",
+    "url": "/idealnemoloko-react/static/js/main.909c00c8.chunk.js"
   },
   {
-    "revision": "1bec1ba523023d6aecbf",
-    "url": "/idealnemoloko-react/static/js/main.1bec1ba5.chunk.js"
+    "revision": "f8ae4ef612ad39f3be66a0a136e18083",
+    "url": "/idealnemoloko-react/static/media/k-2.min.f8ae4ef6.png"
   },
   {
     "revision": "e7fee7396d9e30498dc547338f8962e4",
@@ -56,10 +56,6 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/lustodorf.d3215beb.png"
   },
   {
-    "revision": "9fec4176f14387456621f14dbcb01661",
-    "url": "/idealnemoloko-react/static/media/grechane-prod.9fec4176.png"
-  },
-  {
     "revision": "7b8b83f2275a9397f2d20c8c239c70f7",
     "url": "/idealnemoloko-react/static/media/im-bg.7b8b83f2.png"
   },
@@ -68,15 +64,15 @@ self.__precacheManifest = [
     "url": "/idealnemoloko-react/static/media/Proxima-Nova-Regular.410504d4.otf"
   },
   {
-    "revision": "8a1b91a8e5ef27b6c7ac813ef2235dd8",
-    "url": "/idealnemoloko-react/static/media/LEngineer-Regular.8a1b91a8.otf"
-  },
-  {
     "revision": "62d4d7d369292a9bf23762465ec6d704",
     "url": "/idealnemoloko-react/static/media/Proxima-Nova-Bold.62d4d7d3.otf"
   },
   {
-    "revision": "31bc46e7c14ea7dcd701eaf1ff4a9a67",
+    "revision": "8a1b91a8e5ef27b6c7ac813ef2235dd8",
+    "url": "/idealnemoloko-react/static/media/LEngineer-Regular.8a1b91a8.otf"
+  },
+  {
+    "revision": "d42265e09dd99712a9b5fed86089cdcf",
     "url": "/idealnemoloko-react/index.html"
   }
 ];
