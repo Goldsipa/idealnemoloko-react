@@ -103,7 +103,7 @@ body {
   left: 11vw;
   margin-left: -3vh;
   height: 14vh;
-  z-index: 2;
+  z-index: 4;
   cursor: unset;
   opacity: 0;
 }

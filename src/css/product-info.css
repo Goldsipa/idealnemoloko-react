@@ -1,10 +1,18 @@
-.info {
+#info {
   position: absolute;
-  top: 24vh;
-  left: 11vw;
-  width: 35%;
-  height: 76%;
-  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 46%;
+  z-index: 3;
+}
+.swiper-container-info {
+  height: 100%;
+}
+
+.info {
+  padding-top: 24vh;
+  padding-left: 11vw;
+  height: 76vh;
 
   opacity: 0;
   transition: opacity 0.5s ease;

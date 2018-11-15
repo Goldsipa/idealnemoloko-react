@@ -60,17 +60,38 @@ class MainPage extends React.Component{
         },
         slidesPerView: 1,
         initialSlide: this.props.index,
-        mousewheel: true,
+        mousewheel: {
+          eventsTarged: '#main-page'
+        },
         pagination: {
           el: '.swiper-pagination',
           type: 'bullets',
           clickable: true
         },
       });
-      this.swiper.detachEvents();
 
+      this.swiperInfo = new Swiper('.swiper-container-info', {
+        direction: 'vertical',
+        preventInteractionOnTransition: true,
+        speed: 1000,
+        slidesPerView: 1,
+        initialSlide: this.props.index
+      });
+
+      this.swiper.on('slideNextTransitionStart', () => {
+        this.swiperInfo.slideNext();
+        console.log('slide next');
+      });
+      this.swiper.on('slidePrevTransitionStart', () => {
+        this.swiperInfo.slidePrev();
+        console.log('slide prev');
+      });
+
+      this.swiper.detachEvents();
+      this.swiper.mousewheel.enable();
+      
       this.swiper.autoplay.stop();
-      if(!this.props.isOpen)setTimeout(this.swiperStart, 1500);
+      if(!this.props.isOpen)setTimeout(this.swiperStart, 2500);
 
       var pag = document.getElementsByClassName('swiper-pagination')[0].clientHeight;
       document.getElementById('info-back').style.top = 'calc(50% - ' + pag/window.innerHeight*100/2 + 'vh)';
@@ -89,8 +110,9 @@ class MainPage extends React.Component{
         <Splashes />
         <img 
           className={this.state.isLoading ? 'logo' : 'logo logo-hidden'} 
-          // onClick={this.props.isOpen ? this.logoClick : undefined}
-          src={logoSrc} alt='idealnemoloko logo' 
+          onClick={this.props.isOpen ? this.backClick : undefined}
+          src={logoSrc} alt='idealnemoloko logo'
+          style={{cursor: this.props.isOpen ? 'pointer' : 'unset'}}
         />
         <LeftBar>
           <span><MyDelayLink to='/idealnemoloko-react/production' el='main-trans-curtain'>
@@ -109,14 +131,16 @@ class MainPage extends React.Component{
           hasLoaded={this.hasLoaded}
           lang={this.props.lang}
         /> }
-        <Curtain isOpen={this.props.isOpen} />
-        <Main isOpen={this.props.isOpen} lang={this.props.lang} />
+        
         { this.props.products && <ProductInfo 
-          product={this.props.products[this.props.index]}
+          products={this.props.products}
           isOpen={this.props.isOpen}
           backClick={this.backClick}
           lang={this.props.lang}
         />}
+
+        <Curtain isOpen={this.props.isOpen} />
+        <Main isOpen={this.props.isOpen} lang={this.props.lang} />
 
         <div className="main-trans-curtain main-trans-curtain-hidden">
           <img src={logoSrc} alt='logo'/>

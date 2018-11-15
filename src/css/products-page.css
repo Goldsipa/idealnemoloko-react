@@ -42,7 +42,8 @@
   position: absolute;
   top: 50%;
   margin: 0;
-  font-family: Proxima-Nova-Bold;
+  font-family: Proxima-Nova-SemiBold;
+  
   font-size: 1.7vh;
   color: #006d24;
   transform: translateY(-50%);
@@ -74,6 +75,9 @@
   font-family: Proxima-Nova-Bold;
   font-size: 1.6vh;
   color: #7c4331;
+}
+.products-node-subtitle {
+  font-family: Proxima-Nova-SemiBold;
 }
 .products-node-subtitle {
   max-width: 30vh;
