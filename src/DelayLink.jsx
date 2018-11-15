@@ -80,10 +80,10 @@ export class DelayLink extends React.Component {
 export const MyDelayLink = (props) => (
   <DelayLink
     to={props.to}
-    delay={1000}
+    delay={1200}
     onDelayStart={() => {
       props.onClick && props.onClick();
-      document.getElementsByClassName('trans-curtain')[0].classList.remove('trans-curtain-hidden');
+      document.getElementsByClassName(props.el)[0].classList.remove(props.el + '-hidden');
     }}
   >
     {props.children}

@@ -1,5 +1,5 @@
 .swiper-container-vertical > .swiper-pagination-bullets {
-  right: 3.5vh;
+  right: 5.5vh;
   transition: right 0.5s ease;
   transition-delay: 0.5s;
 }

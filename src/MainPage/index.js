@@ -1,5 +1,7 @@
 import React from 'react';
 import Swiper from 'swiper';
+import { LeftBar } from '../Header';
+import { MyDelayLink } from '../DelayLink';
 
 import Products from './Products';
 import Curtain from './Curtain';
@@ -34,21 +36,13 @@ class MainPage extends React.Component{
 
   productClick() {
     this.swiper.pagination.clickable = false;
-    this.swiper.mousewheel.disable();
     this.swiper.autoplay.stop();
-    this.swiper.detachEvents();
     this.props.setIndexOpen(this.swiper.realIndex, true);
   }
 
   backClick() {
     this.swiper.pagination.clickable = true;
-    this.swiper.mousewheel.enable();
     this.swiper.autoplay.start();
-    this.swiper.attachEvents();
-    // this.setState({
-    //   index: this.swiper.realIndex,
-    //   isOpen: false
-    // });
     this.props.setIndexOpen(this.swiper.realIndex, false);
   }
 
@@ -73,6 +67,7 @@ class MainPage extends React.Component{
           clickable: true
         },
       });
+      this.swiper.detachEvents();
 
       this.swiper.autoplay.stop();
       if(!this.props.isOpen)setTimeout(this.swiperStart, 1500);
@@ -86,36 +81,33 @@ class MainPage extends React.Component{
     this.swiper.autoplay.start();
   }
 
-  kek() {
-    console.log('keeek');
-  }
-
-  componentDidMount() {
-    // if(this.state.isOpen){
-    //   this.swiper.pagination.clickable = false;
-    //   this.swiper.mousewheel.disable();
-    //   this.swiper.detachEvents();
-    // }
-  }
-
   render() {
     return (
       <div id="main-page" className='main-page'>
         <Loader isLoading={this.state.isLoading} />
         <LoaderImg isLoading={this.state.isLoading} />
         <Splashes />
-        
         <img 
           className={this.state.isLoading ? 'logo' : 'logo logo-hidden'} 
           // onClick={this.props.isOpen ? this.logoClick : undefined}
           src={logoSrc} alt='idealnemoloko logo' 
         />
+        <LeftBar>
+          <span><MyDelayLink to='/idealnemoloko-react/production' el='main-trans-curtain'>
+            { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
+          </MyDelayLink></span>
+          <span><MyDelayLink to='/idealnemoloko-react/why' el='main-trans-curtain'>
+            { this.props.lang === 'ua' ? 'ЧОМУ ІДЕАЛЬ НЕМОЛОКО' : 'ПОЧЕМУ ІДЕАЛЬ НЕМОЛОКО'}
+          </MyDelayLink></span>
+        </LeftBar>
+
         { this.props.products && <Products
           isOpen={this.props.isOpen}
           click={this.productClick}
           backClick={this.backClick}
           products={ this.props.products }
           hasLoaded={this.hasLoaded}
+          lang={this.props.lang}
         /> }
         <Curtain isOpen={this.props.isOpen} />
         <Main isOpen={this.props.isOpen} lang={this.props.lang} />
@@ -125,6 +117,10 @@ class MainPage extends React.Component{
           backClick={this.backClick}
           lang={this.props.lang}
         />}
+
+        <div className="main-trans-curtain main-trans-curtain-hidden">
+          <img src={logoSrc} alt='logo'/>
+        </div>
       </div>
     );
   }

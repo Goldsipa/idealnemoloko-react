@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LeftBar } from '../Header';
 import { MyDelayLink } from '../DelayLink';
 
 import '../css/products-page.css';
@@ -33,13 +34,12 @@ class ProductNode extends React.Component {
 
   kek(){
     this.props.setIndexOpen(this.props.index, true);
-    console.log('kek');
   }
 
   render() {
     return (
       <div className='products-node'>
-        <MyDelayLink onClick={this.kek} to='/idealnemoloko-react/'>
+        <MyDelayLink onClick={this.kek} to='/idealnemoloko-react/' el='trans-curtain'>
           { this.props.product && <img src={ IMG_URL + this.props.product.image_for_product_page } alt='grechaneProd' /> }
         </MyDelayLink>
         <Link onClick={this.kek} to='/idealnemoloko-react/'>
@@ -73,12 +73,27 @@ const ProductsContainer = (props) => (
 );
 
 class ProductsPage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.kek = this.kek.bind(this);
+  }
+  
+  kek(){
+    this.props.setIndexOpen(0, false);
+  }
+
   render() {
     return (
       <div className='products-page'>
-        <MyDelayLink to='/idealnemoloko-react/'>
+        <MyDelayLink to='/idealnemoloko-react/' el='trans-curtain' onClick={this.kek}>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
         </MyDelayLink>
+        <LeftBar>
+          <span><MyDelayLink to='/idealnemoloko-react/why' el='trans-curtain'>
+            { this.props.lang === 'ua' ? 'ЧОМУ ІДЕАЛЬ НЕМОЛОКО' : 'ПОЧЕМУ ІДЕАЛЬ НЕМОЛОКО'}
+          </MyDelayLink></span>
+        </LeftBar>
         <img className='prod-splash' src={prodSplash} alt='milk-splash' />
         { this.props.products && 
           <ProductsContainer
@@ -89,7 +104,7 @@ class ProductsPage extends React.Component {
 
         <Contacts />
 
-        <div className='trans-curtain trans-curtain-hidden'>
+        <div className="trans-curtain trans-curtain-hidden">
           <img src={logoSrc} alt='logo'/>
         </div>
       </div>

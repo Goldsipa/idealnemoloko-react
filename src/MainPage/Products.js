@@ -11,7 +11,7 @@ const SwiperSlideRight = (props) => {
         className={ "swiper-slide-right-title" + (props.isOpen ? " swiper-slide-right-title-hidden" : "")}
         onClick={props.isOpen ? undefined : props.click}
       >
-        - {props.product.title} -
+        - { props.lang === 'ua' ? props.product.title : props.product.title_rus } -
       </div>
       <div 
         className={ "swiper-slide-right-img" + (props.isOpen ? " swiper-slide-right-img-hidden" : "")}
@@ -77,6 +77,7 @@ const SwiperSlide = (props) => {
         click={props.click}
         isOpen={props.isOpen}
         hasLoaded={props.hasLoaded}
+        lang={props.lang}
       />
     </div>
   );
@@ -96,6 +97,7 @@ class Products extends React.Component {
                 click={this.props.click}
                 isOpen={this.props.isOpen}
                 hasLoaded={this.props.hasLoaded}
+                lang={this.props.lang}
               />
             )
           )}

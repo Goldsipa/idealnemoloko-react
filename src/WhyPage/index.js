@@ -1,5 +1,6 @@
 import React from 'react';
 import Swiper from 'swiper';
+import { LeftBar } from '../Header';
 import { MyDelayLink } from '../DelayLink';
 
 import { Splashes } from '../Header';
@@ -33,11 +34,16 @@ class WhyPage extends React.Component {
     this.state = {
       index: undefined
     }
+    this.handleSlideTrans = this.handleSlideTrans.bind(this);
     this.kek = this.kek.bind(this);
   }
 
-  kek() {
+  handleSlideTrans() {
     this.setState({index: this.swiper.realIndex});
+  }
+
+  kek(){
+    this.props.setIndexOpen(0, false);
   }
 
   componentDidMount() {
@@ -51,18 +57,23 @@ class WhyPage extends React.Component {
         clickable: true,
       },
       on: {
-        transitionEnd: this.kek
+        transitionEnd: this.handleSlideTrans
       }
     });
-    setTimeout(this.kek, 100);
+    setTimeout(this.handleSlideTrans, 100);
   }
 
   render() {
     return (
       <div className="why-page">
-        <MyDelayLink to='/idealnemoloko-react/'>
+        <MyDelayLink to='/idealnemoloko-react/' el='trans-curtain' onClick={this.kek}>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
         </MyDelayLink>
+        <LeftBar>
+          <span><MyDelayLink to='/idealnemoloko-react/production' el='trans-curtain'>
+            { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
+          </MyDelayLink></span>
+        </LeftBar>
         <Splashes />
         <WhySwiper index={this.state.index} lang={this.props.lang} />
 

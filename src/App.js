@@ -68,7 +68,7 @@ class App extends Component {
             )}
           />
           <Route exact path='/idealnemoloko-react/why'
-            render={(props) => <WhyPage lang={this.state.lang} />}
+            render={(props) => <WhyPage lang={this.state.lang} setIndexOpen={this.setIndexOpen} />}
           />
           <Route exact path='/idealnemoloko-react/production'
             render={(props) => (

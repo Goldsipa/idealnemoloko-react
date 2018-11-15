@@ -1,5 +1,4 @@
 import React from 'react';
-import { MyDelayLink } from './DelayLink';
 
 import splashLeft from './img/splash-left.png';
 import splashRight from './img/splash-right.png';
@@ -31,22 +30,16 @@ const Social = (props) => {
   );
 }
 
-const LeftBar = (props) => {
+export const LeftBar = (props) => {
   return (
     <div className='left-bar'>
-      <span><MyDelayLink to='/idealnemoloko-react/production'>
-        { props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
-      </MyDelayLink></span>
-      <span><MyDelayLink to='/idealnemoloko-react/why'>
-        { props.lang === 'ua' ? 'ЧОМУ ІДЕАЛЬ НЕМОЛОКО' : 'ПОЧЕМУ ІДЕАЛЬ НЕМОЛОКО'}
-      </MyDelayLink></span>
+      {props.children}
     </div>
   );
 };
 
 const Header = (props) => (
   <div>
-    <LeftBar lang={props.lang} />
     <Social />
     <span className="lang" onClick={props.lang === 'ua' ? props.setLangRu : props.setLangUa}>
       {props.lang === 'ua' ? 'RU' : 'UA'}

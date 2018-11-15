@@ -180,15 +180,57 @@ body {
   top: 0;
   height: 100%;
   width: 150%;
-  z-index: 3;
+  z-index: 11;
   background-color: #bcffd0;
   transform: skewX(-10deg);
-  transition: left 1s ease;
+  animation-name: trans;
+  animation-duration: 1.2s;
 }
+@keyframes trans {
+  0%   {left: -175%;}
+  20%   {left: -175%;}
+  100%   {left: -25%;}
+}
+
 .trans-curtain-hidden {
   left: -175%;
+  animation-name: trans-hidden;
+  animation-duration: 3s;
+}
+@keyframes trans-hidden {
+  0%   {left: -25%;}
+  20%   {left: -25%;}
+  100%   {left: -175%;}
 }
 .trans-curtain > img {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  margin-left: 0;
+  height: 28vh;
+  transform: translate(-50%, -50%) skewX(10deg);
+  z-index: 4;
+}
+
+.main-trans-curtain {
+  position: absolute;
+  left: -25%;
+  top: 0;
+  height: 100%;
+  width: 150%;
+  z-index: 11;
+  background-color: #bcffd0;
+  transform: skewX(-10deg);
+  animation-name: trans;
+  animation-duration: 1.2s;
+}
+.main-trans-curtain-hidden {
+  left: -175%;
+  animation-name: trans-hidden;
+  animation-duration: 0.1s;
+}
+.main-trans-curtain > img {
   position: absolute;
 
   top: 50%;
