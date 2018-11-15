@@ -88,6 +88,7 @@ class MainPage extends React.Component{
       });
 
       this.swiper.detachEvents();
+      this.swiperInfo.detachEvents();
       this.swiper.mousewheel.enable();
       
       this.swiper.autoplay.stop();
