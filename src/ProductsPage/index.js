@@ -39,10 +39,10 @@ class ProductNode extends React.Component {
   render() {
     return (
       <div className='products-node'>
-        <MyDelayLink onClick={this.kek} to='/idealnemoloko-react/' el='trans-curtain'>
+        <MyDelayLink onClick={this.kek} to='/' el='trans-curtain'>
           { this.props.product && <img src={ IMG_URL + this.props.product.image_for_product_page } alt='grechaneProd' /> }
         </MyDelayLink>
-        <Link onClick={this.kek} to='/idealnemoloko-react/'>
+        <Link onClick={this.kek} to='/'>
           <h4 className='products-node-heading'>ІДЕАЛЬ НЕМОЛОКО</h4>
           <h5 className='products-node-title'>
             { this.props.lang === 'ua' ? this.props.product.title : this.props.product.title_rus }
@@ -86,11 +86,11 @@ class ProductsPage extends React.Component {
   render() {
     return (
       <div className='products-page'>
-        <MyDelayLink to='/idealnemoloko-react/' el='trans-curtain' onClick={this.kek}>
+        <MyDelayLink to='/' el='trans-curtain' onClick={this.kek}>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
         </MyDelayLink>
         <LeftBar>
-          <span><MyDelayLink to='/idealnemoloko-react/why' el='trans-curtain'>
+          <span><MyDelayLink to='/why' el='trans-curtain'>
             { this.props.lang === 'ua' ? 'ЧОМУ ІДЕАЛЬ НЕМОЛОКО' : 'ПОЧЕМУ ІДЕАЛЬ НЕМОЛОКО'}
           </MyDelayLink></span>
         </LeftBar>

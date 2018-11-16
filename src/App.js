@@ -56,7 +56,7 @@ class App extends Component {
       <div>
         <Header lang={this.state.lang} setLangRu={this.setLangRu} setLangUa={this.setLangUa} />
         <Switch>
-          <Route exact path='/idealnemoloko-react/'
+          <Route exact path='/'
             render={(props) => (
               <MainPage
                 lang={this.state.lang}
@@ -67,10 +67,10 @@ class App extends Component {
               />
             )}
           />
-          <Route exact path='/idealnemoloko-react/why'
+          <Route exact path='/why'
             render={(props) => <WhyPage lang={this.state.lang} setIndexOpen={this.setIndexOpen} />}
           />
-          <Route exact path='/idealnemoloko-react/production'
+          <Route exact path='/production'
             render={(props) => (
               <ProductsPage
                 lang={this.state.lang}

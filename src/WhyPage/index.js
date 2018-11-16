@@ -66,11 +66,11 @@ class WhyPage extends React.Component {
   render() {
     return (
       <div className="why-page">
-        <MyDelayLink to='/idealnemoloko-react/' el='trans-curtain' onClick={this.kek}>
+        <MyDelayLink to='/' el='trans-curtain' onClick={this.kek}>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
         </MyDelayLink>
         <LeftBar>
-          <span><MyDelayLink to='/idealnemoloko-react/production' el='trans-curtain'>
+          <span><MyDelayLink to='/production' el='trans-curtain'>
             { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
           </MyDelayLink></span>
         </LeftBar>

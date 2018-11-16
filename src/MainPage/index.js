@@ -116,10 +116,10 @@ class MainPage extends React.Component{
           style={{cursor: this.props.isOpen ? 'pointer' : 'unset'}}
         />
         <LeftBar>
-          <span><MyDelayLink to='/idealnemoloko-react/production' el='main-trans-curtain'>
+          <span><MyDelayLink to='/production' el='main-trans-curtain'>
             { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
           </MyDelayLink></span>
-          <span><MyDelayLink to='/idealnemoloko-react/why' el='main-trans-curtain'>
+          <span><MyDelayLink to='/why' el='main-trans-curtain'>
             { this.props.lang === 'ua' ? 'ЧОМУ ІДЕАЛЬ НЕМОЛОКО' : 'ПОЧЕМУ ІДЕАЛЬ НЕМОЛОКО'}
           </MyDelayLink></span>
         </LeftBar>
