@@ -16,7 +16,11 @@ const ProcuctInfo = (props) =>(
           { props.lang === 'ua' ? props.product.subtitle : props.product.subtitle_rus }
         </h5>
         <p className='info-body-description'>
-          { props.lang === 'ua' ? props.product.content : props.product.content_rus }
+          { props.lang === 'ua' ? props.product.content.map(
+            (span, index) => <span key={ 'desc_' + index }>{span}<br/></span>
+          ) : props.product.content_rus.map(
+            (span, index) => <span key={ 'desc_' + index }>{span}<br/></span>
+          )}
         </p>
         <h6 className='info-body-list-title'>
           { props.lang === 'ua' ? props.product.list_heading : props.product.list_heading_rus }

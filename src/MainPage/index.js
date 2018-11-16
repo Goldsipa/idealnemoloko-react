@@ -80,11 +80,9 @@ class MainPage extends React.Component{
 
       this.swiper.on('slideNextTransitionStart', () => {
         this.swiperInfo.slideNext();
-        console.log('slide next');
       });
       this.swiper.on('slidePrevTransitionStart', () => {
         this.swiperInfo.slidePrev();
-        console.log('slide prev');
       });
 
       this.swiper.detachEvents();
