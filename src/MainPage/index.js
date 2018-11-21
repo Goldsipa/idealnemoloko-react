@@ -1,7 +1,8 @@
 import React from 'react';
 import Swiper from 'swiper';
 import { LeftBar } from '../Header';
-import { MyDelayLink } from '../DelayLink';
+import { Link } from 'react-router-dom';
+// import { MyDelayLink } from '../DelayLink';
 
 import Products from './Products';
 import Curtain from './Curtain';
@@ -104,22 +105,23 @@ class MainPage extends React.Component{
   render() {
     return (
       <div id="main-page" className='main-page'>
-        <Loader isLoading={this.state.isLoading} />
-        <LoaderImg isLoading={this.state.isLoading} />
+        {/* <Loader isLoading={this.state.isLoading} /> */}
+        {/* <LoaderImg isLoading={this.state.isLoading} /> */}
         <Splashes />
         <img 
-          className={this.state.isLoading ? 'logo' : 'logo logo-hidden'} 
+          // className={this.state.isLoading ? 'logo' : 'logo logo-hidden'} 
+          className='logo'
           onClick={this.props.isOpen ? this.backClick : undefined}
           src={logoSrc} alt='idealnemoloko logo'
           style={{cursor: this.props.isOpen ? 'pointer' : 'unset'}}
         />
         <LeftBar>
-          <span><MyDelayLink to='/idealnemoloko-react/production' el='main-trans-curtain'>
+          <span><Link to='/idealnemoloko-react/production'>
             { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
-          </MyDelayLink></span>
-          <span><MyDelayLink to='/idealnemoloko-react/why' el='main-trans-curtain'>
+          </Link></span>
+          <span><Link to='/idealnemoloko-react/why'>
             { this.props.lang === 'ua' ? 'ЧОМУ ІДЕАЛЬ НЕМОЛОКО' : 'ПОЧЕМУ ІДЕАЛЬ НЕМОЛОКО'}
-          </MyDelayLink></span>
+          </Link></span>
         </LeftBar>
 
         { this.props.products && <Products
@@ -141,9 +143,9 @@ class MainPage extends React.Component{
         <Curtain isOpen={this.props.isOpen} />
         <Main isOpen={this.props.isOpen} lang={this.props.lang} />
 
-        <div className="main-trans-curtain main-trans-curtain-hidden">
+        {/* <div className="main-trans-curtain main-trans-curtain-hidden">
           <img src={logoSrc} alt='logo'/>
-        </div>
+        </div> */}
       </div>
     );
   }

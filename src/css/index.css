@@ -105,16 +105,17 @@ body {
   height: 14vh;
   z-index: 4;
   cursor: unset;
-  opacity: 0;
+  /* opacity: 0; */
+  opacity: 1;
 }
 .logo-not-main {
   opacity: 1;
 }
-.logo-hidden {
+/* .logo-hidden {
   opacity: 1;
   animation-name: logo;
   animation-duration: 2.5s;
-}
+} */
 @keyframes logo {
   0%   {opacity: 0;}
   99.9%   {opacity: 0;}

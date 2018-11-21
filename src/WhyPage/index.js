@@ -1,7 +1,8 @@
 import React from 'react';
 import Swiper from 'swiper';
 import { LeftBar } from '../Header';
-import { MyDelayLink } from '../DelayLink';
+import { Link } from 'react-router-dom';
+// import { MyDelayLink } from '../DelayLink';
 
 import { Splashes } from '../Header';
 import WhySlide from './WhySlide';
@@ -66,20 +67,20 @@ class WhyPage extends React.Component {
   render() {
     return (
       <div className="why-page">
-        <MyDelayLink to='/idealnemoloko-react/' el='trans-curtain' onClick={this.kek}>
+        <Link to='/idealnemoloko-react/' onClick={this.kek}>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
-        </MyDelayLink>
+        </Link>
         <LeftBar>
-          <span><MyDelayLink to='/idealnemoloko-react/production' el='trans-curtain'>
+          <span><Link to='/idealnemoloko-react/production'>
             { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
-          </MyDelayLink></span>
+          </Link></span>
         </LeftBar>
         <Splashes />
         <WhySwiper index={this.state.index} lang={this.props.lang} />
 
-        <div className='trans-curtain trans-curtain-hidden'>
+        {/* <div className='trans-curtain trans-curtain-hidden'>
           <img src={logoSrc} alt='logo'/>
-        </div>
+        </div> */}
       </div>
     ); 
   }

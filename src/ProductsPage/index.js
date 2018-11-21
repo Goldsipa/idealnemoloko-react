@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { LeftBar } from '../Header';
-import { MyDelayLink } from '../DelayLink';
+// import { MyDelayLink } from '../DelayLink';
 
 import '../css/products-page.css';
 import prodSplash from '../img/production-splash.png';
@@ -39,9 +39,9 @@ class ProductNode extends React.Component {
   render() {
     return (
       <div className='products-node'>
-        <MyDelayLink onClick={this.kek} to='/idealnemoloko-react/' el='trans-curtain'>
+        <Link onClick={this.kek} to='/idealnemoloko-react/'>
           { this.props.product && <img src={ IMG_URL + this.props.product.image_for_product_page } alt='grechaneProd' /> }
-        </MyDelayLink>
+        </Link>
         <Link onClick={this.kek} to='/idealnemoloko-react/'>
           <h4 className='products-node-heading'>ІДЕАЛЬ НЕМОЛОКО</h4>
           <h5 className='products-node-title'>
@@ -86,13 +86,13 @@ class ProductsPage extends React.Component {
   render() {
     return (
       <div className='products-page'>
-        <MyDelayLink to='/idealnemoloko-react/' el='trans-curtain' onClick={this.kek}>
+        <Link to='/idealnemoloko-react/' onClick={this.kek}>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
-        </MyDelayLink>
+        </Link>
         <LeftBar>
-          <span><MyDelayLink to='/idealnemoloko-react/why' el='trans-curtain'>
+          <span><Link to='/idealnemoloko-react/why'>
             { this.props.lang === 'ua' ? 'ЧОМУ ІДЕАЛЬ НЕМОЛОКО' : 'ПОЧЕМУ ІДЕАЛЬ НЕМОЛОКО'}
-          </MyDelayLink></span>
+          </Link></span>
         </LeftBar>
         <img className='prod-splash' src={prodSplash} alt='milk-splash' />
         { this.props.products && 
@@ -104,9 +104,9 @@ class ProductsPage extends React.Component {
 
         <Contacts />
 
-        <div className="trans-curtain trans-curtain-hidden">
+        {/* <div className="trans-curtain trans-curtain-hidden">
           <img src={logoSrc} alt='logo'/>
-        </div>
+        </div> */}
       </div>
     );
   }
