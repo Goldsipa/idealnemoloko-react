@@ -52,7 +52,7 @@
 
 .why-body-title{
   margin: 0;
-  font-size: 2.1vh;
+  font-size: 2.3vh;
   text-transform: uppercase;
   font-family: Proxima-Nova-Bold;
   -webkit-font-smoothing: antialiased;
@@ -76,7 +76,7 @@
 
 .why-body-description {
   margin-top: 3vh;
-  font-size: 1.7vh;
+  font-size: 2.2vh;
   line-height: 2.6vh;
   opacity: 0;
   transform: translateY(10vh);

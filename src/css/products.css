@@ -3,11 +3,16 @@
   z-index: 0;
 }
 
+#products .swiper-slide {
+  background-color: #ffd745;
+}
+
 .swiper-slide-left {
   position: absolute;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
+  background-image: radial-gradient(circle, #ffe5ac, #ffe5ac, #ffd745, #ffd745);
   background-size: 65% 100%;
   background-position-x: -15%;
   background-repeat: no-repeat;

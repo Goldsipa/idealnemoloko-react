@@ -2,7 +2,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 46%;
+  width: 50%;
   z-index: 3;
 }
 .swiper-container-info {
@@ -10,7 +10,7 @@
 }
 
 .info {
-  padding-top: 24vh;
+  padding-top: 22vh;
   padding-left: 11vw;
   height: 76vh;
 
@@ -27,10 +27,10 @@
   display: none;
   position: absolute;
   top: 50%;
-  right: 4vh;
+  right: 5.5vh;
   margin-top: -6vh;
-  height: 6vh;
-  width: 6vh;
+  height: 3vh;
+  width: 3vh;
   background-image: url('../img/back.png');
   background-size: 100%;
   opacity: 0.9;
@@ -56,52 +56,54 @@
 }
 
 .info-body {
-  margin-top: 4vh;
+  margin-top: 2vh;
   font-family: Proxima-Nova-Semibold;
   color: #00632f;
 }
 .info-body-title{
   margin: 0;
   color: #75321f;
-  font-size: 1.7vh;
+  font-size: 1.8vh;
 }
 .info-body-subtitle {
   margin: 0;
   margin-top: 0.5vh;
   color: #75321f;
-  font-size: 1.5vh;
+  font-size: 1.8vh;
 }
 .info-body-description {
   margin-bottom: 0;
-  font-size: 1.4vh;
-  line-height: 2.3vh;
+  margin-top: 0.8vh;
+  font-size: 1.8vh;
+  line-height: 2.4vh;
 }
 .info-body-list-title {
   margin: 0;
-  font-size: 1.4vh;
+  margin-top: 0.5vh;
+  font-size: 1.8vh;
   line-height: 2.4vh;
 }
 .info-body-list {
   margin: 0;
-  padding-left: 2vh;
+  padding-left: 1.8vh;
 }
 .info-body-list > li {
-  font-size: 1.4vh;
+  font-size: 1.8vh;
   line-height: 2.3vh;
 }
 .info-body-list > li > * {
   margin-left: -0.5vh;
-  font-size: 1.4vh;
+  font-size: 1.8vh;
   line-height: 2.3vh;
 }
 .info-body-finally {
   margin: 0;
-  font-size: 1.4vh;
+  font-size: 1.8vh;
   line-height: 2.4vh;
 }
 
 .info-footer {
-  margin-top: 2vh;
+  margin-top: 1vh;
   color: #75321f;
 }
 .info-footer-table-title {
@@ -115,13 +117,13 @@
 }
 
 .info-footer-table-head {
-  width: 32vh;
+  width: 41vh;
   margin-bottom: 0.5vh;
   font-family: Proxima-Nova-Semibold;
   background: #ffffff77;
 }
 .info-footer-table-body {
-  width: 32vh;
+  width: 41vh;
   font-family: Proxima-Nova-Semibold;
   background: #ffffff77;
 }
@@ -134,9 +136,9 @@
 }
 .info-footer-table-col > h6 {
   margin: 0.8vh;
-  font-size: 1.4vh;
+  font-size: 1.8vh;
 }
 .info-footer-table-col > div {
   margin: 0.5vh 0.8vh;
-  font-size: 1.4vh;
+  font-size: 1.8vh;
 }

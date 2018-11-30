@@ -61,10 +61,9 @@ class HandleImg extends React.Component {
 }
 
 const SwiperSlide = (props) => {
-  let bgImg = {backgroundImage: "radial-gradient(circle, " + props.product.inner_gradient_color + ", " + props.product.inner_gradient_color + ", " + props.product.outer_gradient_color + ", " + props.product.outer_gradient_color + ")"}
   return (
-    <div className={"swiper-slide"} style={{backgroundColor: props.product.outer_gradient_color}}>
-      <div className="swiper-slide-left" style={bgImg}>
+    <div className={"swiper-slide"}>
+      <div className="swiper-slide-left">
         <HandleImg
           src={ IMG_URL + props.product.cereal_image }
           alt={'small_' + props.index}

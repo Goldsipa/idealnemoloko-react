@@ -7,6 +7,11 @@
   src: url(../fonts/Proxima-Nova-Regular.otf);
 }
 @font-face {
+  font-family: Proxima-Nova-Semibold;
+  src: url(../fonts/Proxima-Nova-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
   font-family: Proxima-Nova-Bold;
   src: url(../fonts/Proxima-Nova-Bold.otf);
 }
@@ -51,7 +56,7 @@ body {
   z-index: 2;
 
   font-family: Proxima-Nova-Bold;
-  font-size: 1.8vh;
+  font-size: 1.9vh;
 }
 .left-bar > span {
   margin-right: 1.5vw;
@@ -88,7 +93,7 @@ body {
   z-index: 2;
 
   font-family: Proxima-Nova-Bold;
-  font-size: 1.8vh;
+  font-size: 1.9vh;
   color: #ffffff;
   cursor: pointer;
 }

@@ -94,7 +94,7 @@ class MainPage extends React.Component{
       if(!this.props.isOpen)setTimeout(this.swiperStart, 2500);
 
       var pag = document.getElementsByClassName('swiper-pagination')[0].clientHeight;
-      document.getElementById('info-back').style.top = 'calc(50% - ' + pag/window.innerHeight*100/2 + 'vh)';
+      document.getElementById('info-back').style.top = 'calc(50% - ' + pag/window.innerHeight*100/3.25 + 'vh)';
     }
   }
 
