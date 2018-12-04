@@ -91,7 +91,7 @@ class ProductsPage extends React.Component {
         </Link>
         <LeftBar>
           <span><Link to='/idealnemoloko-react/why'>
-            { this.props.lang === 'ua' ? 'ЧОМУ ІДЕАЛЬ НЕМОЛОКО' : 'ПОЧЕМУ ІДЕАЛЬ НЕМОЛОКО'}
+            { this.props.lang === 'ua' ? 'ПРО ІДЕАЛЬ НЕМОЛОКО' : 'ПРО ІДЕАЛЬ НЕМОЛОКО'}
           </Link></span>
         </LeftBar>
         <img className='prod-splash' src={prodSplash} alt='milk-splash' />

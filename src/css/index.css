@@ -51,8 +51,7 @@ body {
 .left-bar {
   position: absolute;
   top: 5vh;
-  right: 9.75vw;
-  /* was 13vw */
+  right: calc(6.5vw + 11.5vh);
   z-index: 2;
 
   font-family: Proxima-Nova-Bold;
@@ -73,7 +72,7 @@ body {
 .social {
   position: absolute;
   top: 4.4vh;
-  right: 4vw;
+  right: calc(3vw + 2.5vh);
   z-index: 2;
 }
 .social a {

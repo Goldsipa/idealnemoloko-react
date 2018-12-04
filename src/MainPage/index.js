@@ -120,7 +120,7 @@ class MainPage extends React.Component{
             { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
           </Link></span>
           <span><Link to='/idealnemoloko-react/why'>
-            { this.props.lang === 'ua' ? 'ЧОМУ ІДЕАЛЬ НЕМОЛОКО' : 'ПОЧЕМУ ІДЕАЛЬ НЕМОЛОКО'}
+            { this.props.lang === 'ua' ? 'ПРО ІДЕАЛЬ НЕМОЛОКО' : 'ПРО ІДЕАЛЬ НЕМОЛОКО'}
           </Link></span>
         </LeftBar>
 

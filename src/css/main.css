@@ -26,6 +26,7 @@
   color: #75321f;
 }
 .main-body {
+  text-indent: 1.5em;
   height: 40%;
   margin-top: 5vh;
   margin-right: 2%;
@@ -35,4 +36,7 @@
   font-size: 2.2vh;
   line-height: 2.7vh;
   color: #00632f;
+}
+.main-body > * {
+  margin: 0;
 }

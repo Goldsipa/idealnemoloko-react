@@ -5,7 +5,7 @@ import splashRight from './img/splash-right.png';
 
 import fb_logo from './img/fb-logo.png';
 import ig_logo from './img/ig-logo.png';
-// import yt_logo from './img/yt-logo.png';
+import yt_logo from './img/yt-logo.png';
 
 export const Splashes = (props) => (
   <div>
@@ -23,9 +23,9 @@ const Social = (props) => {
         <a href='https://www.instagram.com/idealnemoloko/' target='_blank' rel='nofollow noopener noreferrer'>
           <img src={ig_logo} alt='fb logo' />
         </a>
-        {/* <a href='https://www.youtube.com/' target='_blank' rel='nofollow noopener noreferrer'>
+        <a href='https://www.youtube.com/' target='_blank' rel='nofollow noopener noreferrer'>
           <img src={yt_logo} alt='fb logo' />
-        </a> */}
+        </a>
       </div>
   );
 }

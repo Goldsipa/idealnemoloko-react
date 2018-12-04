@@ -77,6 +77,9 @@
   font-size: 1.8vh;
   line-height: 2.4vh;
 }
+.info-body-description > span {
+  margin-left: 3vh;
+}
 .info-body-list-title {
   margin: 0;
   margin-top: 0.5vh;
@@ -85,6 +88,7 @@
 }
 .info-body-list {
   margin: 0;
+  margin-left: 3.5vh;
   padding-left: 1.8vh;
 }
 .info-body-list > li {
@@ -97,6 +101,7 @@
   line-height: 2.3vh;
 }
 .info-body-finally {
+  text-indent: 3vh;
   margin: 0;
   font-size: 1.8vh;
   line-height: 2.4vh;
