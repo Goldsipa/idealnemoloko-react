@@ -11,7 +11,7 @@ const WhySlide = (props) => (
       { props.lang === 'ua' ? <WhySlideBodyUA index={props.index} />
         : <WhySlideBodyRU index={props.index} /> }
     </div>
-    <img className="why-img-center" src={koryst_0} alt="koryst_0" />
+    <img className="why-img-center why-img-0" src={koryst_0} alt="koryst_0" />
   </div>
 );
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/product-info.css';
 
+const IMG_URL = 'https://res.cloudinary.com/syplemstudio/';
+
 const ProcuctInfo = (props) =>(
   <div className='swiper-slide'>
     <div className={props.isOpen ? 'info info-hidden' : 'info'}>
@@ -9,10 +11,10 @@ const ProcuctInfo = (props) =>(
       </div>
 
       <div className='info-body'>
-        <h4 className='info-body-title' style={{color: props.product.title_subtitle_color}}>
+        <h4 className='info-body-title'>
           { props.lang === 'ua' ? props.product.title : props.product.title_rus }
         </h4>
-        <h5 className='info-body-subtitle' style={{color: props.product.title_subtitle_color}}>
+        <h5 className='info-body-subtitle'>
           { props.lang === 'ua' ? props.product.subtitle : props.product.subtitle_rus }
         </h5>
         <p className='info-body-description'>
@@ -64,6 +66,11 @@ const ProcuctInfo = (props) =>(
           </div>
         </div>
       </div>
+      <img 
+        className="info-body-cereal-image"
+        src={ IMG_URL + props.product.cereal_image }
+        alt={'small_' + props.index}
+      />
     </div>
   </div>
 );

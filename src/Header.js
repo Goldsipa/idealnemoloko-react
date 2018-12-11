@@ -1,6 +1,7 @@
 import React from 'react';
 
 import splashLeft from './img/splash-left.png';
+import splashLeftNotMain from './img/splash-left-not-main.png';
 import splashRight from './img/splash-right.png';
 
 import fb_logo from './img/fb-logo.png';
@@ -10,6 +11,13 @@ import yt_logo from './img/yt-logo.png';
 export const Splashes = (props) => (
   <div>
     <img className='splash-left' src={splashLeft} alt='milk splash'/>
+    <img className='splash-right' src={splashRight} alt='milk splash'/>
+  </div>
+);
+
+export const SplashesNotMain = (props) => (
+  <div>
+    <img className='splash-left-not-main' src={splashLeftNotMain} alt='milk splash'/>
     <img className='splash-right' src={splashRight} alt='milk splash'/>
   </div>
 );

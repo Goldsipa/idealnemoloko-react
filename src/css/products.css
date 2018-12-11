@@ -4,7 +4,7 @@
 }
 
 #products .swiper-slide {
-  background-color: #ffd745;
+  background-color: #ffdc6f;
 }
 
 .swiper-slide-left {
@@ -12,7 +12,7 @@
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background-image: radial-gradient(circle, #ffe5ac, #ffe5ac, #ffd745, #ffd745);
+  /* background-image: radial-gradient(circle, #ffe5ac, #ffe5ac, #ffd745, #ffd745); */
   background-size: 65% 100%;
   background-position-x: -15%;
   background-repeat: no-repeat;
@@ -20,29 +20,29 @@
 
 .swiper-slide-left > img {
   position: absolute;
-  bottom: 5vh;
-  right: 55vw;
+  bottom: 2vh;
+  left: 2vh;
   height: 25vh;
   width: 25vh;
-  z-index: 1;
+  z-index: 2;
 }
 
 .swiper-slide-right {
   position: absolute;
   right: 0;
   height: 100%;
-  width: 57%;
+  width: 50%;
   box-sizing: border-box;
 }
 
 .swiper-slide-right-title {
-  margin-top: 19vh;
-  margin-left: 12vw;
+  margin-top: 16vh;
+  /* margin-left: 7vw; */
   height: 5vh;
 
   text-align: center;
   font-family: LEngineer-Regular;
-  font-size: 3.5vh;
+  font-size: 4vh;
   -webkit-font-smoothing: antialiased;
   color: #7d4526;
   cursor: pointer;
@@ -52,6 +52,7 @@
 }
 
 .swiper-slide-right-img {
+  margin-top: 2vh;
   height: 70%;
   text-align: center;
   cursor: pointer;
@@ -61,7 +62,7 @@
 }
 .swiper-slide-right-img img {
   position: absolute;
-  right: 43%;
+  right: 50%;
   height: 70vh;
 
   transform: translateX(50%);

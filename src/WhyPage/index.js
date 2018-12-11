@@ -4,7 +4,7 @@ import { LeftBar } from '../Header';
 import { Link } from 'react-router-dom';
 // import { MyDelayLink } from '../DelayLink';
 
-import { Splashes } from '../Header';
+import { SplashesNotMain } from '../Header';
 import WhySlide from './WhySlide';
 import WhySlide1 from './WhySlide1';
 import WhySlide2 from './WhySlide2';
@@ -75,7 +75,7 @@ class WhyPage extends React.Component {
             { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
           </Link></span>
         </LeftBar>
-        <Splashes />
+        <SplashesNotMain />
         <WhySwiper index={this.state.index} lang={this.props.lang} />
 
         {/* <div className='trans-curtain trans-curtain-hidden'>

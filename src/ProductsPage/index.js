@@ -4,7 +4,7 @@ import { LeftBar } from '../Header';
 // import { MyDelayLink } from '../DelayLink';
 
 import '../css/products-page.css';
-import prodSplash from '../img/production-splash.png';
+import { SplashesNotMain } from '../Header';
 import lustodorf from '../img/lustodorf.png';
 import logoSrc from '../img/logo.png';
 
@@ -94,7 +94,7 @@ class ProductsPage extends React.Component {
             { this.props.lang === 'ua' ? 'ПРО ІДЕАЛЬ НЕМОЛОКО' : 'ПРО ІДЕАЛЬ НЕМОЛОКО'}
           </Link></span>
         </LeftBar>
-        <img className='prod-splash' src={prodSplash} alt='milk-splash' />
+        <SplashesNotMain />
         { this.props.products && 
           <ProductsContainer
             products={ this.props.products } 

@@ -35,17 +35,25 @@ body {
 
 .splash-left {
   position: fixed;
-  right: 81vw;
-  bottom: -10%;
-  height: 85%;
+  left: -17vh;
+  bottom: 0;
+  height: 70%;
   z-index: 1;
+  /* transform: translateX(-50%); */
 }
 .splash-right {
   position: fixed;
-  right: 45vw;
-  top: -38%;
-  height: 80%;
+  right: 53vw;
+  top: 0;
+  height: 26%;
   z-index: 1;
+}
+.splash-left-not-main {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 72%;
+  /* transform: translateX(-50%); */
 }
 
 .left-bar {
@@ -62,10 +70,10 @@ body {
 }
 .left-bar a {
   text-decoration: none;
-  color: #ffffff;
+  color: #5b1b0a;
 }
 .left-bar a:hover {
-  color: #ffffff;
+  color: #5b1b0a;
   /* text-shadow: 0px 0px 4px #555555cc; */
 }
 
@@ -93,7 +101,7 @@ body {
 
   font-family: Proxima-Nova-Bold;
   font-size: 1.9vh;
-  color: #ffffff;
+  color: #5b1b0a;
   cursor: pointer;
 }
 

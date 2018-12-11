@@ -63,13 +63,7 @@ class HandleImg extends React.Component {
 const SwiperSlide = (props) => {
   return (
     <div className={"swiper-slide"}>
-      <div className="swiper-slide-left">
-        <HandleImg
-          src={ IMG_URL + props.product.cereal_image }
-          alt={'small_' + props.index}
-          hasLoaded={props.hasLoaded}
-        />
-      </div>
+      <div className="swiper-slide-left"></div>
       <SwiperSlideRight 
         index={props.index}
         product={props.product}
