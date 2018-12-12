@@ -71,11 +71,11 @@ export const MainHeaderRU = (props) => (
 
 export const WhySlideBodyUA = (props) => (
   <div className="why-body">
-    <div className={props.index === 0 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <div className={props.index === 1 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
       Ми хочемо бути на 100% впевненими<br/>
       у продуктах, які обираємо. А ти?
     </div>
-    <div className={props.index === 0 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
+    <div className={props.index === 1 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <p>
         Як відповідальний виробник, компанія «Люстдорф» переконана – все на нашому столі чи навіть в
         сумці для швидкого перекусу має бути абсолютно безпечним, якісним та корисним для здоров’я
@@ -98,11 +98,11 @@ export const WhySlideBodyUA = (props) => (
 
 export const WhySlideBodyRU = (props) => (
   <div className="why-body">
-    <div className={props.index === 0 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <div className={props.index === 1 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
       Мы хотим быть на 100% уверенными<br/>
       в продуктах, которые выбираем. А ты?
     </div>
-    <div className={props.index === 0 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
+    <div className={props.index === 1 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <p>
         Как ответственный производитель, компания «Люстдорф» уверена - все на нашем столе или даже в
         сумке для быстрого перекуса должно быть абсолютно безопасным, качественным и полезным для здоровья
@@ -125,10 +125,10 @@ export const WhySlideBodyRU = (props) => (
 
 export const WhySlide1BodyUA = (props) => (
   <div className="why-body">
-    <h4 className={props.index === 1 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <h4 className={props.index === 2 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
       ДЛЯ КОГО ЩЕ «ІДЕАЛЬ НЕМОЛОКО»?
     </h4>
-    <div className={props.index === 1 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
+    <div className={props.index === 2 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       «Ідеаль Немолоко» корисне для всіх і кожного<br/>
       <div></div>для тих, хто любить пробувати нове<br/>
       <div></div>для тих, хто дотримується посту<br/>
@@ -150,10 +150,10 @@ export const WhySlide1BodyUA = (props) => (
 
 export const WhySlide1BodyRU = (props) => (
   <div className="why-body">
-    <h4 className={props.index === 1 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <h4 className={props.index === 2 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
       ДЛЯ КОГО ЕЩЁ «ІДЕАЛЬ НЕМОЛОКО»?
     </h4>
-    <div className={props.index === 1 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
+    <div className={props.index === 2 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       «Ідеаль Немолоко» полезно для всех и каждого<br/>
       <div></div>для тех, кто любит пробовать новое<br/>
       <div></div>для тех, кто придерживается поста<br/>
@@ -175,10 +175,10 @@ export const WhySlide1BodyRU = (props) => (
 
 export const WhySlide2BodyUA = (props) => (
   <div className="why-body">
-    <div className={props.index === 2 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <div className={props.index === 3 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
       НАВІТЬ ПІД ЧАС ПОСТУ?
     </div>
-    <div className={props.index === 2 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
+    <div className={props.index === 3 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <br/>
       Звичайно!
       <br/><br/>
@@ -200,10 +200,10 @@ export const WhySlide2BodyUA = (props) => (
 
 export const WhySlide2BodyRU = (props) => (
   <div className="why-body">
-    <div className={props.index === 2 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <div className={props.index === 3 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
       ДАЖЕ ВО ВРЕМЯ ПОСТА?
     </div>
-    <div className={props.index === 2 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
+    <div className={props.index === 3 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <br/>
       КОНЕЧНО!<br/><br/>
       <p>
@@ -224,10 +224,10 @@ export const WhySlide2BodyRU = (props) => (
 
 export const WhySlide3BodyUA = (props) => (
   <div className="why-body">
-    <div className={props.index === 3 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <div className={props.index === 4 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
       А ТОЧНО НЕмолоко?
     </div>
-    <div className={props.index === 3 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
+    <div className={props.index === 4 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <br/>
       <p>
         Знак V-LABEL Vegan від<br/>
@@ -246,10 +246,10 @@ export const WhySlide3BodyUA = (props) => (
 
 export const WhySlide3BodyRU = (props) => (
   <div className="why-body">
-    <div className={props.index === 3 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <div className={props.index === 4 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
       А ТОЧНО НЕмолоко?<br/>
     </div>
-    <div className={props.index === 3 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
+    <div className={props.index === 4 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <br/>
       <p>
         Знак V-LABEL Vegan от<br/>

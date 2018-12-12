@@ -5,7 +5,7 @@ import koryst_3 from '../img/k-3.min.png';
 const WhySlide3 = (props) => (
   <div className="swiper-slide">
     <div className="why-left">
-      <div className={props.index === 3 ? "why-header why-header-active" : "why-header" }>
+      <div className={props.index === 4 ? "why-header why-header-active" : "why-header" }>
         <h3>{ props.lang === 'ua' ? 'ЧОМУ ІДЕАЛЬ НЕМОЛОКО' : 'ПОЧЕМУ ІДЕАЛЬ НЕМОЛОКО' }</h3>
       </div>
       { props.lang === 'ua' ? <WhySlide3BodyUA index={props.index} />

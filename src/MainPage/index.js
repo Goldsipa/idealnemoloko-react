@@ -12,13 +12,13 @@ import { Splashes } from '../Header';
 
 import logoSrc from '../img/logo.png';
 
-const Loader = (props) => (
-  <div className={ props.isLoading ? "loader" : "loader loader-hidden" }></div>
-);
+// const Loader = (props) => (
+//   <div className={ props.isLoading ? "loader" : "loader loader-hidden" }></div>
+// );
 
-const LoaderImg = (props) => (
-  <img src={logoSrc} className={ props.isLoading ? "loader-img" : "loader-img loader-img-hidden" } alt='logo'></img>
-);
+// const LoaderImg = (props) => (
+//   <img src={logoSrc} className={ props.isLoading ? "loader-img" : "loader-img loader-img-hidden" } alt='logo'></img>
+// );
 
 class MainPage extends React.Component{
   constructor(props) {
@@ -116,10 +116,10 @@ class MainPage extends React.Component{
           style={{cursor: this.props.isOpen ? 'pointer' : 'unset'}}
         />
         <LeftBar>
-          <span><Link to='/idealnemoloko-react/production'>
+          <span><Link to='/production'>
             { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
           </Link></span>
-          <span><Link to='/idealnemoloko-react/why'>
+          <span><Link to='/why'>
             { this.props.lang === 'ua' ? 'ПРО ІДЕАЛЬ НЕМОЛОКО' : 'ПРО ІДЕАЛЬ НЕМОЛОКО'}
           </Link></span>
         </LeftBar>

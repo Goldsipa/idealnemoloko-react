@@ -39,10 +39,10 @@ class ProductNode extends React.Component {
   render() {
     return (
       <div className='products-node'>
-        <Link onClick={this.kek} to='/idealnemoloko-react/'>
+        <Link onClick={this.kek} to='/'>
           { this.props.product && <img src={ IMG_URL + this.props.product.image_for_product_page } alt='grechaneProd' /> }
         </Link>
-        <Link onClick={this.kek} to='/idealnemoloko-react/'>
+        <Link onClick={this.kek} to='/'>
           <h4 className='products-node-heading'>ІДЕАЛЬ НЕМОЛОКО</h4>
           <h5 className='products-node-title'>
             { this.props.lang === 'ua' ? this.props.product.title : this.props.product.title_rus }
@@ -86,11 +86,11 @@ class ProductsPage extends React.Component {
   render() {
     return (
       <div className='products-page'>
-        <Link to='/idealnemoloko-react/' onClick={this.kek}>
+        <Link to='/' onClick={this.kek}>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
         </Link>
         <LeftBar>
-          <span><Link to='/idealnemoloko-react/why'>
+          <span><Link to='/why'>
             { this.props.lang === 'ua' ? 'ПРО ІДЕАЛЬ НЕМОЛОКО' : 'ПРО ІДЕАЛЬ НЕМОЛОКО'}
           </Link></span>
         </LeftBar>

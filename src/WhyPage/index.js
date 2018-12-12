@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 // import { MyDelayLink } from '../DelayLink';
 
 import { SplashesNotMain } from '../Header';
+import WhySlideVideo from './WhySlideVideo';
 import WhySlide from './WhySlide';
 import WhySlide1 from './WhySlide1';
 import WhySlide2 from './WhySlide2';
@@ -18,6 +19,7 @@ import logoSrc from '../img/logo.png';
 const WhySwiper = (props) => (
   <div className="why-swiper-container">
     <div className="swiper-wrapper">
+      <WhySlideVideo index={props.index} />
       <WhySlide index={props.index} lang={props.lang} />
       <WhySlide1 index={props.index} lang={props.lang} />
       <WhySlide2 index={props.index} lang={props.lang} />
@@ -67,11 +69,11 @@ class WhyPage extends React.Component {
   render() {
     return (
       <div className="why-page">
-        <Link to='/idealnemoloko-react/' onClick={this.kek}>
+        <Link to='/' onClick={this.kek}>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
         </Link>
         <LeftBar>
-          <span><Link to='/idealnemoloko-react/production'>
+          <span><Link to='/production'>
             { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
           </Link></span>
         </LeftBar>
