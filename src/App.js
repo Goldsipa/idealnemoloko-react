@@ -8,7 +8,7 @@ import ProductsPage from './ProductsPage';
 import NotFound from './NotFound';
 
 import productsBackup from './products-backup.json';
-const API = 'http://idealnemoloko.digioceideal.pp.ua:8000/api/';
+const API = 'http://54.37.138.23:8000/api/';
 
 class App extends Component {
   constructor(props) {
