@@ -15,6 +15,8 @@ import '../css/why.css';
 import '../css/my-swiper.css'
 
 import logoSrc from '../img/logo.png';
+import cert from '../img/cert.png';
+import cert1 from '../img/cert1.png';
 
 const WhySwiper = (props) => (
   <div className="why-swiper-container">
@@ -47,6 +49,10 @@ class WhyPage extends React.Component {
 
   kek(){
     this.props.setIndexOpen(0, false);
+  }
+
+  fullscreen(e) {
+    e.target.parentNode.classList.toggle("why-certificate-modal-active");
   }
 
   componentDidMount() {
@@ -83,6 +89,16 @@ class WhyPage extends React.Component {
         {/* <div className='trans-curtain trans-curtain-hidden'>
           <img src={logoSrc} alt='logo'/>
         </div> */}
+        <div className="why-certificate-modal">
+          <div onClick={ this.fullscreen.bind(this) }>
+            <img src={ cert } alt="certificate"/>
+          </div>
+        </div>
+        <div className="why-certificate-modal">
+          <div onClick={ this.fullscreen.bind(this) }>
+            <img src={ cert } alt="certificate"/>
+          </div>
+        </div>
       </div>
     ); 
   }

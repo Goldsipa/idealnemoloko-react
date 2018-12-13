@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/product-info.css';
 
+import cardboard from '../img/cardboard.png';
 const IMG_URL = 'https://res.cloudinary.com/syplemstudio/';
 
 const ProcuctInfo = (props) =>(
@@ -38,31 +39,51 @@ const ProcuctInfo = (props) =>(
       </div>
 
       <div className="info-footer">
-        <h4 className='info-footer-table-title'>
-          { props.lang === 'ua' ? 'Поживна цінність продукту' : 'Питательная ценность продукта'}
-        </h4>
-        <div className='info-footer-table-head'>
-          <div className='info-footer-table-col'>
-            <h6>
-              { props.lang === 'ua' ? 'Показник на 100г' : 'Показатель на 100г'}
-            </h6>
+        <div className="info-footer-table">
+          <h4 className='info-footer-table-title'>
+            { props.lang === 'ua' ? 'Поживна цінність продукту' : 'Питательная ценность продукта'}
+          </h4>
+          <div className='info-footer-table-head'>
+            <div className='info-footer-table-col'>
+              <h6>
+                { props.lang === 'ua' ? 'Показник на 100г' : 'Показатель на 100г'}
+              </h6>
+            </div>
+            <div className='info-footer-table-col'>
+              <h6>Ідеаль Немолоко 2,5%</h6>
+            </div>
           </div>
-          <div className='info-footer-table-col'>
-            <h6>Ідеаль Немолоко 2,5%</h6>
+          <div className='info-footer-table-body'>
+            <div className='info-footer-table-col'>
+              <div>{ props.lang === 'ua' ? 'Калорійність' : 'Калорийность'}</div>
+              <div>{ props.lang === 'ua' ? 'Білок' : 'Белки'}</div>
+              <div>{ props.lang === 'ua' ? 'Вуглеводи' : 'Углеводы'}</div>
+              <div>Холестерин</div>
+            </div>
+            <div className='info-footer-table-col'>
+              <div>{props.product.calories}</div>
+              <div>{props.product.proteins}</div>
+              <div>{props.product.carbohydrates}</div>
+              <div>{props.product.cholesterol}</div>
+            </div>
           </div>
         </div>
-        <div className='info-footer-table-body'>
-          <div className='info-footer-table-col'>
-            <div>{ props.lang === 'ua' ? 'Калорійність' : 'Калорийность'}</div>
-            <div>{ props.lang === 'ua' ? 'Білок' : 'Белки'}</div>
-            <div>{ props.lang === 'ua' ? 'Вуглеводи' : 'Углеводы'}</div>
-            <div>Холестерин</div>
+        <div className="info-footer-weight">
+          <div>
+            <div className="info-footer-weight-img">
+              <img className="info-footer-weight-img-small" src={ cardboard } alt="cardboard" />
+            </div>
+            <div className="info-footer-weight-text">
+              <span>250г</span>
+            </div>
           </div>
-          <div className='info-footer-table-col'>
-            <div>{props.product.calories}</div>
-            <div>{props.product.proteins}</div>
-            <div>{props.product.carbohydrates}</div>
-            <div>{props.product.cholesterol}</div>
+          <div>
+            <div className="info-footer-weight-img">
+              <img className="info-footer-weight-img-big" src={ cardboard } alt="cardboard" />
+            </div>
+            <div className="info-footer-weight-text">
+              <span>1000г</span>
+            </div>
           </div>
         </div>
       </div>

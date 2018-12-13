@@ -125,7 +125,7 @@ export const WhySlideBodyRU = (props) => (
 
 export const WhySlide1BodyUA = (props) => (
   <div className="why-body">
-    <h4 className={props.index === 2 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <h4 className={props.index === 2 ? 'why-header why-header-active' : 'why-header'}>
       ДЛЯ КОГО ЩЕ «ІДЕАЛЬ НЕМОЛОКО»?
     </h4>
     <div className={props.index === 2 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
@@ -150,7 +150,7 @@ export const WhySlide1BodyUA = (props) => (
 
 export const WhySlide1BodyRU = (props) => (
   <div className="why-body">
-    <h4 className={props.index === 2 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <h4 className={props.index === 2 ? 'why-header why-header-active' : 'why-header'}>
       ДЛЯ КОГО ЕЩЁ «ІДЕАЛЬ НЕМОЛОКО»?
     </h4>
     <div className={props.index === 2 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
@@ -175,7 +175,7 @@ export const WhySlide1BodyRU = (props) => (
 
 export const WhySlide2BodyUA = (props) => (
   <div className="why-body">
-    <div className={props.index === 3 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <div className={props.index === 3 ? 'why-header why-header-active' : 'why-header'}>
       НАВІТЬ ПІД ЧАС ПОСТУ?
     </div>
     <div className={props.index === 3 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
@@ -200,7 +200,7 @@ export const WhySlide2BodyUA = (props) => (
 
 export const WhySlide2BodyRU = (props) => (
   <div className="why-body">
-    <div className={props.index === 3 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <div className={props.index === 3 ? 'why-header why-header-active' : 'why-header'}>
       ДАЖЕ ВО ВРЕМЯ ПОСТА?
     </div>
     <div className={props.index === 3 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
@@ -224,14 +224,13 @@ export const WhySlide2BodyRU = (props) => (
 
 export const WhySlide3BodyUA = (props) => (
   <div className="why-body">
-    <div className={props.index === 4 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <div className={props.index === 4 ? 'why-header why-header-active' : 'why-header'}>
       А ТОЧНО НЕмолоко?
     </div>
     <div className={props.index === 4 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <br/>
       <p>
-        Знак V-LABEL Vegan від<br/>
-        Європейської вегетаріанської спілки<br/>
+        Знак V-LABEL Vegan від Європейської вегетаріанської спілки<br/>
         (центральний офіс в Швейцарії) підтверджує,<br/>
         що це на 100% рослинний продукт.
       </p><br/>
@@ -246,14 +245,13 @@ export const WhySlide3BodyUA = (props) => (
 
 export const WhySlide3BodyRU = (props) => (
   <div className="why-body">
-    <div className={props.index === 4 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
+    <div className={props.index === 4 ? 'why-header why-header-active' : 'why-header'}>
       А ТОЧНО НЕмолоко?<br/>
     </div>
     <div className={props.index === 4 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <br/>
       <p>
-        Знак V-LABEL Vegan от<br/>
-        Европейского вегетарианского союза<br/>
+        Знак V-LABEL Vegan от Европейского вегетарианского союза<br/>
         (центральный офис в Швейцарии) подтверждает,<br/>
         что это 100% растительный продукт.
       </p><br/>

@@ -2,7 +2,7 @@
   "name": "idealnemoloko-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://goldsipa.github.io/idealnemoloko-react/",
+  "homepage": ".",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "gsap": "^2.0.2",

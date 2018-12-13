@@ -32,18 +32,21 @@
 }
 .why-header-active {
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.75s ease, transform 0.75s ease;
-}
-.why-header > * {
   font-family: LEngineer-Regular;
   font-size: 4vh;
   -webkit-font-smoothing: antialiased;
   font-weight: lighter;
   color: #75321f;
+  transform: translateY(0);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.why-header > * {
+  font-size: 4vh;
+  -webkit-font-smoothing: antialiased;
+  font-weight: lighter;
 }
 .why-body {
-  height: 40%;
+  /* height: 40%; */
   margin-top: 4vh;
   z-index: 2;
 
@@ -65,6 +68,19 @@
   transition: opacity 0.75s ease, transform 0.75s ease;
   transition-delay: 0.3s;
 }
+
+.why-body-description {
+  margin-top: 3vh;
+  font-size: 2.2vh;
+  line-height: 2.6vh;
+  opacity: 0;
+  box-sizing: border-box;
+  padding-right: 2vh;
+  transform: translateY(10vh);
+}
+.why-body-description > p {
+  margin: 0;
+}
 .why-body-description > div {
   display: inline-block;
   height: 1.1vh;
@@ -72,17 +88,6 @@
   margin-right: 0.4vw;
   border-radius: 50%;
   background-color: green;
-}
-
-.why-body-description {
-  margin-top: 3vh;
-  font-size: 2.2vh;
-  line-height: 2.6vh;
-  opacity: 0;
-  transform: translateY(10vh);
-}
-.why-body-description > p {
-  margin: 0;
 }
 
 .why-body-description-active {
@@ -102,7 +107,10 @@
 }
 .why-img-right {
   position: absolute;
-  right: 0;
+  left: 50%;
+  width: 50%;
+  background-position: center;
+  background-size: cover;
   height: 100%;
 }
 
@@ -120,4 +128,52 @@
 .why-video > iframe {
   height: 54vh;
   width: 96vh;
+}
+
+.why-certificate {
+  display: inline-block;
+  margin-top: 2vh;
+  height: 30vh;
+  margin-right: 1vw;
+}
+.why-certificate > img {
+  height: 100%;
+}
+.why-certificate-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  height: 100vh;
+  width: 100vw;
+  background-color: #00000077;
+  cursor: pointer;
+}
+.why-certificate-modal-active {
+  display: block;
+}
+
+.why-certificate-modal > div {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5vh;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.why-certificate-modal > div  > img {
+  cursor: default;
+  opacity: 0;
+}
+.why-certificate-modal-active > div > img {
+  /* height: 200%; */
+  width: 60%;
+  opacity: 1;
+  animation-name: modal-img;
+  animation-duration: 1.5s;
+}
+@keyframes modal-img {
+  0%   {opacity: 0;}
+  100%   {opacity: 1;}
 }
