@@ -21,11 +21,11 @@ import cert1 from '../img/cert1.png';
 const WhySwiper = (props) => (
   <div className="why-swiper-container">
     <div className="swiper-wrapper">
-      <WhySlideVideo index={props.index} />
       <WhySlide index={props.index} lang={props.lang} />
       <WhySlide1 index={props.index} lang={props.lang} />
       <WhySlide2 index={props.index} lang={props.lang} />
       <WhySlide3 index={props.index} lang={props.lang} />
+      <WhySlideVideo index={props.index} />
     </div>
     <div className='why-swiper-pagination swiper-pagination'>
     </div>
