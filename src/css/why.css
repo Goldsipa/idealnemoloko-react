@@ -135,6 +135,7 @@
   margin-top: 2vh;
   height: 30vh;
   margin-right: 1vw;
+  cursor: pointer;
 }
 .why-certificate > img {
   height: 100%;
