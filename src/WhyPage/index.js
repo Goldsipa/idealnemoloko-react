@@ -96,7 +96,7 @@ class WhyPage extends React.Component {
         </div>
         <div className="why-certificate-modal">
           <div onClick={ this.fullscreen.bind(this) }>
-            <img src={ cert } alt="certificate"/>
+            <img src={ cert1 } alt="certificate"/>
           </div>
         </div>
       </div>
