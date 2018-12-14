@@ -12,7 +12,7 @@ class Certificate extends React.Component {
 
   render() {
     return (
-      <div className="why-certificate">
+      <div className={ this.props.slideIndex === 4 ? 'why-certificate why-certificate-active' : 'why-certificate'}>
         <img onClick={ this.fullscreen.bind(this) } src={ this.props.src } alt="certificate"/>
       </div>
     );
@@ -24,8 +24,8 @@ const WhySlide3 = (props) => (
     <div className="why-left">
       { props.lang === 'ua' ? <WhySlide3BodyUA index={props.index} />
         : <WhySlide3BodyRU index={props.index} /> }
-      <Certificate src={ cert } index={ 0 } />
-      <Certificate src={ cert1 } index={ 1 } />
+      <Certificate src={ cert } index={ 0 } slideIndex={props.index} />
+      <Certificate src={ cert1 } index={ 1 } slideIndex={props.index} />
     </div>
     <img className="why-img-center" src={koryst_3} alt="koryst_3" />
   </div>

@@ -26,7 +26,6 @@
 }
 
 .why-header {
-  height: 6vh;
   opacity: 0;
   transform: translateY(10vh);
 }
@@ -55,6 +54,7 @@
 
 .why-body-title{
   margin: 0;
+  margin-bottom: 3vh;
   font-size: 2.3vh;
   text-transform: uppercase;
   font-family: Proxima-Nova-Bold;
@@ -70,7 +70,6 @@
 }
 
 .why-body-description {
-  margin-top: 3vh;
   font-size: 2.2vh;
   line-height: 2.6vh;
   opacity: 0;
@@ -136,7 +135,16 @@
   height: 30vh;
   margin-right: 1vw;
   cursor: pointer;
+  opacity: 0;
+  transform: translateY(10vh);
 }
+.why-certificate-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+  transition-delay: 0.9s;
+}
+
 .why-certificate > img {
   height: 100%;
 }
