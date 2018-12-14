@@ -175,18 +175,11 @@ export const WhySlide1BodyRU = (props) => (
 
 export const WhySlide2BodyUA = (props) => (
   <div className="why-body">
-<<<<<<< Updated upstream
     <div className={props.index === 2 ? 'why-header why-header-active' : 'why-header'}>
       НАВІТЬ ПІД ЧАС ПОСТУ?
     </div>
     <div className={props.index === 2 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <br/>
-=======
-    <h4 className={props.index === 3 ? 'why-header why-header-active' : 'why-header'}>
-      НАВІТЬ ПІД ЧАС ПОСТУ?
-    </h4>
-    <div className={props.index === 3 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
->>>>>>> Stashed changes
       Звичайно!
       <br/><br/>
       <p>
@@ -207,18 +200,11 @@ export const WhySlide2BodyUA = (props) => (
 
 export const WhySlide2BodyRU = (props) => (
   <div className="why-body">
-<<<<<<< Updated upstream
     <div className={props.index === 2 ? 'why-header why-header-active' : 'why-header'}>
       ДАЖЕ ВО ВРЕМЯ ПОСТА?
     </div>
     <div className={props.index === 2 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <br/>
-=======
-    <h4 className={props.index === 3 ? 'why-header why-header-active' : 'why-header'}>
-      ДАЖЕ ВО ВРЕМЯ ПОСТА?
-    </h4>
-    <div className={props.index === 3 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
->>>>>>> Stashed changes
       КОНЕЧНО!<br/><br/>
       <p>
         Во время поста нужно воздерживаться от продуктов
@@ -238,18 +224,11 @@ export const WhySlide2BodyRU = (props) => (
 
 export const WhySlide3BodyUA = (props) => (
   <div className="why-body">
-<<<<<<< Updated upstream
     <div className={props.index === 3 ? 'why-header why-header-active' : 'why-header'}>
       А ТОЧНО НЕмолоко?
     </div>
     <div className={props.index === 3 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <br/>
-=======
-    <h4 className={props.index === 4 ? 'why-header why-header-active' : 'why-header'}>
-      А ТОЧНО НЕмолоко?
-    </h4>
-    <div className={props.index === 4 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
->>>>>>> Stashed changes
       <p>
         Знак V-LABEL Vegan від Європейської вегетаріанської спілки<br/>
         (центральний офіс в Швейцарії) підтверджує,<br/>
@@ -266,18 +245,11 @@ export const WhySlide3BodyUA = (props) => (
 
 export const WhySlide3BodyRU = (props) => (
   <div className="why-body">
-<<<<<<< Updated upstream
     <div className={props.index === 3 ? 'why-header why-header-active' : 'why-header'}>
       А ТОЧНО НЕмолоко?<br/>
     </div>
     <div className={props.index === 3 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <br/>
-=======
-    <h4 className={props.index === 4 ? 'why-header why-header-active' : 'why-header'}>
-      А ТОЧНО НЕмолоко?<br/>
-    </h4>
-    <div className={props.index === 4 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
->>>>>>> Stashed changes
       <p>
         Знак V-LABEL Vegan от Европейского вегетарианского союза<br/>
         (центральный офис в Швейцарии) подтверждает,<br/>
