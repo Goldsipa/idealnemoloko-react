@@ -134,6 +134,7 @@
   margin-top: 2vh;
   height: 30vh;
   margin-right: 1vw;
+<<<<<<< Updated upstream
   cursor: pointer;
   opacity: 0;
   transform: translateY(10vh);
@@ -143,6 +144,8 @@
   transform: translateY(0);
   transition: opacity 0.75s ease, transform 0.75s ease;
   transition-delay: 0.9s;
+=======
+>>>>>>> Stashed changes
   opacity: 0;
   transform: translateY(10vh);
 }
