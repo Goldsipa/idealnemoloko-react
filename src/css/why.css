@@ -143,6 +143,14 @@
   transform: translateY(0);
   transition: opacity 0.75s ease, transform 0.75s ease;
   transition-delay: 0.9s;
+  opacity: 0;
+  transform: translateY(10vh);
+}
+.why-certificate-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+  transition-delay: 0.9s;
 }
 
 .why-certificate > img {
