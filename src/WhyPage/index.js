@@ -82,6 +82,12 @@ class WhyPage extends React.Component {
           <span><Link to='/production'>
             { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
           </Link></span>
+          <span><Link to='/why'>
+            { this.props.lang === 'ua' ? 'ПРО ІДЕАЛЬ НЕМОЛОКО' : 'ПРО ІДЕАЛЬ НЕМОЛОКО'}
+          </Link></span>
+          <span><Link to='/recipes'>
+            { this.props.lang === 'ua' ? 'РЕЦЕПТИ' : 'РЕЦЕПТЫ'}
+          </Link></span>
         </LeftBar>
         <SplashesNotMain />
         <WhySwiper index={this.state.index} lang={this.props.lang} />

@@ -3,12 +3,13 @@ import { Switch, Route } from 'react-router-dom';
 
 import Header from './Header';
 import MainPage from './MainPage';
-import WhyPage from './WhyPage';
 import ProductsPage from './ProductsPage';
+import WhyPage from './WhyPage';
+import RecipesPage from './RecipesPage';
 import NotFound from './NotFound';
 
 import productsBackup from './products-backup.json';
-const API = 'http://idealnemoloko.digioceideal.pp.ua:8000/api/';
+const API = 'http://54.37.138.23:8000/api/';
 
 class App extends Component {
   constructor(props) {
@@ -67,9 +68,6 @@ class App extends Component {
               />
             )}
           />
-          <Route exact path='/why'
-            render={(props) => <WhyPage lang={this.state.lang} setIndexOpen={this.setIndexOpen} />}
-          />
           <Route exact path='/production'
             render={(props) => (
               <ProductsPage
@@ -78,6 +76,12 @@ class App extends Component {
                 setIndexOpen={this.setIndexOpen}
               />
             )}
+          />
+          <Route exact path='/why'
+            render={(props) => <WhyPage lang={this.state.lang} setIndexOpen={this.setIndexOpen} />}
+          />
+          <Route exact path='/Recipes'
+            render={(props) => <RecipesPage lang={this.state.lang} setIndexOpen={this.setIndexOpen} />}
           />
           <Route 
             render={(props) => <NotFound lang={this.state.lang} />}

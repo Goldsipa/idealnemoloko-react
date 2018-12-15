@@ -62,7 +62,7 @@ class MainPage extends React.Component{
         slidesPerView: 1,
         initialSlide: this.props.index,
         mousewheel: {
-          eventsTarged: '#main-page'
+          eventsTarged: '#root'
         },
         pagination: {
           el: '.swiper-pagination',
@@ -70,7 +70,7 @@ class MainPage extends React.Component{
           clickable: true
         },
       });
-
+      
       this.swiperInfo = new Swiper('.swiper-container-info', {
         direction: 'vertical',
         preventInteractionOnTransition: true,
@@ -121,6 +121,9 @@ class MainPage extends React.Component{
           </Link></span>
           <span><Link to='/why'>
             { this.props.lang === 'ua' ? 'ПРО ІДЕАЛЬ НЕМОЛОКО' : 'ПРО ІДЕАЛЬ НЕМОЛОКО'}
+          </Link></span>
+          <span><Link to='/recipes'>
+            { this.props.lang === 'ua' ? 'РЕЦЕПТИ' : 'РЕЦЕПТЫ'}
           </Link></span>
         </LeftBar>
 

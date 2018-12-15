@@ -30,7 +30,7 @@ class ProductsPage extends React.Component {
   render() {
     return (
       <div style={{height: '100%'}}>
-        <Link to='/idealnemoloko-react/'><img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' /></Link>
+        <Link to='/'><img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' /></Link>
         <div style={stubDivStyle}>
           <h3 style={messageStyle}>
             { this.props.lang === 'ua' ? 'Сторінка не знайдена' : 'Страница не найдена' }

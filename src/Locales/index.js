@@ -73,24 +73,33 @@ export const WhySlideBodyUA = (props) => (
   <div className="why-body">
     <div className={props.index === 0 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
       Ми хочемо бути на 100% впевненими<br/>
-      у продуктах, які обираємо. А ти?
+      у продуктах, які обираємо.<br/>
+      А ти?
     </div>
     <div className={props.index === 0 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       <p>
-        Як відповідальний виробник, компанія «Люстдорф» переконана – все на нашому столі чи навіть в
-        сумці для швидкого перекусу має бути абсолютно безпечним, якісним та корисним для здоров’я
+        Як відповідальний виробник, компанія «Люстдорф» переконана – 
+        все на нашому столі чи навіть в сумці для швидкого перекусу
+        має бути абсолютно безпечним, якісним та корисним для здоров’я
         людей і всієї планети.
       </p><br/>
       <p>
         Ми турбуємося про наших споживачів:<br/>
-        – про тих, хто любить змінювати смаки та експериментувати, про тих, хто не може пити коров’яче
-        молоко і про тих, хто просто любить смачненьке. Тому й створили корисну альтернативу
-        коров’ячого молока – рослинні напої, які ми ніжно називаємо «рослинне молоко».
+        - про тих, хто любить змінювати смаки та експериментувати<br/>
+        - про тих, хто не може пити коров’яче молоко<br/>
+        - про тих, хто просто любить смачненьке<br/>
       </p><br/>
       <p>
-        Ми першими в Україні розробили нову лінійку 100% здорових, натуральних, рослинних напоїв
-        «Ідеаль Немолоко», які принесуть у твоє життя нові смаки та користь.<br/>
-        Чи є щось більш натуральне та природне для нас, як не рослини?
+        Тому й створили корисну альтернативу коров’ячого молока – 
+        рослинні напої, які ми ніжно називаємо «рослинне молоко».
+      </p><br/>
+      <p>
+        Ми першими в Україні розробили нову лінійку 100% здорових, натуральних,
+        рослинних напоїв «Ідеаль Немолоко», які принесуть у твоє життя 
+        нові смаки та користь.
+      </p><br/>
+      <p>
+        <b>Чи є щось більш натуральне та природне для нас, як не рослини?</b>
       </p>
     </div>
   </div>
@@ -125,34 +134,28 @@ export const WhySlideBodyRU = (props) => (
 
 export const WhySlide1BodyUA = (props) => (
   <div className="why-body">
-    <h4 className={props.index === 1 ? 'why-header why-header-active' : 'why-header'}>
-      ДЛЯ КОГО ЩЕ «ІДЕАЛЬ НЕМОЛОКО»?
-    </h4>
     <div className={props.index === 1 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
-      «Ідеаль Немолоко» корисне для всіх і кожного<br/>
-      <div></div>для тих, хто любить пробувати нове<br/>
-      <div></div>для тих, хто дотримується посту<br/>
-      <div></div>для веганів, вегетаріанців, сироїдів<br/>
-      <div></div>для тих, хто не переносить лактози або має алергію
+      <b>«Ідеаль Немолоко» корисне для всіх і кожного</b><br/>
+      - для тих, хто любить пробувати нове<br/>
+      - для тих, хто дотримується посту<br/>
+      - для веганів, вегетаріанців, сироїдів<br/>
+      - для тих, хто не переносить лактози або має алергію
       на білок коров&#39;ячого молока.
       <br/><br/>
       <p>
         Для пікніка і домашнього затишку, до чаю і просто так,
         у каші та всюди, де тільки хочеться.
       </p><br/>
-      <p>
+      <p><b>
         Це здоровий та корисний продукт, 
         який можна і треба включати у свій щоденний раціон.
-      </p>
+      </b></p>
     </div>
   </div>
 );
 
 export const WhySlide1BodyRU = (props) => (
   <div className="why-body">
-    <h4 className={props.index === 1 ? 'why-header why-header-active' : 'why-header'}>
-      ДЛЯ КОГО ЕЩЁ «ІДЕАЛЬ НЕМОЛОКО»?
-    </h4>
     <div className={props.index === 1 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
       «Ідеаль Немолоко» полезно для всех и каждого<br/>
       <div></div>для тех, кто любит пробовать новое<br/>
@@ -175,21 +178,19 @@ export const WhySlide1BodyRU = (props) => (
 
 export const WhySlide2BodyUA = (props) => (
   <div className="why-body">
-    <div className={props.index === 2 ? 'why-header why-header-active' : 'why-header'}>
-      НАВІТЬ ПІД ЧАС ПОСТУ?
-    </div>
     <div className={props.index === 2 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
-      <br/>
-      Звичайно!
+      <b>ЗВИЧАЙНО!</b>
       <br/><br/>
       <p>
         Під час посту треба утримуватись від продуктів
         тваринного походження (м&#39;яса, риби, молока та яєць).<br/>
         Але аж ніяк не нехтувати рослинами!
       </p><br/>
-      <p>
+      <p><b>
         «Ідеаль Немолоко» – це 100% рослинний напій без лактози,
         казеїну, трансжирів, холестерину, ГМО та доданого цукру.
+      </b></p><br/>
+      <p>
         Натомість, у ньому є вітаміни групи В в ідеальному співвідношенні,
         як найкращі «ліки» від стресу, а ще необхідний запас клітковини –
         джерело здоров’я, що регулює обмінні процеси та наповнює енергією.
@@ -200,11 +201,7 @@ export const WhySlide2BodyUA = (props) => (
 
 export const WhySlide2BodyRU = (props) => (
   <div className="why-body">
-    <div className={props.index === 2 ? 'why-header why-header-active' : 'why-header'}>
-      ДАЖЕ ВО ВРЕМЯ ПОСТА?
-    </div>
     <div className={props.index === 2 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
-      <br/>
       КОНЕЧНО!<br/><br/>
       <p>
         Во время поста нужно воздерживаться от продуктов
@@ -224,19 +221,16 @@ export const WhySlide2BodyRU = (props) => (
 
 export const WhySlide3BodyUA = (props) => (
   <div className="why-body">
-    <div className={props.index === 3 ? 'why-header why-header-active' : 'why-header'}>
-      А ТОЧНО НЕмолоко?
-    </div>
     <div className={props.index === 3 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
-      <br/>
       <p>
         Знак V-LABEL Vegan від Європейської вегетаріанської спілки<br/>
         (центральний офіс в Швейцарії) підтверджує,<br/>
         що це на 100% рослинний продукт.
       </p><br/>
       <p>
-        А ти вже п’єш «ІДЕАЛЬ НЕМОЛОКО»?<br/>
-        Шукай нас у Facebook, Instagram та Youtube<br/>
+        <b>А ти вже п’єш «ІДЕАЛЬ НЕМОЛОКО»?</b><br/>
+        Шукай нас у Facebook,<br/>
+        Instagram та Youtube<br/>
         і ділися враженнями та побажаннями!
       </p>
     </div>
@@ -245,11 +239,7 @@ export const WhySlide3BodyUA = (props) => (
 
 export const WhySlide3BodyRU = (props) => (
   <div className="why-body">
-    <div className={props.index === 3 ? 'why-header why-header-active' : 'why-header'}>
-      А ТОЧНО НЕмолоко?<br/>
-    </div>
     <div className={props.index === 3 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
-      <br/>
       <p>
         Знак V-LABEL Vegan от Европейского вегетарианского союза<br/>
         (центральный офис в Швейцарии) подтверждает,<br/>

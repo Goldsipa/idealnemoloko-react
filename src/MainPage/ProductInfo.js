@@ -4,7 +4,7 @@ import '../css/product-info.css';
 import cardboard from '../img/cardboard.png';
 const IMG_URL = 'https://res.cloudinary.com/syplemstudio/';
 
-const ProcuctInfo = (props) =>(
+const ProcuctInfo = (props) => (
   <div className='swiper-slide'>
     <div className={props.isOpen ? 'info info-hidden' : 'info'}>
       <div className='info-header'>
