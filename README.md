@@ -3,6 +3,13 @@
 Before start, please make sure that docker is instlled on the deployment machine.
 
 ## Predeployment and deploy
+0. Check if project runs by entering `docker ps` in terminal
+  Here you would see somth like this:
+  
+  `CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                     NAMES
+`
+
+You need to find record with 0.0.0.0:80->80 and stop it by typing `docker stop <record_name>`, where <record_name> - the name in the NAMES column
 1. clone this repository to the production server (or make `git pull origin master` if already cloned):
   `https://github.com/Goldsipa/idealnemoloko-react.git`
 2. go to the project root and run:
