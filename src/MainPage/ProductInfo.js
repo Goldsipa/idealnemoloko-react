@@ -74,7 +74,7 @@ const ProcuctInfo = (props) => (
               <img className="info-footer-weight-img-small" src={ cardboard } alt="cardboard" />
             </div>
             <div className="info-footer-weight-text">
-              <span>250г</span>
+              <span>{props.product.small_cardboard_weight}г</span>
             </div>
           </div>
           <div>
@@ -82,7 +82,7 @@ const ProcuctInfo = (props) => (
               <img className="info-footer-weight-img-big" src={ cardboard } alt="cardboard" />
             </div>
             <div className="info-footer-weight-text">
-              <span>1000г</span>
+              <span>{props.product.big_cardboard_weight}г</span>
             </div>
           </div>
         </div>

@@ -79,11 +79,11 @@ class WhyPage extends React.Component {
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
         </Link>
         <LeftBar>
-          <span><Link to='/production'>
-            { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
-          </Link></span>
           <span><Link to='/why'>
             { this.props.lang === 'ua' ? 'ПРО ІДЕАЛЬ НЕМОЛОКО' : 'ПРО ІДЕАЛЬ НЕМОЛОКО'}
+          </Link></span>
+          <span><Link to='/production'>
+            { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
           </Link></span>
           <span><Link to='/recipes'>
             { this.props.lang === 'ua' ? 'РЕЦЕПТИ' : 'РЕЦЕПТЫ'}

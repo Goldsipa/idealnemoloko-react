@@ -16,7 +16,6 @@ const RECIPES = 'http://54.37.138.23:8000/recipes/';
 const RecipesSwiper = (props) => (
   <div className="recipes-swiper-container">
     <div className="swiper-wrapper">
-      <RecipesSlide recipe={props.recipes[0]} lang={ props.lang } />
       {props.recipes.map(
         (recipe, index) => (
           <RecipesSlide
@@ -90,11 +89,11 @@ class RecipesPage extends React.Component {
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
         </Link>
         <LeftBar>
-          <span><Link to='/production'>
-            { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
-          </Link></span>
           <span><Link to='/why'>
             { this.props.lang === 'ua' ? 'ПРО ІДЕАЛЬ НЕМОЛОКО' : 'ПРО ІДЕАЛЬ НЕМОЛОКО'}
+          </Link></span>
+          <span><Link to='/production'>
+            { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
           </Link></span>
           <span><Link to='/recipes'>
             { this.props.lang === 'ua' ? 'РЕЦЕПТИ' : 'РЕЦЕПТЫ'}

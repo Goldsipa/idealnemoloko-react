@@ -65,9 +65,9 @@ const RecipesSlide = (props) => (
         </table>
         <div className="recipes-body-endline">
         { props.lang === 'ua' ? props.recipe.endline.map(
-            (end, i) => <span key={ "end" + i }>{end}</span>
+            (end, i) => <span key={ "end" + i }>{end} </span>
           ) : props.recipe.endline_rus.map(
-            (end, i) => <span key={ "end" + i }>{end}</span>
+            (end, i) => <span key={ "end" + i }>{end} </span>
           )}
         </div>
         <div className="recipes-badges">
