@@ -4,11 +4,27 @@ import '../css/product-info.css';
 import cardboard from '../img/cardboard.png';
 const IMG_URL = 'https://res.cloudinary.com/syplemstudio/';
 
+const markdown = (str) => {
+  const arr = str.split("**");
+  return (
+    <span>
+      { arr.map((span, index) => (
+        index % 2 === 0 ? 
+          <span key={ 'desc_in_' + index }>{span}</span> : 
+          <span key={ 'desc_in_' + index }><b>{span}</b></span> ) )}
+    </span>
+  );
+}
+
+const MarkdownApplier = (props) => {
+  return <span>{markdown(props.span)}<br/></span>
+};
+
 const ProcuctInfo = (props) => (
   <div className='swiper-slide'>
     <div className={props.isOpen ? 'info info-hidden' : 'info'}>
       <div className='info-header'>
-        <h3>ІДЕАЛЬ НЕМОЛОКО</h3>
+        <h3>ПЕРШЕ УКРАЇНСЬКЕ «ІДЕАЛЬ НЕМОЛОКО»</h3>
       </div>
 
       <div className='info-body'>
@@ -20,22 +36,38 @@ const ProcuctInfo = (props) => (
         </h5>
         <p className='info-body-description'>
           { props.lang === 'ua' ? props.product.content.map(
-            (span, index) => <span key={ 'desc_' + index }>{span}<br/></span>
+            (span, index) => <MarkdownApplier key={ 'desc_' + index } span={span} />
           ) : props.product.content_rus.map(
-            (span, index) => <span key={ 'desc_' + index }>{span}<br/></span>
+            (span, index) => <MarkdownApplier key={ 'desc_' + index } span={span} />
           )}
         </p>
         <h6 className='info-body-list-title'>
           { props.lang === 'ua' ? props.product.list_heading : props.product.list_heading_rus }
         </h6>
-        <ul className='info-body-list'>
-          { props.lang === 'ua' ? props.product.about_list.map(
-            (li, index) => <li key={ props.product.title + index }><span>{li}</span></li>
-          ) : props.product.about_list_rus.map(
-            (li, index) => <li key={ props.product.title + index }><span>{li}</span></li>
-          )}
-        </ul>
-        <p className='info-body-finally'>{ props.lang === 'ua' ? props.product.silly_comment : props.product.silly_comment_rus}</p>
+        <div className='info-body-list'>
+          <table>
+            <tbody>
+              { props.lang === 'ua' ? props.product.about_list.map(
+                (li, i) => (
+                  <tr key={ "li" + i }>
+                    <td>-</td>
+                    <td>{li}</td>
+                  </tr>
+                )
+              ) : props.recipe.product.about_list_rus.map(
+                (li, i) => (
+                  <tr key={ "li" + i }>
+                    <td>-</td>
+                    <td>{li}</td>
+                  </tr>
+                )
+              )}
+            </tbody>
+          </table>
+        </div>
+        <p className='info-body-finally'>
+        { props.lang === 'ua' ? props.product.silly_comment : props.product.silly_comment_rus }
+        </p>
       </div>
 
       <div className="info-footer">
@@ -69,22 +101,25 @@ const ProcuctInfo = (props) => (
           </div>
         </div>
         <div className="info-footer-weight">
-          <div>
-            <div className="info-footer-weight-img">
-              <img className="info-footer-weight-img-small" src={ cardboard } alt="cardboard" />
+          { props.product.small_cardboard_weight !== null && 
+            <div>
+              <div className="info-footer-weight-img">
+                <img className="info-footer-weight-img-small" src={ cardboard } alt="cardboard" />
+              </div>
+              <div className="info-footer-weight-text">
+                <span>{props.product.small_cardboard_weight}г</span>
+              </div>
             </div>
-            <div className="info-footer-weight-text">
-              <span>{props.product.small_cardboard_weight}г</span>
+          }
+          { props.product.big_cardboard_weight !== null &&  <div>
+              <div className="info-footer-weight-img">
+                <img className="info-footer-weight-img-big" src={ cardboard } alt="cardboard" />
+              </div>
+              <div className="info-footer-weight-text">
+                <span>{props.product.big_cardboard_weight}г</span>
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="info-footer-weight-img">
-              <img className="info-footer-weight-img-big" src={ cardboard } alt="cardboard" />
-            </div>
-            <div className="info-footer-weight-text">
-              <span>{props.product.big_cardboard_weight}г</span>
-            </div>
-          </div>
+          }
         </div>
       </div>
       <img 

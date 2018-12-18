@@ -6,7 +6,7 @@ const WhySlide = (props) => (
   <div className="swiper-slide">
     <div className="why-left">
       <div className={props.index === 0 ? "why-header why-header-active" : "why-header" }>
-        <h3>{ props.lang === 'ua' ? 'ПРО ІДЕАЛЬ НЕМОЛОКО' : 'ПРО ІДЕАЛЬ НЕМОЛОКО' }</h3>
+        <h3>{ props.lang === 'ua' ? 'ПРО «ІДЕАЛЬ НЕМОЛОКО»' : 'ПРО «ІДЕАЛЬ НЕМОЛОКО»' }</h3>
       </div>
       { props.lang === 'ua' ? <WhySlideBodyUA index={props.index} />
         : <WhySlideBodyRU index={props.index} /> }

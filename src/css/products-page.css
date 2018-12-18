@@ -44,7 +44,7 @@
   margin: 0;
   font-family: Proxima-Nova-SemiBold;
   
-  font-size: 2vh;
+  font-size: 1.8vh;
   color: #006d24;
   transform: translateY(-50%);
 }
@@ -64,7 +64,7 @@
   text-align: center;
 }
 .products-node > a > img {
-  height: 70%;
+  width: 11vh;
   margin-bottom: 5%;
 }
 .products-node > a {
@@ -73,7 +73,7 @@
 .products-node-heading, .products-node-title, .products-node-subtitle {
   margin: 0.5vh auto;
   font-family: Proxima-Nova-Bold;
-  font-size: 2vh;
+  font-size: 1.8vh;
   color: #7c4331;
 }
 .products-node-subtitle {

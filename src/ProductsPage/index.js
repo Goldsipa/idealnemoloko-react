@@ -40,10 +40,23 @@ class ProductNode extends React.Component {
     return (
       <div className='products-node'>
         <Link onClick={this.kek} to='/'>
-          { this.props.product && <img src={ IMG_URL + this.props.product.image_for_product_page } alt='grechaneProd' /> }
+          { this.props.product && this.props.product.image_for_product_page !== '' && 
+          <img
+              className='products-node-img'
+              src={ IMG_URL + this.props.product.image_for_product_page }
+              alt={this.props.product.title} 
+            /> 
+          }
+          { this.props.product && this.props.product.image_small !== '' && 
+          <img
+              className='products-node-img'
+              src={ IMG_URL + this.props.product.image_small }
+              alt={this.props.product.title}
+            /> 
+          }
         </Link>
         <Link onClick={this.kek} to='/'>
-          <h4 className='products-node-heading'>ІДЕАЛЬ НЕМОЛОКО</h4>
+          <h4 className='products-node-heading'>«ІДЕАЛЬ НЕМОЛОКО»</h4>
           <h5 className='products-node-title'>
             { this.props.lang === 'ua' ? this.props.product.title : this.props.product.title_rus }
           </h5>
@@ -91,7 +104,7 @@ class ProductsPage extends React.Component {
         </Link>
         <LeftBar>
           <span><Link to='/why'>
-            { this.props.lang === 'ua' ? 'ПРО ІДЕАЛЬ НЕМОЛОКО' : 'ПРО ІДЕАЛЬ НЕМОЛОКО'}
+            { this.props.lang === 'ua' ? 'ПРО «ІДЕАЛЬ НЕМОЛОКО»' : 'ПРО «ІДЕАЛЬ НЕМОЛОКО»'}
           </Link></span>
           <span><Link to='/production'>
             { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}

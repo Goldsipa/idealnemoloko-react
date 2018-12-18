@@ -21,7 +21,7 @@
 }
 .recipes-header > * {
   font-family: LEngineer-Regular;
-  font-size: 3.8vh;
+  font-size: 3.5vh;
   -webkit-font-smoothing: antialiased;
   font-weight: lighter;
   text-transform: uppercase;
@@ -30,17 +30,19 @@
 .recipes-body {
   color: #5b1b0a;
   font-family: Proxima-Nova-Semibold;
-  font-size: 2vh;
+  font-size: 1.8vh;
+  -webkit-font-smoothing: antialiased;
 }
 .recipes-body-subtitle {
+  font-size: 2vh;
   margin: 0;
-  font-size: 2.2vh;
   text-transform: uppercase;
   font-weight: bolder;
 }
 .recipes-body-text {
   margin: 0;
-  font-size: 2vh;
+  font-size: 1.8vh;
+  line-height: 2.6vh;
   font-weight: bolder;
 }
 .recipes-body-ingridients, .recipes-body-howto {
@@ -61,7 +63,7 @@
 }
 
 .recipes-badges {
-  margin-left: 4vh;
+  margin-left: 8vh;
   margin-top: 1.5vh;
 }
 .recipes-badges > img {
