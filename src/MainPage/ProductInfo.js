@@ -54,7 +54,7 @@ const ProcuctInfo = (props) => (
                     <td>{li}</td>
                   </tr>
                 )
-              ) : props.recipe.product.about_list_rus.map(
+              ) : props.product.about_list_rus.map(
                 (li, i) => (
                   <tr key={ "li" + i }>
                     <td>-</td>
