@@ -49,7 +49,7 @@ class ProductNode extends React.Component {
           }
           { this.props.product && this.props.product.image_small !== '' && 
           <img
-              className='products-node-img'
+              className='products-node-img-small'
               src={ IMG_URL + this.props.product.image_small }
               alt={this.props.product.title}
             /> 

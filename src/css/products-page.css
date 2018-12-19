@@ -63,9 +63,14 @@
   margin-bottom: 10vh;
   text-align: center;
 }
-.products-node > a > img {
-  width: 11vh;
+.products-node-img, .products-node-img-small {
   margin-bottom: 5%;
+}
+.products-node-img {
+  height: 70%;
+}
+.products-node-img-small {
+  height: 50%;
 }
 .products-node > a {
   text-decoration: none;

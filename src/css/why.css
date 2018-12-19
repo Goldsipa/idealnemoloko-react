@@ -54,7 +54,7 @@
 .why-body-title{
   margin: 0;
   margin-bottom: 3vh;
-  font-size: 2vh;
+  font-size: 1.8vh;
   text-transform: uppercase;
   font-family: Proxima-Nova-Bold;
   -webkit-font-smoothing: antialiased;
@@ -172,9 +172,9 @@
 .why-certificate-modal > div {
   height: 100%;
   box-sizing: border-box;
-  padding: 5vh;
+  padding: 4vh;
   text-align: center;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .why-certificate-modal > div  > img {
@@ -182,8 +182,8 @@
   opacity: 0;
 }
 .why-certificate-modal-active > div > img {
-  /* height: 200%; */
-  width: 60%;
+  height: 100%;
+  /* width: 60%; */
   opacity: 1;
   animation-name: modal-img;
   animation-duration: 1.5s;

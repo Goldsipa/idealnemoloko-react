@@ -3,6 +3,8 @@ import React from 'react';
 import vegan from '../img/vegan.png';
 import vegetarian from '../img/vegetarian.png';
 import lactoseFree from '../img/lactose-free.png';
+import veganOfficial from '../img/vegan-official.png';
+
 
 const IMG_URL = 'https://res.cloudinary.com/syplemstudio/';
 
@@ -78,7 +80,13 @@ const RecipesSlide = (props) => (
       </div>
     </div>
     <div className="recipes-right">
-      <div className="recipes-right-img" style={{ backgroundImage: `url(${IMG_URL + props.recipe.image })` }}></div>
+      <div className="recipes-right-img" 
+        style={{ backgroundImage: `url(${IMG_URL + props.recipe.image })` }}
+      >
+        { props.recipe.is_vegan && 
+        <img className="vegan-official-img" src={ veganOfficial } alt="vegan official" /> 
+        }
+      </div>
     </div>
   </div>
 );

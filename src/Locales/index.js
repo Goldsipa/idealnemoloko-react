@@ -72,8 +72,7 @@ export const MainHeaderRU = (props) => (
 export const WhySlideBodyUA = (props) => (
   <div className="why-body">
     <div className={props.index === 0 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
-      Ми хочемо бути на 100% впевненими<br/>
-      у продуктах, які обираємо.<br/>
+      Ми хочемо бути на 100% впевненими у продуктах, які обираємо.<br/>
       А ти?
     </div>
     <div className={props.index === 0 ? 'why-body-description why-body-description-active' : 'why-body-description'}>
@@ -121,8 +120,7 @@ export const WhySlideBodyUA = (props) => (
 export const WhySlideBodyRU = (props) => (
   <div className="why-body">
     <div className={props.index === 0 ? 'why-body-title why-body-title-active' : 'why-body-title'}>
-      Мы хотим быть на 100% уверенными<br/>
-      в продуктах, которые выбираем.<br/>
+      Мы хотим быть на 100% уверенными в продуктах, которые выбираем.<br/>
       А ты?
     </div>
     <div className={props.index === 0 ? 'why-body-description why-body-description-active' : 'why-body-description'}>

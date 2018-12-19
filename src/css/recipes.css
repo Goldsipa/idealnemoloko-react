@@ -85,3 +85,10 @@
   background-size: cover;
   height: 100%;
 }
+
+.vegan-official-img {
+  position: absolute;
+  bottom: 9%;
+  left: 7%;
+  height: 8%;
+}
