@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { LeftBar } from '../Header';
 // import { MyDelayLink } from '../DelayLink';
+import ProductNode from './ProductNode';
+import ProductNodeSmall from './ProductNodeSmall';
 
 import '../css/products-page.css';
 import { SplashesNotMain } from '../Header';
 import lustodorf from '../img/lustodorf.png';
 import logoSrc from '../img/logo.png';
-
-const IMG_URL = 'https://res.cloudinary.com/syplemstudio/';
 
 const Contacts = (props) => (
   <div className='contacts'>
@@ -25,55 +25,22 @@ const Contacts = (props) => (
   </div>
 );
 
-class ProductNode extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.kek = this.kek.bind(this);
-  }
-
-  kek(){
-    this.props.setIndexOpen(this.props.index, true);
-  }
-
-  render() {
-    return (
-      <div className='products-node'>
-        <Link onClick={this.kek} to='/'>
-          { this.props.product && this.props.product.image_for_product_page !== '' && 
-          <img
-              className='products-node-img'
-              src={ IMG_URL + this.props.product.image_for_product_page }
-              alt={this.props.product.title} 
-            /> 
-          }
-          { this.props.product && this.props.product.image_small !== '' && 
-          <img
-              className='products-node-img-small'
-              src={ IMG_URL + this.props.product.image_small }
-              alt={this.props.product.title}
-            /> 
-          }
-        </Link>
-        <Link onClick={this.kek} to='/'>
-          <h4 className='products-node-heading'>«ІДЕАЛЬ НЕМОЛОКО»</h4>
-          <h5 className='products-node-title'>
-            { this.props.lang === 'ua' ? this.props.product.title : this.props.product.title_rus }
-          </h5>
-          <p className='products-node-subtitle'>
-            { this.props.lang === 'ua' ? this.props.product.subtitle : this.props.product.subtitle_rus }
-          </p>
-        </Link>
-      </div>
-    )
-  }
-}
-
 const ProductsContainer = (props) => (
   <div className='products-container'>
     {props.products.map(
       (product, index) => (
         <ProductNode
+          key={ product.title + index }
+          product={product}
+          lang={props.lang}
+          index={index}
+          setIndexOpen={props.setIndexOpen}
+        />
+      )
+    )}
+    {props.products.map(
+      (product, index) => (
+        <ProductNodeSmall
           key={ product.title + index }
           product={product}
           lang={props.lang}

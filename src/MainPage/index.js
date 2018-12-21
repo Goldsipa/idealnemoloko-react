@@ -61,8 +61,9 @@ class MainPage extends React.Component{
         },
         slidesPerView: 1,
         initialSlide: this.props.index,
+        allowTouchMove: false,
         mousewheel: {
-          eventsTarged: '#root'
+          eventsTarged: '#main-page'
         },
         pagination: {
           el: '.swiper-pagination',
@@ -76,6 +77,7 @@ class MainPage extends React.Component{
         preventInteractionOnTransition: true,
         speed: 1000,
         slidesPerView: 1,
+        allowTouchMove: false,
         initialSlide: this.props.index
       });
 
@@ -85,13 +87,6 @@ class MainPage extends React.Component{
       this.swiper.on('slidePrevTransitionStart', () => {
         this.swiperInfo.slidePrev();
       });
-
-      this.swiper.detachEvents();
-      this.swiperInfo.detachEvents();
-      this.swiper.mousewheel.enable();
-      
-      this.swiper.autoplay.stop();
-      if(!this.props.isOpen)setTimeout(this.swiperStart, 1);
 
       var pag = document.getElementsByClassName('swiper-pagination')[0].clientHeight;
       document.getElementById('info-back').style.top = 'calc(50% - ' + pag/window.innerHeight*100/3.25 + 'vh)';

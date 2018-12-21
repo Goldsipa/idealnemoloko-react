@@ -48,6 +48,7 @@ class RecipesPage extends React.Component {
       direction: 'vertical',
       speed: 1000,
       slidesPerView: 1,
+      allowTouchMove: false,
       mousewheel: true,
       pagination: {
         el: '.recipes-swiper-pagination',
@@ -73,7 +74,6 @@ class RecipesPage extends React.Component {
       .then( response => response.json() )
       .then( data => { 
         this.setState({recipes: data});
-        console.log(this.state.recipes);
         this.hasLoaded();
       })
       .catch((err) => {  

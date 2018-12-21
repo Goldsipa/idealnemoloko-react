@@ -77,6 +77,10 @@ const SwiperSlide = (props) => {
 }
 
 class Products extends React.Component {
+  componentDidMount() {
+    this.props.hasLoaded();
+  }
+
   render() {
     return (
       <div id='products' className="swiper-container">

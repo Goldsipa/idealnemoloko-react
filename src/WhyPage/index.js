@@ -60,6 +60,7 @@ class WhyPage extends React.Component {
       direction: 'vertical',
       speed: 1000,
       slidesPerView: 1,
+      allowTouchMove: false,
       mousewheel: true,
       pagination: {
         el: '.why-swiper-pagination',
