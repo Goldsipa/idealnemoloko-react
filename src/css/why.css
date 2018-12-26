@@ -130,9 +130,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.why-video > iframe {
+.why-video > video {
   height: 54vh;
-  width: 96vh;
 }
 
 .why-certificate {
