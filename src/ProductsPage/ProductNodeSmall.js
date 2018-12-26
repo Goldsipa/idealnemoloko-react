@@ -33,7 +33,10 @@ class ProductNodeSmall extends React.Component {
               { this.props.lang === 'ua' ? this.props.product.title : this.props.product.title_rus }
             </h5>
             <p className='products-node-subtitle'>
-              { this.props.lang === 'ua' ? this.props.product.subtitle : this.props.product.subtitle_rus }
+              { this.props.lang === 'ua' ?
+                `${this.props.product.subtitle} ${this.props.product.small_cardboard_weight}г` : 
+                `${this.props.product.subtitle_rus} ${this.props.product.small_cardboard_weight}г`
+              }
             </p>
           </Link>
         </div>

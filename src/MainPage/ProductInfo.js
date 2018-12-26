@@ -1,7 +1,9 @@
 import React from 'react';
 import '../css/product-info.css';
 
-import cardboard from '../img/cardboard.png';
+import cardboard from '../img/cardboard.svg';
+import cardboardSmall from '../img/cardboard-small.svg';
+// import cardboard from '../img/cardboard.png';
 const IMG_URL = 'https://res.cloudinary.com/syplemstudio/';
 
 const markdown = (str) => {
@@ -24,7 +26,10 @@ const ProcuctInfo = (props) => (
   <div className='swiper-slide'>
     <div className={props.isOpen ? 'info info-hidden' : 'info'}>
       <div className='info-header'>
-        <h3>ПЕРШЕ УКРАЇНСЬКЕ «ІДЕАЛЬ НЕМОЛОКО»</h3>
+        <h3>{ props.lang === 'ua' ? 
+          'ПЕРШЕ УКРАЇНСЬКЕ «ІДЕАЛЬ НЕМОЛОКО»' :
+          'ПЕРВОЕ УКРАИНСКОЕ «ІДЕАЛЬ НЕМОЛОКО»' }
+        </h3>
       </div>
 
       <div className='info-body'>
@@ -104,7 +109,7 @@ const ProcuctInfo = (props) => (
           { props.product.small_cardboard_weight !== null && 
             <div>
               <div className="info-footer-weight-img">
-                <img className="info-footer-weight-img-small" src={ cardboard } alt="cardboard" />
+                <img className="info-footer-weight-img-small" src={ cardboardSmall } alt="cardboard" />
               </div>
               <div className="info-footer-weight-text">
                 <span>{props.product.small_cardboard_weight}г</span>

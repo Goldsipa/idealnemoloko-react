@@ -12,8 +12,10 @@
 }
 
 .contacts {
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
+  position: relative;
+  box-sizing: border-box;
   height: 20vh;
   width: 100%;
   padding-left: 16vw;
@@ -55,14 +57,13 @@
   width: 75vw;
   padding-left: 20%;
   padding-top: 25vh;
-  padding-bottom: 15vh;
   z-index: 1;
 }
 .products-node {
   display: inline-block;
   width: 25vw;
   height: 45vh;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
   text-align: center;
 }
 .products-node-img, .products-node-img-small {
