@@ -60,7 +60,9 @@ body {
   height: 72%;
   /* transform: translateX(-50%); */
 }
-
+.left-bar-outer {
+  position: relative;
+}
 .left-bar {
   position: absolute;
   top: 5vh;

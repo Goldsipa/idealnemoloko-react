@@ -1,7 +1,6 @@
 import React from 'react';
 import Swiper from 'swiper';
-import { LeftBar } from '../Header';
-import { Link } from 'react-router-dom';
+import Header from '../Header';
 // import { MyDelayLink } from '../DelayLink';
 
 import Products from './Products';
@@ -97,6 +96,10 @@ class MainPage extends React.Component{
     this.swiper.autoplay.start();
   }
 
+  componentDidMount() {
+    if(this.props.isOpen) this.swiper.autoplay.stop();
+  }
+
   render() {
     return (
       <div id="main-page" className='main-page'>
@@ -110,17 +113,7 @@ class MainPage extends React.Component{
           src={logoSrc} alt='idealnemoloko logo'
           style={{cursor: this.props.isOpen ? 'pointer' : 'unset'}}
         />
-        <LeftBar>
-          <span><Link to='/why'>
-            { this.props.lang === 'ua' ? 'ПРО «ІДЕАЛЬ НЕМОЛОКО»' : 'ПРО «ІДЕАЛЬ НЕМОЛОКО»'}
-          </Link></span>
-          <span><Link to='/production'>
-            { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
-          </Link></span>
-          <span><Link to='/recipes'>
-            { this.props.lang === 'ua' ? 'РЕЦЕПТИ' : 'РЕЦЕПТЫ'}
-          </Link></span>
-        </LeftBar>
+        <Header lang={this.props.lang} setLangRu={this.props.setLangRu} setLangUa={this.props.setLangUa} />
 
         { this.props.products && <Products
           isOpen={this.props.isOpen}

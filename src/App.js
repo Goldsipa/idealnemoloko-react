@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Header from './Header';
 import MainPage from './MainPage';
 import ProductsPage from './ProductsPage';
 import WhyPage from './WhyPage';
@@ -55,7 +54,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header lang={this.state.lang} setLangRu={this.setLangRu} setLangUa={this.setLangUa} />
         <Switch>
           <Route exact path='/'
             render={(props) => (
@@ -65,6 +63,8 @@ class App extends Component {
                 setIndexOpen={this.setIndexOpen}
                 index={this.state.index}
                 isOpen={this.state.isOpen}
+                setLangRu={this.setLangRu} 
+                setLangUa={this.setLangUa} 
               />
             )}
           />
@@ -74,14 +74,30 @@ class App extends Component {
                 lang={this.state.lang}
                 products={this.state.products}
                 setIndexOpen={this.setIndexOpen}
+                setLangRu={this.setLangRu} 
+                setLangUa={this.setLangUa} 
               />
             )}
           />
           <Route exact path='/why'
-            render={(props) => <WhyPage lang={this.state.lang} setIndexOpen={this.setIndexOpen} />}
+            render={(props) => (
+              <WhyPage 
+                lang={this.state.lang} 
+                setIndexOpen={this.setIndexOpen}
+                setLangRu={this.setLangRu} 
+                setLangUa={this.setLangUa} 
+              />
+            )}
           />
           <Route exact path='/Recipes'
-            render={(props) => <RecipesPage lang={this.state.lang} setIndexOpen={this.setIndexOpen} />}
+            render={(props) => (
+            <RecipesPage 
+              lang={this.state.lang} 
+              setIndexOpen={this.setIndexOpen}
+              setLangRu={this.setLangRu} 
+              setLangUa={this.setLangUa} 
+            />
+            )}
           />
           <Route 
             render={(props) => <NotFound lang={this.state.lang} />}
