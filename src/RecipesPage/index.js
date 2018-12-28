@@ -1,5 +1,5 @@
 import React from 'react';
-import Swiper from 'swiper';
+import Swiper from 'swiper/dist/js/swiper.js';
 import Header from '../Header';
 import { Link } from 'react-router-dom';
 
@@ -11,7 +11,7 @@ import '../css/my-swiper.css'
 
 import logoSrc from '../img/logo.png';
 
-const RECIPES = 'http://54.37.138.23:8000/recipes/';
+const RECIPES = 'http://idealnemoloko.com:8000/recipes/';
 
 const RecipesSwiper = (props) => (
   <div className="recipes-swiper-container">

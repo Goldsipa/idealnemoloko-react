@@ -1,5 +1,5 @@
 import React from 'react';
-import Swiper from 'swiper';
+import Swiper from 'swiper/dist/js/swiper.js';
 import Header from '../Header';
 import { Link } from 'react-router-dom';
 // import { MyDelayLink } from '../DelayLink';
