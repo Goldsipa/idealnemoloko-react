@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import splashLeft from './img/splash-left.png';
 import splashLeftNotMain from './img/splash-left-not-main.png';
@@ -46,8 +47,39 @@ export const LeftBar = (props) => {
   );
 };
 
+export const LeftBarOuter = (props) => (
+  <div className='left-bar-outer'>
+    <LeftBar>
+      <span><Link to='/why'>
+        { props.lang === 'ua' ? 'ПРО «ІДЕАЛЬ НЕМОЛОКО»' : 'ПРО «ІДЕАЛЬ НЕМОЛОКО»'}
+      </Link></span>
+      <span><Link to='/production'>
+        { props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
+      </Link></span>
+      <span><Link to='/recipes'>
+        { props.lang === 'ua' ? 'РЕЦЕПТИ' : 'РЕЦЕПТЫ'}
+      </Link></span>
+    </LeftBar>
+    <Social />
+    <span className="lang" onClick={props.lang === 'ua' ? props.setLangRu : props.setLangUa}>
+      {props.lang === 'ua' ? 'RU' : 'UA'}
+    </span>
+  </div>
+);
+
 const Header = (props) => (
-  <div>
+  <div className="left-bar-header">
+    <LeftBar>
+      <span><Link to='/why'>
+        { props.lang === 'ua' ? 'ПРО «ІДЕАЛЬ НЕМОЛОКО»' : 'ПРО «ІДЕАЛЬ НЕМОЛОКО»'}
+      </Link></span>
+      <span><Link to='/production'>
+        { props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
+      </Link></span>
+      <span><Link to='/recipes'>
+        { props.lang === 'ua' ? 'РЕЦЕПТИ' : 'РЕЦЕПТЫ'}
+      </Link></span>
+    </LeftBar>
     <Social />
     <span className="lang" onClick={props.lang === 'ua' ? props.setLangRu : props.setLangUa}>
       {props.lang === 'ua' ? 'RU' : 'UA'}

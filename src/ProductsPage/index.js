@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { LeftBar } from '../Header';
+import { LeftBarOuter } from '../Header';
 // import { MyDelayLink } from '../DelayLink';
 import ProductNode from './ProductNode';
 import ProductNodeSmall from './ProductNodeSmall';
@@ -69,17 +69,11 @@ class ProductsPage extends React.Component {
         <Link to='/' onClick={this.kek}>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
         </Link>
-        <LeftBar>
-          <span><Link to='/why'>
-            { this.props.lang === 'ua' ? 'ПРО «ІДЕАЛЬ НЕМОЛОКО»' : 'ПРО «ІДЕАЛЬ НЕМОЛОКО»'}
-          </Link></span>
-          <span><Link to='/production'>
-            { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
-          </Link></span>
-          <span><Link to='/recipes'>
-            { this.props.lang === 'ua' ? 'РЕЦЕПТИ' : 'РЕЦЕПТЫ'}
-          </Link></span>
-        </LeftBar>
+        <LeftBarOuter 
+          lang={this.props.lang}
+          setLangRu={this.props.setLangRu} 
+          setLangUa={this.props.setLangUa} 
+        />
         <SplashesNotMain />
         { this.props.products && 
           <ProductsContainer

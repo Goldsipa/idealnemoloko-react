@@ -1,6 +1,6 @@
 import React from 'react';
 import Swiper from 'swiper/dist/js/swiper.js';
-import { LeftBar } from '../Header';
+import Header from '../Header';
 import { Link } from 'react-router-dom';
 
 import { SplashesNotMain } from '../Header';
@@ -88,17 +88,7 @@ class RecipesPage extends React.Component {
         <Link to='/' onClick={this.kek}>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
         </Link>
-        <LeftBar>
-          <span><Link to='/why'>
-            { this.props.lang === 'ua' ? 'ПРО «ІДЕАЛЬ НЕМОЛОКО»' : 'ПРО «ІДЕАЛЬ НЕМОЛОКО»'}
-          </Link></span>
-          <span><Link to='/production'>
-            { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
-          </Link></span>
-          <span><Link to='/recipes'>
-            { this.props.lang === 'ua' ? 'РЕЦЕПТИ' : 'РЕЦЕПТЫ'}
-          </Link></span>
-        </LeftBar>
+        <Header lang={this.props.lang} setLangRu={this.props.setLangRu} setLangUa={this.props.setLangUa} />
         <SplashesNotMain />
         { this.state.recipes && <RecipesSwiper
           index={this.state.index}

@@ -10,6 +10,9 @@
   height: 80vh;
   z-index: 0;
 }
+.left-bar-outer {
+  position: relative;
+}
 
 .contacts {
   /* position: absolute; */
@@ -19,7 +22,7 @@
   height: 20vh;
   width: 100%;
   padding-left: 16vw;
-  background-color: rgb(51, 177, 0, 29%);
+  background-color: rgb(51, 177, 0, 0.29);
   z-index: 1;
 }
 

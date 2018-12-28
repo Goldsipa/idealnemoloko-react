@@ -1,6 +1,6 @@
 import React from 'react';
 import Swiper from 'swiper/dist/js/swiper.js';
-import { LeftBar } from '../Header';
+import Header from '../Header';
 import { Link } from 'react-router-dom';
 // import { MyDelayLink } from '../DelayLink';
 
@@ -79,17 +79,7 @@ class WhyPage extends React.Component {
         <Link to='/' onClick={this.kek}>
           <img className="logo logo-not-main" src={logoSrc} alt='idealnemoloko logo' />
         </Link>
-        <LeftBar>
-          <span><Link to='/why'>
-            { this.props.lang === 'ua' ? 'ПРО «ІДЕАЛЬ НЕМОЛОКО»' : 'ПРО «ІДЕАЛЬ НЕМОЛОКО»'}
-          </Link></span>
-          <span><Link to='/production'>
-            { this.props.lang === 'ua' ? 'ПРОДУКЦІЯ' : 'ПРОДУКЦИЯ'}
-          </Link></span>
-          <span><Link to='/recipes'>
-            { this.props.lang === 'ua' ? 'РЕЦЕПТИ' : 'РЕЦЕПТЫ'}
-          </Link></span>
-        </LeftBar>
+        <Header lang={this.props.lang} setLangRu={this.props.setLangRu} setLangUa={this.props.setLangUa} />
         <SplashesNotMain />
         <WhySwiper index={this.state.index} lang={this.props.lang} />
 
