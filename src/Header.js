@@ -32,7 +32,7 @@ const Social = (props) => {
         <a href='https://www.instagram.com/idealnemoloko/' target='_blank' rel='nofollow noopener noreferrer'>
           <img src={ig_logo} alt='fb logo' />
         </a>
-        <a href='https://www.youtube.com/' target='_blank' rel='nofollow noopener noreferrer'>
+        <a href='https://www.youtube.com/channel/UCvzcZ0FN5CEM5XVeIZLZCpg/featured' target='_blank' rel='nofollow noopener noreferrer'>
           <img src={yt_logo} alt='fb logo' />
         </a>
       </div>
